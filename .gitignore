@@ -1,0 +1,6 @@
+release-arla/
+*.exe
+*.apk
+node_modules/
+.DS_Store
+Thumbs.db
