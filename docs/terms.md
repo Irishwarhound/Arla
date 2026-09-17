@@ -60,7 +60,7 @@ These Terms of Service ("Terms") are an agreement between you and IrishwarhoundG
 
 ## 8. Your content and data
 8.1 "Your Content" means everything you put into or create with Arla: prompts, chats, files, notes, goals, memories, settings, photos, imported chat history, skills and output generated for you. Between you and us, **you own Your Content.**
-8.2 Arla stores Your Content mainly on your own devices. We don't receive it unless you choose to send it to us (for example in a support request or feedback). Our Privacy Policy explains this further: https://irishwarhoundgaming.github.io/aip/privacy.
+8.2 Arla stores Your Content mainly on your own devices. We don't receive it unless you choose to send it to us (for example in a support request or feedback). Our Privacy Policy explains this further: https://irishwarhound.github.io/arla/privacy.html.
 8.3 You confirm that you have all rights and permissions needed for Your Content and for Arla to process it as you direct. That includes chat exports from other services, documents you index, photos you capture (including of other people, who may need to agree) and personal information about others.
 8.4 **You are responsible for backing up Your Content.** Arla includes backup tools, but backups can fail, be incomplete, or be lost with a device. We are not responsible for loss or corruption of Your Content.
 8.5 If you give us feedback or suggestions, you allow us to use them without restriction or payment.
