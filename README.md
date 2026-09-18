@@ -68,8 +68,8 @@ paid certificate yet. Choose **More info → Run anyway** if you're happy to con
 ## Requirements
 
 - Windows 10 or 11.
-- For models on your own computer: [Ollama](https://ollama.com) (free). Without it, Arla can still use free cloud services you connect.
-- A graphics card helps but isn't required; Arla sizes models to the machine it finds.
+- If you don't have it already: [Ollama](https://ollama.com) (free - models on your pc). Without it, Arla can still use free cloud services you connect.
+- Arla sizes models to the machine it finds.
 
 ## Roadmap to 1.0
 
