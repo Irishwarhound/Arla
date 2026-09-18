@@ -12,13 +12,24 @@ a{color:var(--accent)}
 .note{color:var(--muted);font-size:.92rem}
 ul{padding-left:1.1rem}li{margin:.45rem 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;margin:1rem 0}
+.badges{margin:.8rem 0}
+.badge{display:inline-block;font-size:.78rem;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem;margin:0 .35rem .35rem 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem;margin:1.2rem 0}
+.shots img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.shots figcaption{font-size:.82rem;color:var(--muted);margin-top:.4rem}
 footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted);font-size:.9rem}
 </style></head><body><div class="wrap">
 <h1>Arla</h1>
 <p class="lead">One place for all your AI. It runs on your own computer, works from your phone, and learns how you work.</p>
-<p>Arla brings together the models on your machine, free cloud services and any paid accounts you have. Tell her what you want in plain words: she picks the right mind for the job, brings in specialists when a task needs a team, and makes the change for you.</p>
+<div class="badges"><span class="badge">Windows · Android (soon)</span><span class="badge">Early preview · v0.1.0</span><span class="badge">Private by default</span></div>
+<p>Arla brings together the models on your machine, free cloud services and any paid accounts you have. Tell her what you want in plain words: she picks the right mind for the job, brings in specialists when a task needs a team, and makes the change for you. The goal is simple — less money spent, less time lost, less attention wasted, and less of your potential sitting unused in tools that forget you between sessions.</p>
 <a class="btn" href="https://github.com/Irishwarhound/arla/releases/latest">Download for Windows</a>
 <p class="note">Windows may warn about an unknown publisher until the installer is signed. Android version coming to the Play Store.</p>
+<div class="shots">
+<figure><img src="./screenshots/home-home.png" alt="Arla's Home dashboard"><figcaption>Home — today's plan, goals and your models at a glance</figcaption></figure>
+<figure><img src="./screenshots/api-brain.png" alt="Talk to Brain, Arla's chat"><figcaption>Brain — one conversation, routed to the right model</figcaption></figure>
+<figure><img src="./screenshots/memory-memory.png" alt="Arla's Memory page"><figcaption>Memory — distilled, ranked, and kept small</figcaption></figure>
+</div>
 <h2>What it does</h2>
 <ul>
 <li><b>Ask in plain words.</b> Change settings, open pages, manage goals and your inbox, or have her do the work.</li>
