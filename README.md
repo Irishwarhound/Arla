@@ -58,12 +58,29 @@ paid certificate yet. Choose **More info → Run anyway** if you're happy to con
 
 ## What it does
 
-- **Ask in plain words.** "Switch to light mode", "add a goal to read 12 books this year", "what should I focus on today?"
-- **The right mind for each job.** Every request is scored for how much thinking it needs and what it costs to get wrong, then handled by the smallest model that can do it well: a fast local model for commands, a stronger one for judgement, a team of specialists for big jobs.
-- **A Timeline that keeps itself honest.** Set a deadline and Arla paces the milestones to it and to the way you actually work, marks what your work has finished, warns you when a goal slips, and offers to take on the parts she can do.
-- **Your knowledge, searchable.** Memory that tidies itself, plus a Library of your own notes, PDFs and code that every model here can search.
-- **Bring your chat history.** Drop a ChatGPT, Claude, Gemini or Copilot export on her and she files it and remembers what matters.
-- **Private by default.** No account, no servers of ours, no tracking. Your data stays on your devices unless you choose a cloud model.
+**Talks like an assistant, acts like one too.**
+Say what you want, plainly — "switch to light mode," "add a goal to read 12 books this year," "what should I focus on today?" — and Arla does it: changes settings, opens pages, rearranges Home, edits projects and personas, files your Inbox, opens a terminal, or puts the machine to sleep on a schedule. She isn't a chatbot that talks about doing things.
+
+**Keeps up when you talk over her.**
+Most chat apps make you wait for the reply before you can say anything else. Add a correction mid-reply and it folds straight into what she's already working on; ask something unrelated and it queues instead of getting lost; a quick aside gets answered instantly by a local model while the bigger job keeps running.
+
+**The right mind for every job, automatically.**
+Every message is scored for how much thinking it needs and what it costs to get wrong, then handed to the smallest model that can do it well — a fast local model for a command, a stronger one for judgment, a team of specialists only when a job actually earns it. You stop paying frontier-model prices to be told the time.
+
+**A Timeline that won't let you lie to yourself.**
+Set a deadline and Arla paces the remaining milestones to it and to how you actually work. A milestone is only marked done on real evidence — a passing check, a git commit, a finished task — never because it was told to. When a deadline slips, she re-plans and says so.
+
+**Remembers, searches, and tidies itself.**
+Memory keeps a small, ranked picture of what matters and reorganizes itself on its own rather than growing into a junk drawer. A Library of your own notes, PDFs and code is searchable by every model in the hub. Drop in a ChatGPT, Claude, Gemini or Copilot export and she files it and remembers what mattered.
+
+**Writes her own playbook.**
+When Arla learns a job well enough, she writes herself a small, pre-checked skill for it — and it has to pass its own tests before she'll save it. Common requests get faster and more reliable the longer you use her, with nothing for you to do.
+
+**With you on your phone, too.**
+Pair an Android phone to the same hub over your own network for the same projects, goals and Inbox in your pocket, with a cloud or on-device model standing in when the computer's out of reach.
+
+**Private by default.**
+No account, no servers of ours, no tracking. Most work never leaves your machine, and nothing goes to the cloud unless you connect a service yourself.
 
 ## Requirements
 
