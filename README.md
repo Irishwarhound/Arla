@@ -2,9 +2,8 @@
 
 **One place for all your AI. It runs on your own computer, works from your phone, and learns how you work.**
 
-Arla brings the AI models you already have into one calm, organized home: models on your computer, free cloud services and paid accounts. Arla, your assistant, sits in front of all of it. Tell her what you want in plain words and she picks the right mind for the job, brings in specialists when a task needs a team, and makes the change for you.
+Arla is a personal AI hub for your own computer and phone that turns a pile of disconnected AI models and chat windows into one assistant with a memory. She sits in front of everything you have — small models on your machine, free cloud services, paid accounts — scores each request for how much thinking it really needs and what it costs to get wrong, and hands it to the smallest mind that can do it well, bringing in a team of specialists only when the work earns it. Around that sits the part chat apps never give you: one continuous conversation that remembers you across projects and devices, a library of your own documents and imported chat history she can search, goals and deadlines she paces to how you actually work and updates from real evidence of your progress, and the ability to act — change settings, arrange your screen, file your inbox, run terminals, schedule work, and wake or sleep the machine. She is private by default, cheap by design (most work never leaves your hardware), and built to get better: she learns which requests need more care, writes herself small pre-checked skills so common jobs come out right the first time, and keeps her own memory tidy. The promise is simple: less money spent, less time lost, less attention wasted, and less of your potential sitting unused in tools that forget you between sessions
 
-Most work runs on your own hardware, so it's private, fast and free. The cloud is only used when you choose it, or when your computer is out of reach.
 
 ## Download
 
