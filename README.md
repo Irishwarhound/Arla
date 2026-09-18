@@ -58,29 +58,83 @@ paid certificate yet. Choose **More info → Run anyway** if you're happy to con
 
 ## What it does
 
-**Talks like an assistant, acts like one too.**
-Say what you want, plainly — "switch to light mode," "add a goal to read 12 books this year," "what should I focus on today?" — and Arla does it: changes settings, opens pages, rearranges Home, edits projects and personas, files your Inbox, opens a terminal, or puts the machine to sleep on a schedule. She isn't a chatbot that talks about doing things.
+Say what you want, plainly — "switch to light mode," "add a goal to read 12 books this year,"
+"what should I focus on today?" — and Arla does it: changes settings, opens pages, rearranges
+Home, edits projects and personas, files your Inbox, opens a terminal, or puts the machine to
+sleep on a schedule. She isn't a chatbot that talks about doing things. And unlike most chat apps,
+you don't have to wait for her to finish before you say anything else: a correction mid-reply
+folds into what she's already working on, something unrelated queues instead of getting lost, and
+a quick aside gets answered instantly by a local model while the bigger job keeps running.
 
-**Keeps up when you talk over her.**
-Most chat apps make you wait for the reply before you can say anything else. Add a correction mid-reply and it folds straight into what she's already working on; ask something unrelated and it queues instead of getting lost; a quick aside gets answered instantly by a local model while the bigger job keeps running.
+Under the hood, the app is organized the way you'd actually use it:
 
-**The right mind for every job, automatically.**
-Every message is scored for how much thinking it needs and what it costs to get wrong, then handed to the smallest model that can do it well — a fast local model for a command, a stronger one for judgment, a team of specialists only when a job actually earns it. You stop paying frontier-model prices to be told the time.
+### Minds — every way to talk to a model
 
-**A Timeline that won't let you lie to yourself.**
-Set a deadline and Arla paces the remaining milestones to it and to how you actually work. A milestone is only marked done on real evidence — a passing check, a git commit, a finished task — never because it was told to. When a deadline slips, she re-plans and says so.
+- **Brain** is the main hub-wide assistant. Leave routing on **Auto** and Arla picks the model
+  herself, or pin a specific one for a conversation. This is where she acts on the app itself.
+- **Personas** give you focused characters instead of one generic voice — **Code Buddy**,
+  **Muse**, **Critic**, **Scout** and more ship by default, each with its own temperature and
+  system prompt, and you can make your own with a full icon picker and goals of their own.
+- **Deck** runs several chat slots side by side — different models or personas answering the
+  same thing at once, so you can compare instead of guessing which one to trust.
+- **Chat** is a plain, single-thread conversation with a model of your choosing.
+- **Relay** chains models into a pipeline: each step receives `{{input}}` (your prompt) and
+  `{{prev}}` (the previous step's output) — draft with one model, critique with another, polish
+  with a third, all in one run.
 
-**Remembers, searches, and tidies itself.**
-Memory keeps a small, ranked picture of what matters and reorganizes itself on its own rather than growing into a junk drawer. A Library of your own notes, PDFs and code is searchable by every model in the hub. Drop in a ChatGPT, Claude, Gemini or Copilot export and she files it and remembers what mattered.
+### Plan — where the work actually gets tracked
 
-**Writes her own playbook.**
-When Arla learns a job well enough, she writes herself a small, pre-checked skill for it — and it has to pass its own tests before she'll save it. Common requests get faster and more reliable the longer you use her, with nothing for you to do.
+- **Inbox** is capture-now-sort-later: drop in an idea, link or to-do and Arla files it.
+- **Timeline** paces your remaining milestones to a deadline and to how you actually work.
+- **Projects & Goals** organizes work into projects, each with its own goals and milestones —
+  a milestone is only marked done on real evidence (a passing check, a git commit, a finished
+  task), never because it was told to, and Arla re-plans and says so when a deadline slips.
+- **Work log** is a running record of what's next, in progress, and done.
+- **Routines** are jobs Arla runs on a schedule without you asking each time.
 
-**With you on your phone, too.**
-Pair an Android phone to the same hub over your own network for the same projects, goals and Inbox in your pocket, with a cloud or on-device model standing in when the computer's out of reach.
+### Knowledge — memory and your own documents
 
-**Private by default.**
-No account, no servers of ours, no tracking. Most work never leaves your machine, and nothing goes to the cloud unless you connect a service yourself.
+- **Memory** keeps a small, ranked picture of what matters and reorganizes itself on its own
+  (on a sleep cycle, when the GPU is idle) instead of growing into a junk drawer you have to prune.
+- **Library** indexes your own notes, PDFs and code so every model in the hub can search it —
+  and it's where a dropped-in ChatGPT, Claude, Gemini or Copilot export ends up, filed and
+  remembered.
+
+### Workshop — how Arla stays capable, and how you stay in control
+
+- **Tools** connects external MCP servers so Arla can use other tools you run — start and stop
+  each one, and approve what it's allowed to touch.
+- **Models** manages what's installed locally through Ollama and what cloud providers are
+  connected, with a live read on what's actually available right now.
+- **Skills** are small, pre-checked playbooks Arla writes herself as she learns a job — each one
+  has to pass its own tests before she'll save it, so common requests get faster and more
+  reliable the longer you use her.
+- **Specialists** is the bench she can pull from for a job big enough to earn a team, instead of
+  one model trying to do everything.
+- **Checks** are the same build, syntax and page-smoke checks that gate a real release — visible
+  and re-runnable by you at any time, not hidden in a CI log somewhere.
+
+### Bring your own model
+
+Arla works fully offline with [Ollama](https://ollama.com), or you can connect any OpenAI- or
+Anthropic-compatible endpoint — OpenRouter, Groq, LM Studio, OpenAI, Anthropic directly, or your
+own self-hosted server — and mix them freely. A usage meter tracks what you're spending on
+metered providers so nothing shows up as a surprise.
+
+### Make it yours
+
+Five themes — glass, midnight, aurora, sunset, daylight — and a Home built from panels you
+choose (goals, recent chats, loaded models, usage, personas) instead of one fixed layout.
+
+### With you on your phone, too
+
+Pair an Android phone to the same hub over your own network for the same projects, goals and
+Inbox in your pocket, with a cloud or on-device model standing in when the computer's out of reach.
+
+### Private by default
+
+No account, no servers of ours, no tracking. Most work never leaves your machine, and nothing
+goes to the cloud unless you connect a service yourself.
 
 ## Requirements
 
