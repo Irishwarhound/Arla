@@ -144,8 +144,7 @@ goes to the cloud unless you connect a service yourself.
 
 ## Roadmap to 1.0
 
-Arla is in active, daily development. What's left before a 1.0 release: a signed installer,
-a public store listing with the assets above, a clean-machine install pass, and crash/error
+Arla is in active, daily development. What's left before a 1.0 release: a public store listing with the assets above, a clean-machine install pass, and crash/error
 reporting wired end to end. Nothing here is a promise of a date — it's what's actually left.
 
 ## Privacy and terms
