@@ -7,7 +7,7 @@
 **One place for all your AI.** It runs on your own computer, works from your phone, and learns how you work.
 
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Android-5b4bd6)
-![Status](https://img.shields.io/badge/status-early%20preview%20%C2%B7%20v0.1.0-orange)
+![Status](https://img.shields.io/badge/status-preview%200.1.0%20%C2%B7%201.0%20in%20progress-orange)
 ![License](https://img.shields.io/badge/license-proprietary-lightgrey)
 [![Download](https://img.shields.io/badge/download-latest%20release-5b4bd6?style=flat&logo=windows)](../../releases/latest)
 
@@ -35,6 +35,36 @@ common jobs come out right the first time, and keeps her own memory tidy.
 
 > The promise is simple: less money spent, less time lost, less attention wasted, and less of
 > your potential sitting unused in tools that forget you between sessions.
+
+## What's new since 0.1.0
+
+Arla has been in daily development since the 0.1.0 preview. These changes are finished and in
+testing; they reach the download with the 1.0 release.
+
+- **One conversation everywhere.** The same conversation continues on your computer and your
+  phone, including what you say to the phone while the computer is off. Arla notes which model
+  answered and falls back to another one if a reply fails.
+- **She does the work, and you can take it back.** Changes Arla makes to your goals, tasks, plans,
+  checks and notes are saved together as one step you can undo. A large batch waits on a review
+  card for your OK, and a check that runs a command on your computer is always shown to you first.
+- **She asks before she guesses.** When you ask for a new task, goal, plan or check, Arla makes
+  sure she has what it needs (what it is, why it matters, its steps, or how to tell a check has
+  passed) and asks for anything missing in one short question. She also notes who it's for:
+  something she can do herself, or something only you can do.
+- **Action items you can manage in place.** Task, goal, plan and check cards have a Start button,
+  a two-press delete with Undo, and editing, even after an item is finished. A finished plan keeps
+  its results and can be run again as a fresh copy. New items start with sensible dates.
+- **Test Arla.** One button runs a short, self-contained check of the assistant with your own
+  models and reports what worked.
+- **Cloud models your way.** Add keys for the services you use, see the models each key can
+  reach, and set usage budgets so nothing runs away.
+- **Personas with a full character sheet**, a movable orb that opens Arla from anywhere on
+  screen (even outside the app), sticky notes on desktop and phone, a Research page that keeps
+  sources with trust labels, and an Image Studio for generating and finding pictures.
+- **A safer phone link.** The Android app's connection to your computer is now encrypted, and
+  the phone reconnects on its own when you come back to it.
+- **Looking after your data.** Manual, nightly and before-update backups on the desktop, and a
+  phone backup you can save to your computer.
 
 ## Screenshots
 
@@ -144,8 +174,17 @@ goes to the cloud unless you connect a service yourself.
 
 ## Roadmap to 1.0
 
-Arla is in active, daily development. What's left before a 1.0 release: a public store listing with the assets above, a clean-machine install pass, and crash/error
-reporting wired end to end. Nothing here is a promise of a date — it's what's actually left.
+Arla is in active, daily development. Planned next, before 1.0:
+
+- **A life cycle for action items:** Not started, Needs your input, Running, In progress and Done,
+  with Start doing the right thing for who the item is for, and items that repeat daily, weekly
+  or monthly while keeping their history.
+- **Today, Week, Month and Year views** on the Today panel, and a day schedule that respects your
+  own hours: work stays in work time and personal time stays yours.
+- **Timeline bars** that show how long a goal or plan runs, from its start to its next checkpoint.
+- Then the release checklist: a clean-machine install pass and the store listing.
+
+Nothing here is a promise of a date — it's what's actually left.
 
 ## Privacy and terms
 
