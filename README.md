@@ -9,7 +9,6 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Android-5b4bd6)
 ![Status](https://img.shields.io/badge/status-preview%200.1.0%20%C2%B7%201.0%20in%20progress-orange)
 ![License](https://img.shields.io/badge/license-proprietary-lightgrey)
-[![Download](https://img.shields.io/badge/download-latest%20release-5b4bd6?style=flat&logo=windows)](../../releases/latest)
 
 </div>
 
@@ -39,7 +38,7 @@ common jobs come out right the first time, and keeps her own memory tidy.
 ## What's new since 0.1.0
 
 Arla has been in daily development since the 0.1.0 preview. These changes are finished and in
-testing; they reach the download with the 1.0 release.
+testing; they arrive with the 1.0 release.
 
 - **One conversation everywhere.** The same conversation continues on your computer and your
   phone, including what you say to the phone while the computer is off. Arla notes which model
@@ -76,15 +75,10 @@ testing; they reach the download with the 1.0 release.
 </tr>
 </table>
 
-## Download
+## Availability
 
-**Windows:** get the latest `Arla-Setup-*.exe` from [Releases](../../releases/latest).
-
-Windows may warn that the installer is from an unknown publisher, because it isn't signed with a
-paid certificate yet. Choose **More info → Run anyway** if you're happy to continue.
-
-**Android:** coming to the Play Store. Until then, install the `.apk` from
-[Releases](../../releases/latest).
+Arla isn't available for download yet: it's in private testing. This page will say how to get it
+when it is.
 
 ## What it does
 
@@ -197,4 +191,4 @@ irishwarhoundgaming@gmail.com
 
 ---
 
-<sub>© 2026 IrishwarhoundGaming. Arla is proprietary software; this repository holds its public downloads, documents and issue tracker, not its source code.</sub>
+<sub>© 2026 IrishwarhoundGaming. Arla is proprietary software; this repository holds its public documents and issue tracker, not its source code or downloads.</sub>
