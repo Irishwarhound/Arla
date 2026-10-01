@@ -1,10 +1,10 @@
 # Arla Terms of Service
 
-**Version 1.0 · Effective September 17, 2026**
+**Version 1.0 · Effective October 1, 2026**
 
 _Have a licensed Idaho attorney review this before you sell Arla. It was drafted with AI help and is not legal advice._
 
-These Terms of Service ("Terms") are an agreement between you and IrishwarhoundGaming ("we", "us", "our"). They cover the Arla desktop app, the Arla mobile app, and any related websites, updates, skills, templates and documents (together, "Arla" or the "Software").
+These Terms of Service ("Terms") are an agreement between you and Irishwarhound LLC ("we", "us", "our"). They cover the Arla desktop app, the Arla mobile app, and any related websites, updates, skills, templates and documents (together, "Arla" or the "Software").
 
 **By installing, opening or using Arla, you agree to these Terms. If you don't agree, don't use Arla.** If you use Arla for an organization, you confirm you are authorized to accept these Terms for it, and "you" includes that organization.
 
@@ -122,10 +122,10 @@ You will follow all export-control and sanctions laws that apply to Arla and to 
 
 ## 21. Disputes, arbitration and class action waiver
 21.1 **Governing law.** These Terms are governed by the laws of the State of Idaho, USA, without regard to its conflict-of-laws rules, except where the law of your place of residence requires otherwise.
-21.2 **Informal resolution first.** Before starting a claim, you agree to contact us at irishwarhoundgaming@gmail.com and try to resolve it informally for at least 60 days.
+21.2 **Informal resolution first.** Before starting a claim, you agree to contact us at irishwarhound@gmail.com and try to resolve it informally for at least 60 days.
 21.3 **Arbitration.** Where the law allows, any dispute that isn't resolved informally will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules under its rules, in Ada County, Idaho (or by phone or video, at your choice), instead of in court, except that either party may bring an individual claim in small-claims court, or seek an injunction for misuse of intellectual property.
 21.4 **Class action waiver.** Where the law allows, **you and we each agree to bring claims only individually, not as a plaintiff or class member in any class, collective or representative action**, and the arbitrator may not combine claims.
-21.5 **Opting out.** You may opt out of arbitration within 30 days of first accepting these Terms by emailing irishwarhoundgaming@gmail.com with your name and a clear statement that you opt out.
+21.5 **Opting out.** You may opt out of arbitration within 30 days of first accepting these Terms by emailing irishwarhound@gmail.com with your name and a clear statement that you opt out.
 21.6 **Time limit.** Where the law allows, any claim must be brought within one year after it arises, or it is permanently barred.
 21.7 If you live in a country whose consumer laws give you rights that these sections can't limit, those rights still apply.
 
@@ -142,4 +142,4 @@ We may update these Terms. If a change is material, we will show the new version
 23.7 **Language.** If these Terms are translated, the English version controls where the law allows.
 
 ## 24. Contact
-IrishwarhoundGaming · Idaho, USA · irishwarhoundgaming@gmail.com
+Irishwarhound LLC (Cody Dean) · Idaho, USA · irishwarhound@gmail.com
