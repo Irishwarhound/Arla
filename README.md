@@ -187,4 +187,4 @@ irishwarhound@gmail.com
 
 ---
 
-<sub>© 2026 Irishwarhound LLC. Arla is proprietary software; this repository holds its public documents and issue tracker, not its source code or downloads.</sub>
+<sub>© 2026 Irishwarhound. Arla is proprietary software; this repository holds its public documents and issue tracker, not its source code or downloads.</sub>

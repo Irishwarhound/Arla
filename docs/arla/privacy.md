@@ -2,7 +2,7 @@
 
 **Version 1.0 · Effective October 1, 2026**
 
-Irishwarhound LLC ("we", "us") makes Arla for Windows and Android. Arla has no account with us, advertising, analytics, or server that receives your conversations. We do not receive automatic usage or crash reports. If you contact us, we receive what you choose to send.
+Cody Dean, publishing as Irishwarhound ("we", "us") makes Arla for Windows and Android. Arla has no account with us, advertising, analytics, or server that receives your conversations. We do not receive automatic usage or crash reports. If you contact us, we receive what you choose to send.
 
 ## What stays on your devices
 
@@ -40,4 +40,4 @@ Arla asks for device permissions when a feature needs them: camera for an Inbox 
 
 Arla is not directed at children under 13. Device security protects local records, and operating-system protected storage protects keys. No system is perfectly secure. We will date material policy changes and describe changes to data sharing in release notes.
 
-**Contact:** Irishwarhound LLC (Cody Dean) · Idaho, USA · irishwarhound@gmail.com
+**Contact:** Irishwarhound (Cody Dean) · Idaho, USA · irishwarhound@gmail.com

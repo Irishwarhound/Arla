@@ -4,7 +4,7 @@
 
 _Have a licensed Idaho attorney review this before you sell Arla. It was drafted with AI help and is not legal advice._
 
-These Terms of Service ("Terms") are an agreement between you and Irishwarhound LLC ("we", "us", "our"). They cover the Arla desktop app, the Arla mobile app, and any related websites, updates, skills, templates and documents (together, "Arla" or the "Software").
+These Terms of Service ("Terms") are an agreement between you and Cody Dean, publishing as Irishwarhound ("we", "us", "our"). They cover the Arla desktop app, the Arla mobile app, and any related websites, updates, skills, templates and documents (together, "Arla" or the "Software").
 
 **By installing, opening or using Arla, you agree to these Terms. If you don't agree, don't use Arla.** If you use Arla for an organization, you confirm you are authorized to accept these Terms for it, and "you" includes that organization.
 
@@ -142,4 +142,4 @@ We may update these Terms. If a change is material, we will show the new version
 23.7 **Language.** If these Terms are translated, the English version controls where the law allows.
 
 ## 24. Contact
-Irishwarhound LLC (Cody Dean) · Idaho, USA · irishwarhound@gmail.com
+Irishwarhound (Cody Dean) · Idaho, USA · irishwarhound@gmail.com
