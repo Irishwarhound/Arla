@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="build/icon.png" width="88" alt="Arla" />
+<img src="docs/assets/arla-192.png" width="88" alt="Arla" />
 
 # Arla
 
@@ -77,8 +77,8 @@ testing; they arrive with the 1.0 release.
 
 ## Availability
 
-Arla isn't available for download yet: it's in private testing. This page will say how to get it
-when it is.
+Arla isn't available for download yet: it's in private testing. See [irishwarhound.com/arla](https://irishwarhound.com/arla/)
+for everything it does and to hear when it's ready.
 
 ## What it does
 
@@ -168,22 +168,18 @@ goes to the cloud unless you connect a service yourself.
 
 ## Roadmap to 1.0
 
-Arla is in active, daily development. Planned next, before 1.0:
+The 1.0 features are built and in testing: a life cycle for action items (Not started, Needs your
+input, Running, In progress, Done) with a Start button that does the right thing, repeating items
+that keep their history, Today, Week, Month and Year views with a day schedule that respects your
+own hours, and Timeline bars that show how long each item runs.
 
-- **A life cycle for action items:** Not started, Needs your input, Running, In progress and Done,
-  with Start doing the right thing for who the item is for, and items that repeat daily, weekly
-  or monthly while keeping their history.
-- **Today, Week, Month and Year views** on the Today panel, and a day schedule that respects your
-  own hours: work stays in work time and personal time stays yours.
-- **Timeline bars** that show how long a goal or plan runs, from its start to its next checkpoint.
-- Then the release checklist: a clean-machine install pass and the store listing.
-
-Nothing here is a promise of a date — it's what's actually left.
+What's left before 1.0 is the release itself: a clean-machine install pass, purchase and licence
+keys, and the store listing. Nothing here is a promise of a date — it's what's actually left.
 
 ## Privacy and terms
 
-- [Privacy policy](https://irishwarhound.github.io/arla/privacy.html)
-- [Terms of service](https://irishwarhound.github.io/arla/terms.html)
+- [Privacy policy](https://irishwarhound.com/arla/privacy.html)
+- [Terms of service](https://irishwarhound.com/arla/terms.html)
 
 ## Support
 

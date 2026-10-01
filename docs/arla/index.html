@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arla · one assistant for your computer and phone</title>
+<meta name="description" content="Arla is a personal AI assistant for Windows and Android. One conversation across your devices that remembers you, plans with you and does the work, with your data on your own devices.">
+<meta property="og:title" content="Arla · one assistant for your computer and phone">
+<meta property="og:description" content="One conversation across your devices that remembers you, plans with you and does the work.">
+<meta property="og:image" content="https://irishwarhound.com/assets/arla-512.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0e1a">
+<link rel="icon" type="image/png" href="../assets/arla-192.png">
+<style>
+@font-face{font-family:'Sacramento';src:url('../assets/sacramento.woff2') format('woff2');font-display:swap}
+:root{
+  --bg:#0b0e1a;--bg-2:#11152a;--panel:rgba(255,255,255,.045);--panel-line:rgba(255,255,255,.09);
+  --ink:#eef0f8;--muted:#a3aac4;--faint:#7c84a3;
+  --violet:#8f7dff;--blue:#5a8dff;--orange:#ff9a4a;--teal:#3fd0c4;
+  --radius:18px;--wrap:68rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--violet)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--bg-2);padding:.5rem 1rem;z-index:10}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:5;background:rgba(11,14,26,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--panel-line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:4rem;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink)}
+.brand img{width:34px;height:34px}
+.brand span{font-family:'Sacramento',cursive;font-size:2rem;line-height:1;padding-top:.2rem}
+nav.links{display:flex;gap:1.4rem;font-size:.95rem}
+nav.links a{color:var(--muted);text-decoration:none}
+nav.links a:hover{color:var(--ink)}
+@media (max-width:720px){nav.links{display:none}}
+
+/* Hero */
+.hero{position:relative;padding:5.5rem 0 4.5rem;text-align:center;overflow:hidden;isolation:isolate}
+.glow{position:absolute;inset:0 -20% auto;height:44rem;pointer-events:none;z-index:-1;
+  background:radial-gradient(38% 42% at 32% 38%,rgba(90,141,255,.22),transparent 70%),radial-gradient(32% 38% at 70% 30%,rgba(255,154,74,.16),transparent 70%),radial-gradient(36% 40% at 56% 64%,rgba(143,125,255,.2),transparent 70%),radial-gradient(28% 34% at 22% 70%,rgba(63,208,196,.12),transparent 70%)}
+.hero img.logo{width:min(15rem,52vw);height:auto;filter:drop-shadow(0 18px 48px rgba(143,125,255,.35))}
+.hero h1{margin:1.2rem auto .2rem;font-family:'Sacramento',cursive;font-weight:400;font-size:clamp(4.2rem,11vw,6.5rem);line-height:1;letter-spacing:.01em}
+.hero .pitch{margin:.6rem auto 0;max-width:40rem;font-size:clamp(1.3rem,3.2vw,1.75rem);line-height:1.35;font-weight:650;letter-spacing:-.01em}
+.hero .sub{margin:1.1rem auto 0;max-width:38rem;color:var(--muted);font-size:1.08rem}
+.cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:650;text-decoration:none;font-size:1rem;border:1px solid transparent}
+.btn.primary{background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;box-shadow:0 10px 30px rgba(110,110,255,.3)}
+.btn.ghost{color:var(--ink);border-color:var(--panel-line);background:var(--panel)}
+.btn.small{padding:.5rem 1rem;font-size:.92rem}
+.status{margin-top:1.2rem;color:var(--faint);font-size:.92rem}
+.pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+.pill{font-size:.85rem;color:var(--muted);border:1px solid var(--panel-line);background:var(--panel);border-radius:999px;padding:.3rem .85rem}
+
+/* Sections */
+section{padding:4.5rem 0;scroll-margin-top:3.5rem}
+.kicker{color:var(--orange);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 1rem;max-width:44rem}
+.lede{color:var(--muted);font-size:1.1rem;max-width:44rem;margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.problem p{color:var(--muted);margin:0 0 1rem}
+.problem p strong{color:var(--ink)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.4rem}
+.step .n{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;font-weight:700;font-size:.95rem;color:#0b0e1a;margin-bottom:.8rem}
+.step:nth-child(1) .n{background:var(--blue)}.step:nth-child(2) .n{background:var(--orange)}.step:nth-child(3) .n{background:var(--teal)}
+.step h3{margin:0 0 .35rem;font-size:1.12rem}
+.step p{margin:0;color:var(--muted);font-size:.98rem}
+.say{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.say span{font-size:.95rem;background:rgba(143,125,255,.12);border:1px solid rgba(143,125,255,.28);color:#d9d3ff;border-radius:14px 14px 14px 4px;padding:.45rem .9rem}
+
+/* Features */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.4rem}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.5rem 1.4rem;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--c,var(--violet))}
+.card .ic{width:2.4rem;height:2.4rem;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--c,var(--violet)) 18%,transparent);margin-bottom:.9rem}
+.card .ic svg{width:1.3rem;height:1.3rem;stroke:var(--c,var(--violet));fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 .7rem;font-size:1.15rem}
+.card ul{margin:0;padding:0;list-style:none}
+.card li{position:relative;padding-left:1.1rem;margin:.5rem 0;color:var(--muted);font-size:.96rem;line-height:1.5}
+.card li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:.4rem;border-radius:50%;background:var(--c,var(--violet));opacity:.8}
+.card li b{color:var(--ink);font-weight:600}
+
+/* Different */
+.diff{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.2rem}
+@media (max-width:980px){.diff{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.diff{grid-template-columns:1fr}}
+.diff div{border-left:2px solid var(--c);padding:.2rem 0 .2rem 1rem}
+.diff h3{margin:0 0 .3rem;font-size:1.02rem}
+.diff p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
+
+/* Platforms + status */
+.plat{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+@media (max-width:720px){.plat{grid-template-columns:1fr}}
+.plat .card h3{margin-bottom:.3rem}
+.plat .card p{color:var(--muted);margin:0;font-size:.98rem}
+.honest{margin-top:2.4rem;background:linear-gradient(135deg,rgba(255,154,74,.08),rgba(143,125,255,.06));border:1px solid rgba(255,154,74,.22);border-radius:var(--radius);padding:1.6rem 1.5rem}
+.honest h3{margin:0 0 .6rem}
+.honest ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.honest li{margin:.4rem 0}
+.honest b{color:var(--ink)}
+
+/* FAQ */
+details{border-bottom:1px solid var(--panel-line);padding:1rem 0}
+details:first-of-type{border-top:1px solid var(--panel-line)}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--violet);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{color:var(--muted);margin:.6rem 0 0;max-width:46rem}
+
+/* Closing */
+.closing{text-align:center;padding:5rem 0}
+.closing h2{margin:0 auto 1rem}
+.closing p{color:var(--muted);margin:0 auto;max-width:34rem}
+
+/* Everything it does */
+.all{columns:2 22rem;column-gap:2.5rem;margin-top:2.2rem}
+.all .grp{break-inside:avoid;margin:0 0 2rem}
+.all h3{margin:0 0 .6rem;font-size:1.08rem;display:flex;align-items:center;gap:.55rem}
+.all h3::before{content:"";width:.7rem;height:.7rem;border-radius:3px;background:var(--c,var(--violet))}
+.all ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem;line-height:1.55}
+.all li{margin:.38rem 0}
+.all li b{color:var(--ink);font-weight:600}
+.services{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+.services span{font-size:.85rem;border:1px solid var(--panel-line);background:var(--panel);border-radius:999px;padding:.2rem .7rem;color:var(--muted)}
+.crumb{color:var(--faint);font-size:.9rem;text-decoration:none;margin-left:.3rem}
+.crumb:hover{color:var(--ink)}
+
+@media (max-width:640px){section{padding:3rem 0}.hero{padding:3.5rem 0 3rem}.closing{padding:3.5rem 0}}
+
+footer{border-top:1px solid var(--panel-line);padding:2rem 0 3rem;color:var(--faint);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:none;margin-right:1.2rem}
+footer a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <div style="display:flex;align-items:center"><a class="brand" href="./" aria-label="Arla home"><img src="../assets/arla-192.png" alt="" width="34" height="34"><span>Arla</span></a><a class="crumb" href="../">by Irishwarhound</a></div>
+    <nav class="links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#everything">Everything it does</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn ghost small" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Get notified</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <img class="logo" src="../assets/arla-512.png" alt="The Arla logo: four faces in blue, orange, purple and teal around a glowing brain" width="512" height="512">
+      <h1>Arla</h1>
+      <p class="pitch">One assistant, one conversation, on your computer and your phone.</p>
+      <p class="sub">Arla remembers you, plans with you, and actually does the work, using the AI models you already have. Your data stays on your own devices.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Tell me when it's ready</a>
+        <a class="btn ghost" href="#features">See what she does</a>
+      </div>
+      <p class="status">In private testing. Not available for download yet.</p>
+      <div class="pills" aria-label="At a glance">
+        <span class="pill">Windows desktop</span><span class="pill">Android phone app</span><span class="pill">Bring your own AI</span><span class="pill">No account with us</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="problem">
+    <div class="wrap split problem">
+      <div>
+        <p class="kicker">The problem</p>
+        <h2>Your AI forgets you. Your plans live somewhere else.</h2>
+      </div>
+      <div>
+        <p>Most people who use AI juggle separate chat windows, apps and accounts. <strong>Each one forgets you between sessions</strong>, none of them knows your projects, and the answers stay on the screen: you still have to go and do the work.</p>
+        <p>Your plans live in one app, your notes in another, your documents in a third, and the AI sees none of them. On your phone, it starts over again.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="kicker">How Arla solves it</p>
+      <h2>Talk plainly. She keeps the thread and does the work.</h2>
+      <p class="lede">Arla sits on top of your projects, goals, tasks, notes, documents and day, and connects to the AI models you choose.</p>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><h3>Connect what you have</h3><p>Use models on your own computer, free cloud services, or the paid AI accounts you already have. Mix them freely, with usage limits.</p></div>
+        <div class="step"><span class="n">2</span><h3>Say what you want</h3><p>One continuous conversation on your computer and your phone. Interrupt any time: a correction folds into the work in progress.</p></div>
+        <div class="step"><span class="n">3</span><h3>She does it, with an Undo</h3><p>Arla makes the change instead of describing it, asks first when it matters, and everything she changes can be taken back.</p></div>
+      </div>
+      <div class="say" aria-label="Things you can say">
+        <span>"Add a goal to read 12 books this year."</span>
+        <span>"What should I focus on today?"</span>
+        <span>"Switch to light mode."</span>
+        <span>"Remind me to call the bank at 3."</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <p class="kicker">What Arla does today</p>
+      <h2>Everything here is built, tested, and running now.</h2>
+      <p class="lede">No roadmap promises. These features work today on Windows and Android.</p>
+      <div class="grid">
+
+        <article class="card" style="--c:var(--violet)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div>
+          <h3>Conversation and models</h3>
+          <ul>
+            <li><b>One conversation</b> on computer and phone, including what you say while the computer is off.</li>
+            <li><b>The best available model answers.</b> If one fails, another takes over, and each reply shows which model answered.</li>
+            <li>Works with Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, Groq, OpenRouter and any OpenAI-compatible service.</li>
+            <li><b>Voice:</b> speak and hear replies. On the desktop, speech runs on your own computer.</li>
+            <li>Brain, Direct chat and Relay for power users: chain models to draft, critique and polish.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--orange)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+          <h3>Plans, goals, tasks and the Timeline</h3>
+          <ul>
+            <li><b>Arla asks before she guesses:</b> one short question for anything a new task or goal is missing.</li>
+            <li><b>Start does the right thing.</b> Arla runs her own items; for yours, she shows just what you need to do.</li>
+            <li><b>Repeating items</b> (daily, weekly, monthly) keep their history, and a missed turn says Missed.</li>
+            <li><b>A Timeline</b> with Now, a clear Overdue mark, and bars that show how long each item runs.</li>
+            <li>Checks and routines: one-click project tests, and scheduled jobs on local models that cost nothing.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--teal)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+          <h3>Today and your day</h3>
+          <ul>
+            <li><b>Today, Week, Month and Year</b> calendars across all your projects.</li>
+            <li><b>Shrink to "Next up":</b> the next three things, each with Start.</li>
+            <li><b>My day:</b> set your hours. Work stays in work time, personal stays yours, and what didn't fit is listed.</li>
+            <li>She never moves an item you gave a time yourself.</li>
+            <li><b>Learns gently:</b> she suggests a change only after a steady pattern, says why, and asks once.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--blue)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z"/><path d="M19 17v4H6"/></svg></div>
+          <h3>Memory, Library and Research</h3>
+          <ul>
+            <li><b>Memory</b> keeps a small, ranked picture of what matters, and tidies itself.</li>
+            <li><b>Library:</b> your notes, PDFs and code, searchable by every model. Secret and backup files are left out on purpose.</li>
+            <li><b>Bring your history:</b> import chats from ChatGPT, Claude and Gemini.</li>
+            <li><b>Research</b> answers with numbered sources, labelled by publisher, saved for later.</li>
+            <li><b>Inbox:</b> drop in an idea, link or file, and Arla files it.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--violet)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 19"/></svg></div>
+          <h3>Personas, Deck and more</h3>
+          <ul>
+            <li><b>Personas</b> with their own model, voice and instructions: Code Buddy, Muse, Critic, Scout, or your own.</li>
+            <li><b>Deck:</b> five chats side by side. Ask several models the same thing and compare.</li>
+            <li><b>Sticky notes</b> on a board, on Home, or always on top. Also on the phone.</li>
+            <li><b>Image Studio:</b> generate and save pictures with a connected service.</li>
+            <li>Nine themes, including a light one, and a Home built from the panels you choose.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--teal)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+          <h3>The phone app</h3>
+          <ul>
+            <li><b>The same conversation</b>, paired to your computer over your own network, on an encrypted link.</li>
+            <li><b>Works without the computer:</b> an on-device AI model, fully offline once downloaded, or a cloud service you connect.</li>
+            <li>Messages sent offline sync when you're back.</li>
+            <li>Your own Home with Today, Timeline, goals, notes and personas, plus a quick orb.</li>
+            <li>Voice that can stay on the phone, and backups saved to your computer.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="everything">
+    <div class="wrap">
+      <p class="kicker">Everything Arla can do</p>
+      <h2>The complete list.</h2>
+      <p class="lede">Every feature below is in the app today, organised the way the app is.</p>
+      <div class="all">
+
+        <div class="grp" style="--c:var(--violet)">
+          <h3>Talking with Arla</h3>
+          <ul>
+            <li><b>One conversation</b> across your computer and phone, including turns made on the phone while the computer is off. Long conversations stay quick: Arla keeps a short running summary instead of re-reading everything.</li>
+            <li><b>Your strongest connected model answers.</b> If it fails, the next one takes over; with none reachable, a local model answers and any changes wait. Each reply shows the model that actually answered.</li>
+            <li><b>Talk over her:</b> a correction mid-reply folds into the work in progress, and an unrelated request waits its turn.</li>
+            <li><b>Asks first</b> before an action your words didn't request or work she proposed herself, and learns your phrasing over time.</li>
+            <li><b>Voice:</b> speak and hear replies. On the computer, speech recognition and the voice run locally.</li>
+            <li><b>The orb:</b> a movable orb opens Arla anywhere in the app; drag it out of the window for a floating orb with its own chat pop-up.</li>
+            <li><b>Bigger jobs:</b> for a project-sized request, Arla drafts a plan with her team for you to review before anything runs.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--orange)">
+          <h3>Arla on your computer</h3>
+          <ul>
+            <li><b>Changes things for you:</b> settings, pages, Home layout, projects, personas, your Inbox.</li>
+            <li><b>Power:</b> sleep, lock, restart or shut down, always with a countdown you can cancel; wake the PC at a set time.</li>
+            <li><b>Reminders</b> and requests scheduled for later ("at 9, summarise my inbox"), each one cancellable.</li>
+            <li><b>Hands for the AI:</b> work with files in your workspace, run Python, read public web pages, and look at the screen when you ask.</li>
+            <li><b>Coding help:</b> hand work to Claude Code on your own Claude Code sign-in, and open a PowerShell, Command Prompt or Git Bash terminal inside Arla.</li>
+            <li><b>Approvals:</b> when an action needs your OK, approve it from any paired device; file edits and commands are approved on the computer only.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--blue)">
+          <h3>Many minds</h3>
+          <ul>
+            <li><b>Brain:</b> a direct chat with your strongest connected model.</li>
+            <li><b>Deck:</b> five chats side by side, to compare models or personas on the same question.</li>
+            <li><b>Direct chat:</b> one conversation pinned to one model of your choice.</li>
+            <li><b>Relay:</b> chain models step by step: draft with one, critique with a second, polish with a third.</li>
+            <li><b>Personas:</b> Assistant, Code Buddy, Muse, Critic, Scout and Caretaker to start, each with its own model, temperature and instructions. Make your own with a full character sheet and icon.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--teal)">
+          <h3>Projects and action items</h3>
+          <ul>
+            <li><b>Projects</b> each hold goals, tasks, plans, checks, routines, an Inbox, a Timeline and a Work log, and can point at a folder on your computer.</li>
+            <li><b>Clear stages:</b> Not started, Needs your input, Running, In progress, Done. <b>Start</b> runs Arla's items and shows you just what to do on yours.</li>
+            <li><b>Details that matter:</b> who it's for, priority, start and due dates, a time and length, and repeats (daily, weekly on chosen days, monthly or every few days, with an optional end).</li>
+            <li><b>Arla asks</b> one short question when a new item is missing something it needs.</li>
+            <li><b>Manage in place:</b> edit any card (even when finished), delete with Undo, and run a finished plan again while keeping its results.</li>
+            <li><b>A plan keeper</b> re-paces your plans from real progress (finished work, saved files, passing checks) every couple of hours.</li>
+            <li><b>Undo</b> for everything Arla changes; large batches wait on a review card.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--orange)">
+          <h3>Timeline, Today and your day</h3>
+          <ul>
+            <li><b>Timeline:</b> a Now range around today, one Overdue mark, bars from start to the next checkpoint, several open cards, and drag to move a due date.</li>
+            <li><b>Today panel:</b> Today, Week, Month and Year calendars across all projects; it shows more as it grows and shrinks to "Next up" with one click. Click it to open its own window.</li>
+            <li><b>My day:</b> wake time, work hours and wind-down; each project marked Work, Personal or Both. Items are placed in fitting slots, and anything that doesn't fit is listed.</li>
+            <li><b>Gentle learning:</b> only after a steady new pattern, she says why and asks once. She never moves a time you set.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--violet)">
+          <h3>Capture and notes</h3>
+          <ul>
+            <li><b>Inbox:</b> drop in text, links and files (or a photo on the phone) and Arla files each one; a quick-capture window is always a click away.</li>
+            <li><b>Sticky notes:</b> a Notes board, notes pinned to Home, and an always-on-top note; also on the phone, with offline edits that sync later.</li>
+            <li><b>Routines:</b> small scheduled jobs on local models only, so they cost nothing: Morning focus, End of day summary and Weekly goal check to start.</li>
+            <li><b>Checks:</b> one-click tests that confirm a project still works; a command is always shown to you first.</li>
+            <li><b>Work log:</b> a live board of project work and of replies by service and model.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--blue)">
+          <h3>Memory, Library and Research</h3>
+          <ul>
+            <li><b>Memory:</b> a small, ranked picture of you and your projects that tidies itself; edit, pin or delete anything.</li>
+            <li><b>Library:</b> notes, PDFs, Word documents and code from folders you choose (and each project's folder), searchable by every model. Backup, signing and secret files are always skipped.</li>
+            <li><b>Bring your history:</b> import chats from ChatGPT, Claude and Gemini; they become searchable notes, and the lasting facts go to memory.</li>
+            <li><b>Research:</b> answers with numbered sources, labelled by publisher; check a source, save research with tags, and search it later. It uses your connected models' web search, with Tavily as a backup.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--teal)">
+          <h3>Workshop</h3>
+          <ul>
+            <li><b>Models:</b> download and manage local models (kept on your graphics card so replies stay fast), connect cloud services, and set usage budgets.</li>
+            <li><b>Skills:</b> small, pre-checked recipes for common jobs. Arla writes new ones as she learns, and each must pass its own tests before it's saved. Switch any off, export or import them.</li>
+            <li><b>Specialists:</b> tiny local models that each do one job fast, taking routine work off the bigger ones.</li>
+            <li><b>Tools:</b> connect other tools (MCP servers), start and stop them, and approve what each may touch.</li>
+            <li><b>Image Studio:</b> generate pictures (Pollinations, Google Gemini, Hugging Face), search free images (Openverse, Pexels), and save them with their licence labels.</li>
+            <li><b>Test Arla:</b> one button runs a short self-check with your own models and reports what worked.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--violet)">
+          <h3>The phone app</h3>
+          <ul>
+            <li><b>The same conversation and projects</b> as your computer, paired over your own network on an encrypted link.</li>
+            <li><b>Works on its own:</b> download an on-device model and chat fully offline, or use a cloud service whose key is on the phone (OpenRouter sign-in included). Offline messages and edits sync later.</li>
+            <li><b>Your Home:</b> a Daily Brief, quick capture, chat, the Today calendar with My day, goals, Timeline, personas, notes, Inbox and health panels; it can mirror your computer's Home and accent colour.</li>
+            <li><b>Arla runs the app from chat:</b> "open my notes", "switch to my work project", "add a goal".</li>
+            <li><b>A team on the phone:</b> watch specialists work on a bigger request, step by step.</li>
+            <li><b>Camera to Inbox, voice</b> that can stay on the phone, a quick orb, and backups saved to your computer.</li>
+            <li><b>What it's worth:</b> an estimate of the time and money Arla saved you, with its assumptions shown.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--orange)">
+          <h3>Make it yours, and stay in control</h3>
+          <ul>
+            <li><b>Nine themes</b> including a light one, accent colours, rename the app's labels, and a Home built from the panels you choose.</li>
+            <li><b>Control page:</b> what Arla may do, what she did, which model answered, what she's learned, and what that learning costs in memory and disk.</li>
+            <li><b>Devices:</b> pair phones, see what's connected, and refuse older, less secure links.</li>
+            <li><b>Backups:</b> manual, nightly and before every update, with restore; phone backups kept separately.</li>
+            <li><b>Pop Home panels out</b> into their own windows, and they reopen where you left them; full keyboard access; spelling suggestions on right-click.</li>
+            <li><b>Stays out of the way:</b> closing the window keeps Arla in the system tray.</li>
+          </ul>
+        </div>
+
+      </div>
+      <h3 style="margin:1rem 0 .2rem">Works with</h3>
+      <div class="services" aria-label="Supported AI services">
+        <span>Ollama (local)</span><span>LM Studio (local)</span><span>On-device models (phone)</span><span>OpenAI</span><span>Anthropic</span><span>Google Gemini</span><span>Groq</span><span>OpenRouter</span><span>Any OpenAI-compatible service</span><span>Tavily (research)</span><span>Claude Code</span><span>MCP tools</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap split">
+      <div>
+        <p class="kicker">Privacy and control</p>
+        <h2>Yours, on your devices.</h2>
+        <p class="lede">There's no account with us, and none of our servers ever sees your conversations. A cloud model only gets a request when you've connected that service yourself.</p>
+      </div>
+      <div class="card" style="--c:var(--teal)">
+        <ul>
+          <li><b>Stored on your devices.</b> No advertising, analytics or tracking.</li>
+          <li><b>Asks first</b> before an action you didn't request, and before any command runs on your computer.</li>
+          <li><b>Undo</b> for everything Arla changes. A large batch waits for your OK.</li>
+          <li><b>See what happened:</b> which model answered, what Arla did, and what she's learning.</li>
+          <li><b>Backups:</b> manual, nightly and before every update on the desktop; phone backups to your computer.</li>
+        </ul>
+        <p style="margin:1rem 0 0;font-size:.92rem"><a href="./privacy.html">Read the privacy policy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="different">
+    <div class="wrap">
+      <p class="kicker">What makes Arla different</p>
+      <h2>Not another chat window.</h2>
+      <div class="diff">
+        <div style="--c:var(--violet)"><h3>One thread</h3><p>One conversation follows you between computer and phone.</p></div>
+        <div style="--c:var(--orange)"><h3>It acts</h3><p>Arla changes things for you, and you can take it back.</p></div>
+        <div style="--c:var(--blue)"><h3>Your models</h3><p>Local, free and paid services side by side, with limits.</p></div>
+        <div style="--c:var(--teal)"><h3>Your time</h3><p>A day that keeps work in work hours, and learning that asks first.</p></div>
+        <div style="--c:var(--violet)"><h3>Your data</h3><p>It lives on your devices, not on our servers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platforms">
+    <div class="wrap">
+      <p class="kicker">Platforms</p>
+      <h2>Windows and Android, working together.</h2>
+      <div class="plat">
+        <div class="card" style="--c:var(--blue)"><h3>Windows desktop</h3><p>Windows 10 or 11. Optional: <a href="https://ollama.com" rel="noopener">Ollama</a> (free) for AI models on your own computer. Without it, Arla uses the cloud services you connect.</p></div>
+        <div class="card" style="--c:var(--teal)"><h3>Android phone app</h3><p>Pairs with your Windows computer for the same conversation, projects and day, and keeps working on its own when the computer is out of reach.</p></div>
+      </div>
+      <div class="honest">
+        <h3>Where things stand</h3>
+        <ul>
+          <li><b>Not available yet:</b> Arla is in private testing. Leave your email and we'll tell you when it's ready.</li>
+          <li><b>Pricing</b> hasn't been decided.</li>
+          <li>Windows and Android only for now: no Mac, Linux or iPhone.</li>
+          <li>The Windows installer isn't code-signed yet, so Windows may show a SmartScreen warning. The Android app isn't in the Play Store yet.</li>
+          <li>Arla's actions use a connected cloud model. Without one she still answers with a local model, and changes wait until a cloud model is back.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <p class="kicker">Questions</p>
+      <h2>Good to know</h2>
+      <details><summary>Do I need to pay for AI services?</summary><p>No. Arla can use free cloud services and models running on your own computer. If you already pay for an AI service, you can connect it too, and set usage limits so nothing runs away.</p></details>
+      <details><summary>Does Arla send my data to you?</summary><p>No. There's no account with us, and we have no server that receives your conversations. Your records stay on your computer and phone. A cloud AI service only receives a request when you've connected it. See the <a href="./privacy.html">privacy policy</a> for the details.</p></details>
+      <details><summary>Can Arla change things without asking?</summary><p>She asks first before an action your words didn't request, and before running a command on your computer. Changes she makes in one go are saved as one step you can undo, and a large batch waits for your OK.</p></details>
+      <details><summary>Does it work offline?</summary><p>The phone app can answer with an on-device model when it's offline, and your messages sync when you're back. On the computer, Arla can answer with a local model; actions wait until a connected cloud model is available.</p></details>
+      <details><summary>When can I get it, and what will it cost?</summary><p>Arla is in private testing, and pricing hasn't been decided. <a href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Email us</a> and we'll let you know when it's ready.</p></details>
+    </div>
+  </section>
+
+  <div class="closing">
+    <div class="wrap">
+      <h2>Less switching. Less forgetting. More done.</h2>
+      <p>Be the first to know when Arla is ready.</p>
+      <div class="cta"><a class="btn primary" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Tell me when it's ready</a></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="mailto:irishwarhound@gmail.com">Contact</a></div>
+    <div>© 2026 <a href="../" style="margin:0">Irishwarhound LLC</a></div>
+  </div>
+</footer>
+</body>
+</html>
