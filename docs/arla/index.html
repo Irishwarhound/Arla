@@ -195,9 +195,10 @@ footer a:hover{color:var(--ink)}
       <p class="sub">Arla remembers you, plans with you, and actually does the work, using the AI models you already have. Your data stays on your own devices.</p>
       <div class="cta">
         <a class="btn primary" href="#beta">Apply for the beta</a>
+        <a class="btn ghost" href="#waitlist">Join the waitlist</a>
         <span class="btn ghost soon" aria-disabled="true" title="Buying opens after the beta">Buy Arla · after the beta</span>
       </div>
-      <p class="status">Arla is in beta. Apply to test it free for 90 days. Buying ($55 once for 2 computers, nothing charged automatically) opens after the beta.</p>
+      <p class="status">Arla is in beta. Apply to test it free for 90 days, or join the waitlist to hear when you can buy it ($55 once for 2 computers, nothing charged automatically).</p>
       <div class="pills" aria-label="At a glance">
         <span class="pill">Windows desktop</span><span class="pill">Android phone app</span><span class="pill">Bring your own AI</span><span class="pill">No account with us</span>
       </div>
@@ -509,6 +510,22 @@ footer a:hover{color:var(--ink)}
     </div>
   </section>
 
+  <section id="waitlist">
+    <div class="wrap">
+      <p class="kicker">Waitlist</p>
+      <h2>Get one email when Arla can be bought</h2>
+      <div class="beta-card">
+        <p>Not ready to test, but want Arla when it's ready? Leave your email and we'll send <b>one</b> email when buying opens. Then we delete your address. No newsletter, no sharing.</p>
+        <form class="beta-form" method="post" action="https://api.irishwarhound.com/waitlist">
+          <label>Email<input type="email" name="email" maxlength="254" autocomplete="email" required></label>
+          <div class="trap" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="consent"><input type="checkbox" name="consent" value="yes" required> <span>Email me once when Arla can be bought. See the <a href="./privacy.html">privacy policy</a>; every email has a link to take you off the list.</span></label>
+          <button class="btn primary" type="submit">Join the waitlist</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section id="beta">
     <div class="wrap">
       <p class="kicker">Beta programme</p>
@@ -562,7 +579,7 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <h2>Less switching. Less forgetting. More done.</h2>
       <p>Arla is in beta. Help shape it: testers get a free 90-day licence.</p>
-      <div class="cta"><a class="btn primary" href="#beta">Apply for the beta</a><span class="btn ghost soon" aria-disabled="true" title="Buying opens after the beta">Buy Arla · after the beta</span></div>
+      <div class="cta"><a class="btn primary" href="#beta">Apply for the beta</a><a class="btn ghost" href="#waitlist">Join the waitlist</a><span class="btn ghost soon" aria-disabled="true" title="Buying opens after the beta">Buy Arla · after the beta</span></div>
     </div>
   </div>
 </main>

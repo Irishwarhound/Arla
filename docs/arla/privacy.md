@@ -1,6 +1,6 @@
 # Arla Privacy Policy
 
-**Version 1.2 · Effective October 2, 2026**
+**Version 1.3 · Effective October 2, 2026**
 
 Cody Dean, publishing as Irishwarhound ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase"; it never receives your conversations, files or records. We do not receive automatic usage or crash reports. If you contact us, we receive what you choose to send.
 
@@ -37,8 +37,9 @@ On Android, Arla stores chats, settings, goals, Inbox items and captured photos,
 - **Beta applications:** if you apply to test Arla, our service keeps what you send in the form (your name, email address, how you'd use Arla, your PC and whether you have an Android phone), when you applied, and a one-way code made from your connection's address (only to limit repeated applications; the address itself isn't stored). Each application is also emailed to us. We use it only to choose testers and to contact you about the beta, and delete it when you ask, or within 12 months after the beta programme ends.
 - **Downloads and hosting:** the website and the download and licence service run on GitHub Pages and Cloudflare, which process your IP address and similar connection data to serve them, under their own policies. We don't use that data to track you. We count installer downloads as a daily total, with nothing about who downloaded.
 - **Website visit counts:** our website (irishwarhound.com, not the apps) uses Cloudflare Web Analytics to count visits. It records which page was viewed, the site you came from, and your browser type and country, with no cookies or other stored identifiers and no fingerprinting, so it cannot follow you across sites or visits. We see only totals.
+- **The waitlist:** if you join the waitlist on the Arla web page, our service keeps your email address and when you joined, only to send you one email when Arla can be bought. We send it through Resend and delete your address as soon as it has gone, or straight away if you use the "take me off the list" link or ask us. A one-way code made from your connection's address limits repeated sign-ups (see "Limits on forms").
 - **Reviews:** if you send a review (from the Arla web page or the app's Help), our service keeps the name you chose to show, your star rating and review, the optional email address you give (never shown; only to contact you about your review, and to check whether you got a free beta licence, which we then mention with your review), whether it came from the website or the app, and when. Each review is emailed to us. Nothing is shown until we approve it; then the name, stars, review and month appear on irishwarhound.com. We remove reviews only for spam, abuse, personal information, fakes or not being about Arla, never for being critical; a removed review is kept with the reason so our moderation can be checked. Ask support@irishwarhound.com and we'll delete your review.
-- **Limits on forms:** to stop floods, the review form and trial reports use a one-way code made from your connection's address and the day; the address itself isn't stored, and the codes are deleted after two days.
+- **Limits on forms:** to stop floods, the review and waitlist forms and trial reports use a one-way code made from your connection's address and the day; the address itself isn't stored, and the codes are deleted after two days.
 
 ## Backups and crash reports
 
