@@ -48,10 +48,11 @@ nav.links a:hover{color:var(--ink)}
 .hero .pitch{margin:.6rem auto 0;max-width:40rem;font-size:clamp(1.3rem,3.2vw,1.75rem);line-height:1.35;font-weight:650;letter-spacing:-.01em}
 .hero .sub{margin:1.1rem auto 0;max-width:38rem;color:var(--muted);font-size:1.08rem}
 .cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:999px;font-weight:650;text-decoration:none;font-size:1rem;border:1px solid transparent}
+.btn{display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;padding:.85rem 1.5rem;border-radius:999px;font-weight:650;text-decoration:none;font-size:1rem;border:1px solid transparent}
 .btn.primary{background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;box-shadow:0 10px 30px rgba(110,110,255,.3)}
 .btn.ghost{color:var(--ink);border-color:var(--panel-line);background:var(--panel)}
 .btn.small{padding:.5rem 1rem;font-size:.92rem}
+.btn.soon{opacity:.5;cursor:not-allowed;filter:grayscale(1)}
 .status{margin-top:1.2rem;color:var(--faint);font-size:.92rem}
 .pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
 .pill{font-size:.85rem;color:var(--muted);border:1px solid var(--panel-line);background:var(--panel);border-radius:999px;padding:.3rem .85rem}
@@ -142,6 +143,28 @@ footer{border-top:1px solid var(--panel-line);padding:2rem 0 3rem;color:var(--fa
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 footer a{color:var(--muted);text-decoration:none;margin-right:1.2rem}
 footer a:hover{color:var(--ink)}
+.beta-card{background:linear-gradient(135deg,rgba(143,125,255,.10),rgba(63,208,196,.06));border:1px solid rgba(143,125,255,.28);border-radius:var(--radius);padding:1.8rem 1.6rem;max-width:44rem}
+.beta-card p{color:var(--muted)}
+.beta-form{display:grid;gap:1rem;margin-top:1.4rem}
+.beta-form label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+.beta-form .hint{font-weight:400;color:var(--faint);font-size:.85rem}
+.beta-form input[type=text],.beta-form input[type=email],.beta-form textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg-2);border:1px solid var(--panel-line);border-radius:10px;padding:.7rem .85rem}
+.beta-form textarea{min-height:6.5rem;resize:vertical}
+.beta-form input:focus-visible,.beta-form textarea:focus-visible,.beta-form button:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.beta-form fieldset{border:0;padding:0;margin:0;display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center}
+.beta-form legend{font-weight:600;font-size:.95rem;margin-bottom:.35rem;padding:0}
+.beta-form .choice{display:flex;gap:.45rem;align-items:center;font-weight:400}
+.beta-form .consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;color:var(--muted);font-size:.92rem}
+.beta-form .consent input{margin-top:.3rem}
+.beta-form .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.beta-form button{justify-self:start;cursor:pointer}
+.review-summary{color:var(--muted);font-size:1.05rem}
+.review-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem;margin:1.4rem 0}
+.review{margin:0;background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.2rem 1.3rem}
+.review-stars{margin:0 0 .4rem;color:var(--orange);letter-spacing:.1em}
+.review blockquote{margin:0 0 .7rem;color:var(--ink);white-space:pre-line;overflow-wrap:anywhere}
+.review figcaption{color:var(--faint);font-size:.9rem;overflow-wrap:anywhere}
+.review-note{color:var(--faint);font-size:.92rem}
 </style>
 </head>
 <body>
@@ -155,9 +178,10 @@ footer a:hover{color:var(--ink)}
       <a href="#features">Features</a>
       <a href="#everything">Everything it does</a>
       <a href="#privacy">Privacy</a>
+      <a href="#beta">Beta</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn ghost small" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Get notified</a>
+    <span class="btn ghost small soon" aria-disabled="true" title="Buying opens after the beta">Buy · after beta</span>
   </div>
 </header>
 
@@ -170,10 +194,10 @@ footer a:hover{color:var(--ink)}
       <p class="pitch">One assistant, one conversation, on your computer and your phone.</p>
       <p class="sub">Arla remembers you, plans with you, and actually does the work, using the AI models you already have. Your data stays on your own devices.</p>
       <div class="cta">
-        <a class="btn primary" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Tell me when it's ready</a>
-        <a class="btn ghost" href="#features">See what she does</a>
+        <a class="btn primary" href="#beta">Apply for the beta</a>
+        <span class="btn ghost soon" aria-disabled="true" title="Buying opens after the beta">Buy Arla · after the beta</span>
       </div>
-      <p class="status">In private testing. Not available for download yet.</p>
+      <p class="status">Arla is in beta. Apply to test it free for 90 days. Buying ($55 once for 2 computers, nothing charged automatically) opens after the beta.</p>
       <div class="pills" aria-label="At a glance">
         <span class="pill">Windows desktop</span><span class="pill">Android phone app</span><span class="pill">Bring your own AI</span><span class="pill">No account with us</span>
       </div>
@@ -472,13 +496,50 @@ footer a:hover{color:var(--ink)}
       <div class="honest">
         <h3>Where things stand</h3>
         <ul>
-          <li><b>Not available yet:</b> Arla is in private testing. Leave your email and we'll tell you when it's ready.</li>
-          <li><b>Pricing</b> hasn't been decided.</li>
+          <li><b>Price:</b> $55 once (tax included) for a licence on 2 computers, with all 1.x updates. No subscription. The phone app is free.</li>
+          <li><b>Beta first:</b> buying and the public free trial open after the beta; until then, <a href="#beta">apply to test Arla</a> free for 90 days. <b>Free trial</b> (when buying opens): 3 days with everything on, no card needed. After that Arla turns read-only until you buy: your data stays viewable, searchable and exportable, and is never locked or deleted.</li>
+          <li><b>Refunds:</b> email us within 7 days of buying for a full refund.</li>
+          <li><b>Your PC:</b> Windows 10 or 11 (64-bit), 8 GB of memory (16 GB recommended for offline models) and about 10 GB free for the starter pack. <a href="./help.html#requirements">Full requirements</a>.</li>
+          <li><b>The Android app</b> isn't available to download yet; it's coming to the Play Store.</li>
           <li>Windows and Android only for now: no Mac, Linux or iPhone.</li>
-          <li>The Windows installer isn't code-signed yet, so Windows may show a SmartScreen warning. The Android app isn't in the Play Store yet.</li>
+          <li>The Windows installer is signed by Cody Dean. Because Arla is new, Windows may still show a SmartScreen warning (choose More info, then Run anyway).</li>
           <li>Arla's actions use a connected cloud model. Without one she still answers with a local model, and changes wait until a cloud model is back.</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section id="beta">
+    <div class="wrap">
+      <p class="kicker">Beta programme</p>
+      <h2>Help shape Arla</h2>
+      <div class="beta-card">
+        <p>We're looking for a small group of people to use Arla every day and tell us what works and what doesn't. Accepted testers get a <b>free 90-day licence</b> for 2 computers. We read every application and reply by email if you're selected.</p>
+        <form class="beta-form" method="post" action="https://api.irishwarhound.com/beta">
+          <label>Your name<input type="text" name="name" maxlength="100" autocomplete="name" required></label>
+          <label>Email<input type="email" name="email" maxlength="254" autocomplete="email" required></label>
+          <label>How would you use Arla? <span class="hint">Work, study, personal projects… a few sentences is plenty.</span><textarea name="use" maxlength="1500" minlength="10" required></textarea></label>
+          <label>Your Windows PC <span class="hint">Optional, for example "Windows 11 laptop, 16 GB".</span><input type="text" name="pc" maxlength="200"></label>
+          <fieldset>
+            <legend>Do you have an Android phone?</legend>
+            <label class="choice"><input type="radio" name="android" value="yes"> Yes</label>
+            <label class="choice"><input type="radio" name="android" value="no" checked> No</label>
+          </fieldset>
+          <div class="trap" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <label class="consent"><input type="checkbox" name="consent" value="yes" required> <span>Keep my answers to run the beta and email me about it. See the <a href="./privacy.html">privacy policy</a>; you can ask us to delete them any time.</span></label>
+          <button class="btn primary" type="submit">Apply for the beta</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" hidden>
+    <div class="wrap">
+      <p class="kicker">Reviews</p>
+      <h2>What people say</h2>
+      <p class="review-summary" id="review-summary"></p>
+      <div class="review-list" id="review-list"></div>
+      <p class="review-note">We show every genuine review, good or bad, and only remove spam, abuse, personal information, fakes and reviews that aren't about Arla. Reviews from beta testers, who got Arla free, say so. <a href="./review.html">Write a review</a></p>
     </div>
   </section>
 
@@ -487,27 +548,48 @@ footer a:hover{color:var(--ink)}
       <p class="kicker">Questions</p>
       <h2>Good to know</h2>
       <details><summary>Do I need to pay for AI services?</summary><p>No. Arla can use free cloud services and models running on your own computer. If you already pay for an AI service, you can connect it too, and set usage limits so nothing runs away.</p></details>
-      <details><summary>Does Arla send my data to you?</summary><p>No. There's no account with us, and we have no server that receives your conversations. Your records stay on your computer and phone. A cloud AI service only receives a request when you've connected it. See the <a href="./privacy.html">privacy policy</a> for the details.</p></details>
+      <details><summary>Does Arla send my data to you?</summary><p>No. There's no account with us. Our only server checks licence keys and delivers updates; it never receives your conversations, files or records. Your records stay on your computer and phone. A cloud AI service only receives a request when you've connected it. See the <a href="./privacy.html">privacy policy</a> for the details.</p></details>
       <details><summary>Can Arla change things without asking?</summary><p>She asks first before an action your words didn't request, and before running a command on your computer. Changes she makes in one go are saved as one step you can undo, and a large batch waits for your OK.</p></details>
       <details><summary>Does it work offline?</summary><p>The phone app can answer with an on-device model when it's offline, and your messages sync when you're back. On the computer, Arla can answer with a local model; actions wait until a connected cloud model is available.</p></details>
-      <details><summary>When can I get it, and what will it cost?</summary><p>Arla is in private testing, and pricing hasn't been decided. <a href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Email us</a> and we'll let you know when it's ready.</p></details>
+      <details><summary>Will Arla run on my PC?</summary><p>If you have Windows 10 or 11 (64-bit) and 8 GB of memory, yes. Offline AI models run best with 16 GB or more, or a graphics card with 6 GB of its own memory; on smaller PCs, connect a free cloud AI and Arla stays fast. The starter pack needs about 10 GB of free disk space, and can live on another drive. See the <a href="./help.html#requirements">full requirements</a> and try it free for 3 days first.</p></details>
+      <details><summary>What does it cost?</summary><p>$55 once, tax included, for a licence on 2 computers with all 1.x updates. There's no subscription and nothing is ever charged automatically. Buying and a 3-day free trial open after the beta; until then you can <a href="#beta">apply to test Arla free</a>. When you buy, the page after payment shows your licence key and a download link; enter the key in Settings → Licence. Payments are handled by Stripe and sold through Link.</p></details>
+      <details><summary>What happens after the free trial?</summary><p>Arla turns read-only: you can still open, search, export, back up and delete everything, but new chats, Arla's actions and new or changed records need a licence. Enter a key whenever you're ready; nothing is lost.</p></details>
+      <details><summary>I lost my key, or my computer died.</summary><p>Use the <a href="https://api.irishwarhound.com/key">Lost your key?</a> page: enter the address you bought with, and we'll email your key with a link to free the old computer's place. Stuck? <a href="mailto:support@irishwarhound.com">Email us</a> from that address.</p></details>
     </div>
   </section>
 
   <div class="closing">
     <div class="wrap">
       <h2>Less switching. Less forgetting. More done.</h2>
-      <p>Be the first to know when Arla is ready.</p>
-      <div class="cta"><a class="btn primary" href="mailto:irishwarhound@gmail.com?subject=Tell%20me%20when%20Arla%20is%20ready">Tell me when it's ready</a></div>
+      <p>Arla is in beta. Help shape it: testers get a free 90-day licence.</p>
+      <div class="cta"><a class="btn primary" href="#beta">Apply for the beta</a><span class="btn ghost soon" aria-disabled="true" title="Buying opens after the beta">Buy Arla · after the beta</span></div>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="mailto:irishwarhound@gmail.com">Contact</a></div>
+    <div><a href="./help.html">Getting started</a><a href="./whats-new.html">What&#39;s new</a><a href="./review.html">Write a review</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="mailto:support@irishwarhound.com">Contact</a></div>
     <div>© 2026 <a href="../" style="margin:0">Irishwarhound</a></div>
   </div>
 </footer>
+<script>
+fetch('https://api.irishwarhound.com/reviews.json').then(r => r.ok ? r.json() : null).then(d => {
+  if (!d || !d.count || !Array.isArray(d.reviews)) return;
+  const list = document.getElementById('review-list');
+  document.getElementById('review-summary').textContent = d.average + ' out of 5 from ' + d.count + (d.count === 1 ? ' review' : ' reviews');
+  for (const r of d.reviews) {
+    const n = Math.max(1, Math.min(5, Math.round(Number(r.stars)) || 1));
+    const card = document.createElement('figure'), stars = document.createElement('p'), text = document.createElement('blockquote'), who = document.createElement('figcaption');
+    card.className = 'review'; stars.className = 'review-stars';
+    stars.textContent = '★'.repeat(n) + '☆'.repeat(5 - n); stars.setAttribute('aria-label', n + ' out of 5 stars');
+    text.textContent = String(r.text || '');
+    who.textContent = String(r.name || '') + ' · ' + String(r.month || '') + (r.beta ? ' · Got a free beta licence' : '');
+    card.append(stars, text, who); list.append(card);
+  }
+  document.getElementById('reviews').hidden = false;
+}).catch(() => {});
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9a2d2d261fbe4ee6a1d9f68eff82f25f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

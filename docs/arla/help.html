@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Getting started · Arla</title>
+<meta name="description" content="How to install Arla, set it up, connect AI, enter your licence key and get help.">
+<meta property="og:title" content="Getting started · Arla">
+<meta property="og:description" content="How to install Arla, set it up, connect AI, enter your licence key and get help.">
+<meta property="og:image" content="https://irishwarhound.com/assets/arla-512.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0e1a">
+<link rel="icon" type="image/png" href="../assets/arla-192.png">
+<style>
+@font-face{font-family:'Sacramento';src:url('../assets/sacramento.woff2') format('woff2');font-display:swap}
+:root{
+  --bg:#0b0e1a;--bg-2:#11152a;--panel:rgba(255,255,255,.045);--panel-line:rgba(255,255,255,.09);
+  --ink:#eef0f8;--muted:#a3aac4;--faint:#7c84a3;
+  --violet:#8f7dff;--blue:#5a8dff;--orange:#ff9a4a;--teal:#3fd0c4;
+  --radius:18px;--wrap:68rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--violet)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--bg-2);padding:.5rem 1rem;z-index:10}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:5;background:rgba(11,14,26,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--panel-line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:4rem;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink)}
+.brand img{width:34px;height:34px}
+.brand span{font-family:'Sacramento',cursive;font-size:2rem;line-height:1;padding-top:.2rem}
+nav.links{display:flex;gap:1.4rem;font-size:.95rem}
+nav.links a{color:var(--muted);text-decoration:none}
+nav.links a:hover{color:var(--ink)}
+@media (max-width:720px){nav.links{display:none}}
+
+/* Hero */
+.hero{position:relative;padding:5.5rem 0 4.5rem;text-align:center;overflow:hidden;isolation:isolate}
+.glow{position:absolute;inset:0 -20% auto;height:44rem;pointer-events:none;z-index:-1;
+  background:radial-gradient(38% 42% at 32% 38%,rgba(90,141,255,.22),transparent 70%),radial-gradient(32% 38% at 70% 30%,rgba(255,154,74,.16),transparent 70%),radial-gradient(36% 40% at 56% 64%,rgba(143,125,255,.2),transparent 70%),radial-gradient(28% 34% at 22% 70%,rgba(63,208,196,.12),transparent 70%)}
+.hero img.logo{width:min(15rem,52vw);height:auto;filter:drop-shadow(0 18px 48px rgba(143,125,255,.35))}
+.hero h1{margin:1.2rem auto .2rem;font-family:'Sacramento',cursive;font-weight:400;font-size:clamp(4.2rem,11vw,6.5rem);line-height:1;letter-spacing:.01em}
+.hero .pitch{margin:.6rem auto 0;max-width:40rem;font-size:clamp(1.3rem,3.2vw,1.75rem);line-height:1.35;font-weight:650;letter-spacing:-.01em}
+.hero .sub{margin:1.1rem auto 0;max-width:38rem;color:var(--muted);font-size:1.08rem}
+.cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;padding:.85rem 1.5rem;border-radius:999px;font-weight:650;text-decoration:none;font-size:1rem;border:1px solid transparent}
+.btn.primary{background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;box-shadow:0 10px 30px rgba(110,110,255,.3)}
+.btn.ghost{color:var(--ink);border-color:var(--panel-line);background:var(--panel)}
+.btn.small{padding:.5rem 1rem;font-size:.92rem}
+.btn.soon{opacity:.5;cursor:not-allowed;filter:grayscale(1)}
+.status{margin-top:1.2rem;color:var(--faint);font-size:.92rem}
+.pills{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
+.pill{font-size:.85rem;color:var(--muted);border:1px solid var(--panel-line);background:var(--panel);border-radius:999px;padding:.3rem .85rem}
+
+/* Sections */
+section{padding:4.5rem 0;scroll-margin-top:3.5rem}
+.kicker{color:var(--orange);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 1rem;max-width:44rem}
+.lede{color:var(--muted);font-size:1.1rem;max-width:44rem;margin:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.problem p{color:var(--muted);margin:0 0 1rem}
+.problem p strong{color:var(--ink)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.2rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.step{background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.4rem}
+.step .n{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;font-weight:700;font-size:.95rem;color:#0b0e1a;margin-bottom:.8rem}
+.step:nth-child(1) .n{background:var(--blue)}.step:nth-child(2) .n{background:var(--orange)}.step:nth-child(3) .n{background:var(--teal)}
+.step h3{margin:0 0 .35rem;font-size:1.12rem}
+.step p{margin:0;color:var(--muted);font-size:.98rem}
+.say{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.say span{font-size:.95rem;background:rgba(143,125,255,.12);border:1px solid rgba(143,125,255,.28);color:#d9d3ff;border-radius:14px 14px 14px 4px;padding:.45rem .9rem}
+
+/* Features */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.4rem}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.5rem 1.4rem;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--c,var(--violet))}
+.card .ic{width:2.4rem;height:2.4rem;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--c,var(--violet)) 18%,transparent);margin-bottom:.9rem}
+.card .ic svg{width:1.3rem;height:1.3rem;stroke:var(--c,var(--violet));fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 .7rem;font-size:1.15rem}
+.card ul{margin:0;padding:0;list-style:none}
+.card li{position:relative;padding-left:1.1rem;margin:.5rem 0;color:var(--muted);font-size:.96rem;line-height:1.5}
+.card li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:.4rem;border-radius:50%;background:var(--c,var(--violet));opacity:.8}
+.card li b{color:var(--ink);font-weight:600}
+
+/* Different */
+.diff{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.2rem}
+@media (max-width:980px){.diff{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.diff{grid-template-columns:1fr}}
+.diff div{border-left:2px solid var(--c);padding:.2rem 0 .2rem 1rem}
+.diff h3{margin:0 0 .3rem;font-size:1.02rem}
+.diff p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
+
+/* Platforms + status */
+.plat{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
+@media (max-width:720px){.plat{grid-template-columns:1fr}}
+.plat .card h3{margin-bottom:.3rem}
+.plat .card p{color:var(--muted);margin:0;font-size:.98rem}
+.honest{margin-top:2.4rem;background:linear-gradient(135deg,rgba(255,154,74,.08),rgba(143,125,255,.06));border:1px solid rgba(255,154,74,.22);border-radius:var(--radius);padding:1.6rem 1.5rem}
+.honest h3{margin:0 0 .6rem}
+.honest ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.honest li{margin:.4rem 0}
+.honest b{color:var(--ink)}
+
+/* FAQ */
+details{border-bottom:1px solid var(--panel-line);padding:1rem 0}
+details:first-of-type{border-top:1px solid var(--panel-line)}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--violet);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"\2013"}
+details p{color:var(--muted);margin:.6rem 0 0;max-width:46rem}
+
+/* Closing */
+.closing{text-align:center;padding:5rem 0}
+.closing h2{margin:0 auto 1rem}
+.closing p{color:var(--muted);margin:0 auto;max-width:34rem}
+
+/* Everything it does */
+.all{columns:2 22rem;column-gap:2.5rem;margin-top:2.2rem}
+.all .grp{break-inside:avoid;margin:0 0 2rem}
+.all h3{margin:0 0 .6rem;font-size:1.08rem;display:flex;align-items:center;gap:.55rem}
+.all h3::before{content:"";width:.7rem;height:.7rem;border-radius:3px;background:var(--c,var(--violet))}
+.all ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem;line-height:1.55}
+.all li{margin:.38rem 0}
+.all li b{color:var(--ink);font-weight:600}
+.services{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+.services span{font-size:.85rem;border:1px solid var(--panel-line);background:var(--panel);border-radius:999px;padding:.2rem .7rem;color:var(--muted)}
+.crumb{color:var(--faint);font-size:.9rem;text-decoration:none;margin-left:.3rem}
+.crumb:hover{color:var(--ink)}
+
+@media (max-width:640px){section{padding:3rem 0}.hero{padding:3.5rem 0 3rem}.closing{padding:3.5rem 0}}
+
+footer{border-top:1px solid var(--panel-line);padding:2rem 0 3rem;color:var(--faint);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:none;margin-right:1.2rem}
+footer a:hover{color:var(--ink)}
+.beta-card{background:linear-gradient(135deg,rgba(143,125,255,.10),rgba(63,208,196,.06));border:1px solid rgba(143,125,255,.28);border-radius:var(--radius);padding:1.8rem 1.6rem;max-width:44rem}
+.beta-card p{color:var(--muted)}
+.beta-form{display:grid;gap:1rem;margin-top:1.4rem}
+.beta-form label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+.beta-form .hint{font-weight:400;color:var(--faint);font-size:.85rem}
+.beta-form input[type=text],.beta-form input[type=email],.beta-form textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg-2);border:1px solid var(--panel-line);border-radius:10px;padding:.7rem .85rem}
+.beta-form textarea{min-height:6.5rem;resize:vertical}
+.beta-form input:focus-visible,.beta-form textarea:focus-visible,.beta-form button:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.beta-form fieldset{border:0;padding:0;margin:0;display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center}
+.beta-form legend{font-weight:600;font-size:.95rem;margin-bottom:.35rem;padding:0}
+.beta-form .choice{display:flex;gap:.45rem;align-items:center;font-weight:400}
+.beta-form .consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;color:var(--muted);font-size:.92rem}
+.beta-form .consent input{margin-top:.3rem}
+.beta-form .trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.beta-form button{justify-self:start;cursor:pointer}
+</style>
+<style>
+.doc{max-width:46rem;margin:0 auto;padding:3.5rem 1rem 4rem}
+.doc h1{font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;margin:.2rem 0 1rem}
+.doc h2{font-size:1.45rem;margin:2.6rem 0 .8rem}
+.doc h3{font-size:1.1rem;margin:1.6rem 0 .4rem}
+.doc p,.doc li{color:var(--muted)}
+.doc li{margin:.35rem 0}
+.doc b,.doc strong{color:var(--ink)}
+.doc .box{background:var(--panel);border:1px solid var(--panel-line);border-radius:var(--radius);padding:1.1rem 1.3rem;margin:1rem 0}
+.doc table{width:100%;border-collapse:collapse;margin:.8rem 0}
+.doc th,.doc td{border-bottom:1px solid var(--panel-line);padding:.55rem .4rem;text-align:left;vertical-align:top;color:var(--muted)}
+.doc th{color:var(--ink);font-weight:650}
+.doc .version{color:var(--orange);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.doc kbd{background:var(--bg-2);border:1px solid var(--panel-line);border-radius:6px;padding:.05rem .4rem;font-size:.9em;color:var(--ink)}
+@media (max-width:600px){.doc{padding:2rem 1rem 3rem}.doc th,.doc td{padding:.45rem .25rem;font-size:.92rem}}
+</style></head>
+<body>
+<a class="skip" href="./#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <div style="display:flex;align-items:center"><a class="brand" href="./" aria-label="Arla home"><img src="../assets/arla-192.png" alt="" width="34" height="34"><span>Arla</span></a><a class="crumb" href="../">by Irishwarhound</a></div>
+    <nav class="links" aria-label="Sections">
+      <a href="./#how">How it works</a>
+      <a href="./#features">Features</a>
+      <a href="./#everything">Everything it does</a>
+      <a href="./#privacy">Privacy</a>
+      <a href="./#beta">Beta</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <span class="btn ghost small soon" aria-disabled="true" title="Buying opens after the beta">Buy · after beta</span>
+  </div>
+</header>
+
+<main id="main">
+<article class="doc">
+<p class="version">Help</p>
+<h1>Getting started with Arla</h1>
+<p>Everything you need for the first hour, in order. If you get stuck, <a href="mailto:support@irishwarhound.com">email support@irishwarhound.com</a>.</p>
+<h2 id="requirements">Will Arla run on my PC?</h2>
+<table>
+<tr><th>Windows</th><td>Windows 10 or 11, 64-bit.</td></tr>
+<tr><th>Memory</th><td>8 GB minimum. 16 GB or more is recommended for Arla's offline models (the Standard pack); 32 GB for the Power pack.</td></tr>
+<tr><th>Free disk space</th><td>About <b>10 GB</b> for the Base starter pack, 25 GB for Standard, 35 GB for Power. You can keep the large files on another drive (Settings → Storage).</td></tr>
+<tr><th>Graphics card</th><td>Optional. A graphics card with 6 GB or more of its own memory makes offline answers much faster.</td></tr>
+<tr><th>Internet</th><td>To download Arla and the starter pack, to activate a licence (once, then a quick check about once a month), and for cloud AI services if you connect them. Offline models work without internet.</td></tr>
+<tr><th>Phone (optional)</th><td>An Android phone for the free companion app (coming to the Play Store).</td></tr>
+</table>
+<h2 id="install">1. Install</h2>
+<ol>
+<li>Download Arla for Windows with the link in your beta welcome email, and run the installer. (Arla is in beta: the public download opens with buying, after the beta.)</li>
+<li>If Windows shows a blue <b>"Windows protected your PC"</b> box, choose <b>More info</b>, then <b>Run anyway</b>. The installer is signed by Cody Dean (Windows shows the publisher there), but Windows can still show this box for new apps while they build a reputation; it doesn't mean anything is wrong.</li>
+<li>Arla opens and asks you to accept the terms.</li>
+</ol>
+<p>Beta testers: enter your beta key (step 4) whenever you like. Without a key, the first 3 days are a free trial with everything switched on. No card or payment details are needed, and nothing is ever charged automatically.</p>
+<h2 id="tour">2. The tour and the starter pack</h2>
+<p>A short tour starts by itself. It asks your name, then offers a <b>starter pack</b>: the free programs and models that let Arla work on your computer without the internet (Ollama, a few offline AI models, and voice). Arla suggests a pack that suits your PC and shows the download size first. Choose <b>Base</b> if you're unsure; you can add more later in <b>Workshop → Models</b>.</p>
+<p>The download continues in the background while you finish the tour. Windows may ask once to allow Ollama to install.</p>
+<h2 id="cloud">3. Connect a free cloud AI (recommended)</h2>
+<p>Cloud AI services make Arla faster and smarter, and several are free. The tour walks you through it, or later open <b>Settings → AI services → Connect a cloud AI, step by step</b>. Good free choices are <b>Groq</b>, <b>Google Gemini</b> and <b>OpenRouter</b>; connecting two or three means Arla always has one available. You paste a key from the service's website; it's stored encrypted on your PC.</p>
+<h2 id="licence">4. Enter your licence key</h2>
+<p>After buying, the page you land on shows your key (like <kbd>ARLA-XXXX-XXXX-XXXX-XXXX</kbd>). In Arla, open <b>Settings → Licence</b>, paste the key and choose <b>Activate</b>. One licence covers 2 computers; to move it, choose <b>Deactivate this computer</b> on the old one first.</p>
+<p>After the trial, without a key, Arla becomes read-only: you can still open, search, export and back up everything. Nothing is ever locked or deleted.</p>
+<h2 id="storage">5. Keep large files on another drive</h2>
+<p>Offline models are large. To keep them, the voice models, the download cache, backups and saved pictures on another drive (for example an external one), open <b>Settings → Storage</b>, choose a folder there, and Arla moves everything for you, checking each copy before switching. If that drive is unplugged later, Arla still opens and tells you; cloud AI keeps working.</p>
+<h2 id="help">6. Getting help</h2>
+<ul>
+<li><b>Something isn't working:</b> in Arla, open <b>Help → Report a problem</b>. It prepares a report you can read first; nothing is sent automatically. Bugs go to <a href="mailto:beta@irishwarhound.com">beta@irishwarhound.com</a>.</li>
+<li><b>Questions, your licence or a refund:</b> <a href="mailto:support@irishwarhound.com">support@irishwarhound.com</a>. Refunds within 7 days of buying, in full.</li>
+<li><b>Lost your key or your old computer?</b> Use the <a href="https://api.irishwarhound.com/key">Lost your key?</a> page with the address you bought with: we'll email your key and a link to free the old computer's place. Stuck? Email support from that address.</li>
+<li><b>See the tour again:</b> Help → Take the tour again.</li>
+<li><b>Tell others what you think:</b> Help → Leave a review, or <a href="./review.html">write a review here</a>.</li>
+</ul>
+<p>See also: <a href="./whats-new.html">What's new</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="mailto:support@irishwarhound.com">Contact</a></div>
+    <div>© 2026 <a href="../" style="margin:0">Irishwarhound</a></div>
+  </div>
+</footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9a2d2d261fbe4ee6a1d9f68eff82f25f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Arla Terms of Service
 
-**Version 1.0 · Effective October 1, 2026**
+**Version 1.1 · Effective October 1, 2026**
 
 _Have a licensed Idaho attorney review this before you sell Arla. It was drafted with AI help and is not legal advice._
 
@@ -22,7 +22,7 @@ These Terms of Service ("Terms") are an agreement between you and Cody Dean, pub
 2.3 Most of Arla runs on your own hardware. Its speed, quality, cost and availability depend on your devices, networks, the models you install and the third-party services you connect, none of which we control.
 
 ## 3. Your license to use Arla
-3.1 Subject to these Terms, we grant you a limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable license to install and use Arla on devices you own or control.
+3.1 Subject to these Terms, we grant you a limited, personal, non-exclusive, non-transferable, non-sublicensable, revocable license to install and use Arla on devices you own or control, within the limits of the trial or the licence you bought (section 13).
 3.2 You may not, and may not help anyone else to:
 (a) copy, sell, rent, lease, sublicense or redistribute Arla, except as the law expressly allows;
 (b) reverse engineer, decompile or disassemble Arla, except where the law allows it despite this restriction;
@@ -91,8 +91,14 @@ Arla is not designed, tested or certified for situations where a failure, error 
 12.2 Features labeled experimental, preview or beta, or described as optional, are provided for testing, may be unstable, and may be changed or removed at any time.
 12.3 We may change or stop offering Arla, or any part of it, at any time, to the extent the law allows.
 
-## 13. Fees
-If we charge for Arla or any feature, the price, billing terms and any refund rights will be shown at the time of purchase, and the storefront's terms (for example Google Play or the Microsoft Store) will also apply. Unless the law requires otherwise, fees are non-refundable. Taxes are your responsibility.
+## 13. Free trial, buying Arla and your licence
+13.1 **Free trial.** The Arla desktop app works fully for 3 days after it is first started on a computer, without a licence and without any payment details. When the trial ends, the app becomes read-only until you enter a licence key (see 13.5).
+13.2 **Buying.** Arla is sold for a one-time price shown at checkout, with sales tax or VAT included where it applies. There is no subscription and **nothing is ever charged automatically**. Purchases are processed by Stripe and sold through Link, which acts as the seller of record: it takes the payment, collects and pays the tax, and sends your receipt, and its own terms apply to the payment.
+13.3 **Your licence.** A purchase gives you a licence key for personal use of the Arla desktop app on up to **2 computers** you own or control at the same time. You can move a licence by choosing Deactivate this computer in Settings → Licence; if a computer is lost or broken, email us and we will free its place. The licence includes updates to Arla 1.x. A later major version may be sold separately. The Arla mobile app is a free companion and needs no licence.
+13.4 **Activation.** Entering a key needs an internet connection once. After that the app checks the licence about every 30 days when it is online, and keeps working offline for up to 90 days after its last successful check. Licence keys are personal: don't share, publish or sell them. A key that is shared, refunded, or paid for with a disputed or reversed payment may be deactivated.
+13.5 **Read-only mode.** When the trial has ended, or a licence is refunded, reversed or deactivated, the app stays usable in read-only mode: you can still open, view, search, export, back up, restore and delete everything you created. Only new chats, Arla's actions and new or changed records need a licence. **We never lock, hide or delete your data because of the licence.**
+13.6 **Refunds.** If Arla doesn't work for you, email support@irishwarhound.com within 7 days of your purchase and we will refund it in full. Link may also handle refunds and disputes under its own policies, and you keep any refund rights the law gives you. A refunded purchase's licence stops working, and its computers become read-only as described in 13.5.
+13.7 **Beta licences.** If we accept you into the beta programme, you get a free licence key for the period we tell you (normally 90 days) on up to 2 computers, under these Terms. Beta versions may contain bugs, and features may change or disappear, so keep backups. When a beta licence ends, the app becomes read-only as described in 13.5, and you can buy a licence to keep using it. We may extend, shorten or end the beta programme at any time. Feedback you send us is covered by 8.5.
 
 ## 14. Our intellectual property
 Arla, including its code, design, names, logos, built-in skills, templates and documentation, belongs to us and our licensors and is protected by law. These Terms don't give you any rights to our trademarks. All rights not expressly granted to you are reserved.
@@ -122,10 +128,10 @@ You will follow all export-control and sanctions laws that apply to Arla and to 
 
 ## 21. Disputes, arbitration and class action waiver
 21.1 **Governing law.** These Terms are governed by the laws of the State of Idaho, USA, without regard to its conflict-of-laws rules, except where the law of your place of residence requires otherwise.
-21.2 **Informal resolution first.** Before starting a claim, you agree to contact us at irishwarhound@gmail.com and try to resolve it informally for at least 60 days.
+21.2 **Informal resolution first.** Before starting a claim, you agree to contact us at support@irishwarhound.com and try to resolve it informally for at least 60 days.
 21.3 **Arbitration.** Where the law allows, any dispute that isn't resolved informally will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules under its rules, in Ada County, Idaho (or by phone or video, at your choice), instead of in court, except that either party may bring an individual claim in small-claims court, or seek an injunction for misuse of intellectual property.
 21.4 **Class action waiver.** Where the law allows, **you and we each agree to bring claims only individually, not as a plaintiff or class member in any class, collective or representative action**, and the arbitrator may not combine claims.
-21.5 **Opting out.** You may opt out of arbitration within 30 days of first accepting these Terms by emailing irishwarhound@gmail.com with your name and a clear statement that you opt out.
+21.5 **Opting out.** You may opt out of arbitration within 30 days of first accepting these Terms by emailing support@irishwarhound.com with your name and a clear statement that you opt out.
 21.6 **Time limit.** Where the law allows, any claim must be brought within one year after it arises, or it is permanently barred.
 21.7 If you live in a country whose consumer laws give you rights that these sections can't limit, those rights still apply.
 
@@ -142,4 +148,4 @@ We may update these Terms. If a change is material, we will show the new version
 23.7 **Language.** If these Terms are translated, the English version controls where the law allows.
 
 ## 24. Contact
-Irishwarhound (Cody Dean) · Idaho, USA · irishwarhound@gmail.com
+Irishwarhound (Cody Dean) · Idaho, USA · support@irishwarhound.com
