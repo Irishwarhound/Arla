@@ -1,6 +1,6 @@
 # Arla Privacy Policy
 
-**Version 1.5 · Effective October 4, 2026**
+**Version 1.6 · Effective October 5, 2026**
 
 Cody Dean, publishing as Irishwarhound ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase"; it never receives your conversations, files or records. We do not receive automatic usage or crash reports. If you contact us, send a problem report or report an AI reply, we receive what you choose to send.
 
@@ -28,7 +28,8 @@ On Android, Arla stores chats, settings, goals, Inbox items and captured photos,
 
 ## Your licence and purchase
 
-- **The free trial** is counted on your computer. The trial's start date and a random install ID that Arla makes for each installed copy (not a hardware fingerprint or anything about you) stay in the app's data folder; the licence key and its signed activation are encrypted with Windows protected storage. None of this is written to logs, crash reports or backups in readable form, and the phone app has no licence data.
+- **The free trial** is counted on your computer. The trial's start date and a random install ID that Arla makes for each installed copy (not a hardware fingerprint or anything about you) stay in the app's data folder; the licence key and its signed activation are encrypted with Windows protected storage. None of this is written to logs, crash reports or backups in readable form, and the phone app never receives your licence key.
+- **Arla for Android access:** the phone keeps its trial start date, the last Google Play purchase state it confirmed and your computer's last licence answer in Android protected storage. This stays on the phone and is not synced or included in backups. A linked phone asks your computer only whether it is licensed; the computer answers yes or no and the kind (bought, beta or trial), never the key, its activation or anything else. The phone unlock is bought through Google Play: Google processes your payment and Google account details under Google's privacy policy, and the app asks Google Play whether your account owns the unlock. We never see your card details, and our server receives nothing about phone purchases. Google gives us an order record in our Google Play developer account (such as the order number, date, product, price and country), which we use only for refunds, accounting and tax.
 - **Anonymous trial reports** (from Arla 1.0.4): while a copy is in its free trial and online, it tells `api.irishwarhound.com` when the trial starts and then at most once a day: a random report ID made only for this (not the install ID, so a report can't be linked to a later purchase or licence), the trial's start date, the days it has left and the app version. Nothing about you or your computer is sent. We use the reports only to count trials and to notice copies whose trial runs longer than it should. Our service keeps each report ID with when it was first and last seen and what it last sent, and deletes it 13 months after it was last seen.
 - **Licence checks** contact our service at `api.irishwarhound.com` when you enter a key, about every 30 days afterwards while you are online, and when you deactivate a computer. Each request sends only the key or its signed activation, the install ID and the app version.
 - **Updates:** a licensed copy asks `api.irishwarhound.com` for updates unless `autoUpdate` is off, sending its signed activation. A trial copy doesn't check.
