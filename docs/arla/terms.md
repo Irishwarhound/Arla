@@ -1,6 +1,6 @@
 # Arla Terms of Service
 
-**Version 1.2 · Effective October 5, 2026**
+**Version 1.3 · Effective October 8, 2026**
 
 _Have a licensed Idaho attorney review this before you sell Arla. It was drafted with AI help and is not legal advice._
 
@@ -33,7 +33,7 @@ These Terms of Service ("Terms") are an agreement between you and Cody Dean, pub
 3.3 Open-source components included in Arla are licensed under their own licenses, which apply to those components and control where they conflict with these Terms.
 
 ## 4. Your accounts, keys and devices
-4.1 Some features need accounts or API keys from third parties (for example OpenAI, Anthropic, Google, Groq, OpenRouter, Mistral, NVIDIA, Hugging Face or Ollama). You get these directly from those providers, under their terms.
+4.1 Some features need accounts or API keys from third parties (for example OpenAI, Anthropic, Google, Groq, OpenRouter, Mistral, NVIDIA, Hugging Face, Ollama, Z.ai, Cloudflare, Cohere, Exa, Serper, LangSearch, Tavily or Pixabay). You get these directly from those providers, under their terms.
 4.2 **You are responsible for keeping your keys, passwords, pairing codes, devices and networks secure**, and for all activity that happens through them, including charges, rate-limit use and actions taken by AI models you connect. Tell the relevant provider immediately if you think a key has been exposed.
 4.3 Pairing a phone or other device with the Arla hub lets that device use your hub. Only pair devices you control, on networks you trust. You are responsible for your router, firewall, VPN (such as Tailscale) and operating-system security settings.
 
@@ -51,6 +51,7 @@ These Terms of Service ("Terms") are an agreement between you and Cody Dean, pub
 6.4 A power action (sleep, restart, shut down) or a scheduled wake can interrupt unsaved work, downloads, updates or other programs. Save your work, and use the on-screen cancel option or permissions if you don't want this.
 6.5 Verification features (such as skill tests, plan evidence checks, permission prompts and safety guards) reduce risk but **don't guarantee** correctness, safety or security.
 6.6 Don't point Arla's tools at systems, files, accounts or networks you don't own or aren't authorized to use.
+6.7 **Email and calendar.** If you connect an email or calendar account, Arla can draft emails, send them and change calendar events only when you ask and confirm. You are responsible for every email sent and every event changed after you confirm, including the recipients and content. Check the details in the confirmation window before you press Send now; a sent email cannot be taken back.
 
 ## 7. Third-party models, services and content
 7.1 Arla lets you connect third-party AI models and services, download models, fetch web pages and import data from other apps. These third parties are not under our control. Their own terms, privacy policies, usage limits, content policies and fees apply to your use of them, and **you are responsible for following them.**
@@ -85,11 +86,13 @@ Arla is not designed, tested or certified for situations where a failure, error 
 11.1 When you import chat history, Arla files the conversations on your devices and may use a model to pick out facts about you to remember. Import only data you have the right to use. Review and delete memories you don't want kept.
 11.2 The camera feature captures photos only when you tap it, and stores them in Arla's own storage. Follow the law and respect others' privacy when you take and store photos.
 11.3 Memory and learning features store information on your devices to personalize Arla. They may remember things incorrectly. You can view, edit and delete memories and lessons in the app.
+11.4 Meetings record audio and turn speech into text only while you are recording. Many places require everyone's consent before a conversation is recorded. Tell the people in the meeting and get their consent where the law requires it.
 
 ## 12. Updates, beta features and changes
 12.1 We may release updates, and some updates may be needed for Arla to keep working. Updates may add, change or remove features.
 12.2 Features labeled experimental, preview or beta, or described as optional, are provided for testing, may be unstable, and may be changed or removed at any time.
-12.3 We may change or stop offering Arla, or any part of it, at any time, to the extent the law allows.
+12.3 **Early-access features.** Email and calendar and Sync away from home are early-access features. They may have daily limits, may be unavailable at times, and may change or be withdrawn. Email and calendar connections also depend on Google's and Microsoft's approval of Arla, which can limit who can connect.
+12.4 We may change or stop offering Arla, or any part of it, at any time, to the extent the law allows.
 
 ## 13. Free trial, buying Arla and your licence
 13.1 **Free trial.** The Arla desktop app works fully for 3 days after it is first started on a computer, without a licence and without any payment details. When the trial ends, the app becomes read-only until you enter a licence key (see 13.5).
