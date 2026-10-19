@@ -1,6 +1,6 @@
 # Arla Privacy Policy
 
-**Version 2.0 · Effective October 17, 2026**
+**Version 2.1 · Effective October 18, 2026**
 
 Cody Dean, publishing as Irishwarhound ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase", which also runs the optional relay described under "Your paired devices". Neither ever receives your conversations, files or records in a form we can read. We do not receive automatic usage or crash reports. If you contact us, send a problem report or report an AI reply, we receive what you choose to send.
 
@@ -22,6 +22,8 @@ Research items you save stay on this computer and are included in its backups. R
 - Arla then fetches each source page it found from that public site (up to 6,000 characters per page);
 - excerpts of those pages, up to 14,000 characters in all, go to the chosen cloud model with your question.
 
+**Deep research (optional).** When you choose Deep, a Research job can run up to four steps. In each step the search words go to the search service or searching model, Arla fetches the source pages from their public sites (up to 40 pages in a job), and excerpts of those pages, up to 40,000 characters per request, go to a connected cloud model to write step notes, plan the next step, write the report and review it. If a model or search service is busy or has used up its allowance, Arla sends that request to the next one you have connected and allowed; a paid model is used only if you added it and agreed to paid use. With the saved report, Arla keeps a list of the requests it made (service, model, outcome and wait times), never your text or the pages.
+
 Image Studio, on Windows and Android, sends a generation prompt or image search words to the service you select (for example Cloudflare Workers AI, Pixabay or Wikimedia Commons). Search result previews and pictures you explicitly save may be fetched from the image host named by that service. Generated results stay temporary until you press Save; saved pictures, prompts, source links, authors and licence labels stay in the gallery and its backups. Pixabay results are kept on the computer for 24 hours, as Pixabay's rules require. Image service keys use Windows or Android protected storage. The separate Google Images window is ordinary browsing at Google; Arla does not read or automate the page. A right-click Save to Image Studio explicitly downloads one picture to the local gallery.
 
 **Meetings.** A meeting you record is saved in its project's folder, in a `Meetings` folder with one folder per meeting holding the transcript, Arla's notes and the recording. On Windows, speech is turned into text on your computer. On Android, Arla asks the phone's speech recognizer to work on the phone only, and Android 13 or newer can keep the recording. Saved meetings are searchable like the rest of the project's folder. A linked phone sends its meetings, recordings included, to the computer over the device link. Deleting a meeting removes its files and search passages on the computer and, when it next connects, on the linked device.
@@ -33,6 +35,8 @@ Image Studio, on Windows and Android, sends a generation prompt or image search 
 **Email on Android.** You can also connect a Google or Microsoft account on the phone itself (System → Email and calendar), or add one of your computer's accounts to the phone with **Add to this phone**, which only fills in the address for you to sign in. The phone's sign-in is held by Google Play services or by Microsoft's sign-in library on the phone, never in Arla's own records, backups, exports, sync, the relay or logs, and it never leaves the phone. Arla keeps the account's address, label and when it was connected. The phone's accounts are not sent to your computer. **Scheduled emails** you approve on the phone are kept on the phone until they run or you cancel them (the same details as on Windows), so they can be sent at the chosen time even when Arla is closed; they are never synced to the computer.
 
 On Android, Arla stores chats, settings, goals, Inbox items and captured photos, notes and sticky notes, offline edits waiting to sync, and downloaded models in the app's storage. It can retain up to 5,000 Arla turns. API keys and the phone-link key are kept in Android protected storage. Windows stores API and phone-link secrets with Windows protected storage; a desktop backup containing those encrypted values cannot make them readable on another PC. Records generally remain until you delete them or the app's data. Removing an app alone may leave its desktop data folder behind.
+
+AI usage and cost records stay on the device where the requests run and contain service, model, purpose, outcome, reported token counts and calculated cost, not conversation text. When you open usage details, Arla may use your saved key to read usage or balance figures directly from that same provider; these reads are cached for an hour. Usage records are included when you export or back up your data.
 
 ## When information leaves a device
 
