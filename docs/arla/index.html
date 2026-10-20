@@ -538,7 +538,12 @@ footer a:hover{color:var(--ink)}
           <label>Your name<input type="text" name="name" maxlength="100" autocomplete="name" required></label>
           <label>Email<input type="email" name="email" maxlength="254" autocomplete="email" required></label>
           <label>How would you use Arla? <span class="hint">Work, study, personal projects… a few sentences is plenty.</span><textarea name="use" maxlength="1500" minlength="10" required></textarea></label>
-          <label>Your Windows PC <span class="hint">Optional, for example "Windows 11 laptop, 16 GB".</span><input type="text" name="pc" maxlength="200"></label>
+          <fieldset>
+            <legend>Do you have a Windows PC?</legend>
+            <label class="choice"><input type="radio" name="has_pc" value="yes" required> Yes</label>
+            <label class="choice"><input type="radio" name="has_pc" value="no"> No</label>
+          </fieldset>
+          <label>About your PC <span class="hint">Optional, for example "Windows 11 laptop, 16 GB".</span><input type="text" name="pc" maxlength="200"></label>
           <fieldset>
             <legend>Do you have an Android phone?</legend>
             <label class="choice"><input type="radio" name="android" value="yes"> Yes</label>
