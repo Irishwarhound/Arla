@@ -1,0 +1,2370 @@
+<doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>
+How to use Arla · Desktop and Android tutorials
+</title>
+<meta
+  name="description"
+  content="Step-by-step Arla tutorials for Windows and Android: chat, plans, projects, research, offline models, and using your computer and phone together.">
+<meta name="theme-color" content="#0b0e1a">
+<link rel="icon" type="image/png" href="../assets/arla-192.png">
+<style>
+@font-face{
+font-family:'Sacramento';
+src:url('../assets/sacramento.woff2') format('woff2');
+font-display:swap}
+:root{
+--bg:#0b0e1a;
+--bg-2:#11152a;
+--panel:rgba(255,
+255,
+255,
+.045);
+--panel-line:rgba(255,
+255,
+255,
+.09);
+--ink:#eef0f8;
+--muted:#a3aac4;
+--faint:#7c84a3;
+--violet:#8f7dff;
+--blue:#5a8dff;
+--orange:#ff9a4a;
+--teal:#3fd0c4;
+--radius:18px;
+--wrap:68rem;
+}
+*{
+box-sizing:border-box}
+html{
+scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+html{
+scroll-behavior:auto}
+*{
+animation:none!important;
+transition:none!important}
+}
+body{
+margin:0;
+background:var(--bg);
+color:var(--ink);
+font:17px/1.65 system-ui,
+-apple-system,
+'Segoe UI',
+Roboto,
+sans-serif;
+-webkit-font-smoothing:antialiased;
+overflow-x:hidden}
+a{
+color:var(--violet)}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible{
+outline:2px solid var(--orange);
+outline-offset:3px;
+border-radius:8px}
+.wrap{
+max-width:var(--wrap);
+margin:0 auto;
+padding:0 1.25rem}
+.skip{
+position:absolute;
+left:-999px}
+.skip:focus{
+left:1rem;
+top:1rem;
+background:var(--bg-2);
+padding:.5rem 1rem;
+z-index:10}
+/* Header */
+header.top{
+position:sticky;
+top:0;
+z-index:5;
+background:rgba(11,
+14,
+26,
+.72);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid var(--panel-line)}
+header.top .wrap{
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:4rem;
+gap:1rem}
+.brand{
+display:flex;
+align-items:center;
+gap:.6rem;
+text-decoration:none;
+color:var(--ink)}
+.brand img{
+width:34px;
+height:34px}
+.brand span{
+font-family:'Sacramento',
+cursive;
+font-size:2rem;
+line-height:1;
+padding-top:.2rem}
+nav.links{
+display:flex;
+gap:1.4rem;
+font-size:.95rem}
+nav.links a{
+color:var(--muted);
+text-decoration:none}
+nav.links a:hover{
+color:var(--ink)}
+@media (max-width:720px){
+nav.links{
+display:none}
+}
+/* Hero */
+.hero{
+position:relative;
+padding:5.5rem 0 4.5rem;
+text-align:center;
+overflow:hidden;
+isolation:isolate}
+.glow{
+position:absolute;
+inset:0 -20% auto;
+height:44rem;
+pointer-events:none;
+z-index:-1;
+background:radial-gradient(38% 42% at 32% 38%,
+rgba(90,
+141,
+255,
+.22),
+transparent 70%),
+radial-gradient(32% 38% at 70% 30%,
+rgba(255,
+154,
+74,
+.16),
+transparent 70%),
+radial-gradient(36% 40% at 56% 64%,
+rgba(143,
+125,
+255,
+.2),
+transparent 70%),
+radial-gradient(28% 34% at 22% 70%,
+rgba(63,
+208,
+196,
+.12),
+transparent 70%)}
+.hero img.logo{
+width:min(15rem,
+52vw);
+height:auto;
+filter:drop-shadow(0 18px 48px rgba(143,
+125,
+255,
+.35))}
+.hero h1{
+margin:1.2rem auto .2rem;
+font-family:'Sacramento',
+cursive;
+font-weight:400;
+font-size:clamp(4.2rem,
+11vw,
+6.5rem);
+line-height:1;
+letter-spacing:.01em}
+.hero .pitch{
+margin:.6rem auto 0;
+max-width:40rem;
+font-size:clamp(1.3rem,
+3.2vw,
+1.75rem);
+line-height:1.35;
+font-weight:650;
+letter-spacing:-.01em}
+.hero .sub{
+margin:1.1rem auto 0;
+max-width:38rem;
+color:var(--muted);
+font-size:1.08rem}
+.cta{
+display:flex;
+gap:.8rem;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:2rem}
+.btn{
+display:inline-flex;
+align-items:center;
+gap:.5rem;
+white-space:nowrap;
+padding:.85rem 1.5rem;
+border-radius:999px;
+font-weight:650;
+text-decoration:none;
+font-size:1rem;
+border:1px solid transparent}
+.btn.primary{
+background:linear-gradient(135deg,
+var(--violet),
+var(--blue));
+color:#fff;
+box-shadow:0 10px 30px rgba(110,
+110,
+255,
+.3)}
+.btn.ghost{
+color:var(--ink);
+border-color:var(--panel-line);
+background:var(--panel)}
+.btn.small{
+padding:.5rem 1rem;
+font-size:.92rem}
+.btn.soon{
+opacity:.5;
+cursor:not-allowed;
+filter:grayscale(1)}
+.status{
+margin-top:1.2rem;
+color:var(--faint);
+font-size:.92rem}
+.pills{
+display:flex;
+gap:.5rem;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:1.6rem}
+.pill{
+font-size:.85rem;
+color:var(--muted);
+border:1px solid var(--panel-line);
+background:var(--panel);
+border-radius:999px;
+padding:.3rem .85rem}
+/* Sections */
+section{
+padding:4.5rem 0;
+scroll-margin-top:3.5rem}
+.kicker{
+color:var(--orange);
+font-weight:700;
+font-size:.82rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+margin:0 0 .6rem}
+h2{
+font-size:clamp(1.7rem,
+4vw,
+2.4rem);
+line-height:1.2;
+letter-spacing:-.02em;
+margin:0 0 1rem;
+max-width:44rem}
+.lede{
+color:var(--muted);
+font-size:1.1rem;
+max-width:44rem;
+margin:0}
+.split{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2.5rem;
+align-items:start}
+@media (max-width:860px){
+.split{
+grid-template-columns:1fr}
+}
+.problem p{
+color:var(--muted);
+margin:0 0 1rem}
+.problem p strong{
+color:var(--ink)}
+.steps{
+display:grid;
+grid-template-columns:repeat(3,
+1fr);
+gap:1rem;
+margin-top:2.2rem}
+@media (max-width:860px){
+.steps{
+grid-template-columns:1fr}
+}
+.step{
+background:var(--panel);
+border:1px solid var(--panel-line);
+border-radius:var(--radius);
+padding:1.4rem}
+.step .n{
+display:inline-grid;
+place-items:center;
+width:2rem;
+height:2rem;
+border-radius:50%;
+font-weight:700;
+font-size:.95rem;
+color:#0b0e1a;
+margin-bottom:.8rem}
+.step:nth-child(1) .n{
+background:var(--blue)}
+.step:nth-child(2) .n{
+background:var(--orange)}
+.step:nth-child(3) .n{
+background:var(--teal)}
+.step h3{
+margin:0 0 .35rem;
+font-size:1.12rem}
+.step p{
+margin:0;
+color:var(--muted);
+font-size:.98rem}
+.say{
+margin-top:1.6rem;
+display:flex;
+flex-wrap:wrap;
+gap:.6rem}
+.say span{
+font-size:.95rem;
+background:rgba(143,
+125,
+255,
+.12);
+border:1px solid rgba(143,
+125,
+255,
+.28);
+color:#d9d3ff;
+border-radius:14px 14px 14px 4px;
+padding:.45rem .9rem}
+/* Features */
+.grid{
+display:grid;
+grid-template-columns:repeat(3,
+1fr);
+gap:1rem;
+margin-top:2.4rem}
+@media (max-width:980px){
+.grid{
+grid-template-columns:repeat(2,
+1fr)}
+}
+@media (max-width:640px){
+.grid{
+grid-template-columns:1fr}
+}
+.card{
+background:var(--panel);
+border:1px solid var(--panel-line);
+border-radius:var(--radius);
+padding:1.5rem 1.4rem;
+position:relative;
+overflow:hidden}
+.card::before{
+content:"";
+position:absolute;
+inset:0 0 auto;
+height:3px;
+background:var(--c,
+var(--violet))}
+.card .ic{
+width:2.4rem;
+height:2.4rem;
+border-radius:12px;
+display:grid;
+place-items:center;
+background:color-mix(in srgb,
+var(--c,
+var(--violet)) 18%,
+transparent);
+margin-bottom:.9rem}
+.card .ic svg{
+width:1.3rem;
+height:1.3rem;
+stroke:var(--c,
+var(--violet));
+fill:none;
+stroke-width:2;
+stroke-linecap:round;
+stroke-linejoin:round}
+.card h3{
+margin:0 0 .7rem;
+font-size:1.15rem}
+.card ul{
+margin:0;
+padding:0;
+list-style:none}
+.card li{
+position:relative;
+padding-left:1.1rem;
+margin:.5rem 0;
+color:var(--muted);
+font-size:.96rem;
+line-height:1.5}
+.card li::before{
+content:"";
+position:absolute;
+left:0;
+top:.6em;
+width:.4rem;
+height:.4rem;
+border-radius:50%;
+background:var(--c,
+var(--violet));
+opacity:.8}
+.card li b{
+color:var(--ink);
+font-weight:600}
+/* Different */
+.diff{
+display:grid;
+grid-template-columns:repeat(5,
+1fr);
+gap:1rem;
+margin-top:2.2rem}
+@media (max-width:980px){
+.diff{
+grid-template-columns:repeat(2,
+1fr)}
+}
+@media (max-width:560px){
+.diff{
+grid-template-columns:1fr}
+}
+.diff div{
+border-left:2px solid var(--c);
+padding:.2rem 0 .2rem 1rem}
+.diff h3{
+margin:0 0 .3rem;
+font-size:1.02rem}
+.diff p{
+margin:0;
+color:var(--muted);
+font-size:.94rem;
+line-height:1.5}
+/* Platforms + status */
+.plat{
+display:grid;
+grid-template-columns:repeat(2,
+1fr);
+gap:1rem;
+margin-top:2rem}
+@media (max-width:720px){
+.plat{
+grid-template-columns:1fr}
+}
+.plat .card h3{
+margin-bottom:.3rem}
+.plat .card p{
+color:var(--muted);
+margin:0;
+font-size:.98rem}
+.honest{
+margin-top:2.4rem;
+background:linear-gradient(135deg,
+rgba(255,
+154,
+74,
+.08),
+rgba(143,
+125,
+255,
+.06));
+border:1px solid rgba(255,
+154,
+74,
+.22);
+border-radius:var(--radius);
+padding:1.6rem 1.5rem}
+.honest h3{
+margin:0 0 .6rem}
+.honest ul{
+margin:0;
+padding-left:1.1rem;
+color:var(--muted)}
+.honest li{
+margin:.4rem 0}
+.honest b{
+color:var(--ink)}
+/* FAQ */
+details{
+border-bottom:1px solid var(--panel-line);
+padding:1rem 0}
+details:first-of-type{
+border-top:1px solid var(--panel-line)}
+summary{
+cursor:pointer;
+font-weight:600;
+font-size:1.05rem;
+list-style:none;
+display:flex;
+justify-content:space-between;
+gap:1rem}
+summary::-webkit-details-marker{
+display:none}
+summary::after{
+content:"+";
+color:var(--violet);
+font-size:1.3rem;
+line-height:1}
+details[open] summary::after{
+content:"\2013"}
+details p{
+color:var(--muted);
+margin:.6rem 0 0;
+max-width:46rem}
+/* Closing */
+.closing{
+text-align:center;
+padding:5rem 0}
+.closing h2{
+margin:0 auto 1rem}
+.closing p{
+color:var(--muted);
+margin:0 auto;
+max-width:34rem}
+/* Everything it does */
+.all{
+columns:2 22rem;
+column-gap:2.5rem;
+margin-top:2.2rem}
+.all .grp{
+break-inside:avoid;
+margin:0 0 2rem}
+.all h3{
+margin:0 0 .6rem;
+font-size:1.08rem;
+display:flex;
+align-items:center;
+gap:.55rem}
+.all h3::before{
+content:"";
+width:.7rem;
+height:.7rem;
+border-radius:3px;
+background:var(--c,
+var(--violet))}
+.all ul{
+margin:0;
+padding-left:1.1rem;
+color:var(--muted);
+font-size:.95rem;
+line-height:1.55}
+.all li{
+margin:.38rem 0}
+.all li b{
+color:var(--ink);
+font-weight:600}
+.services{
+display:flex;
+flex-wrap:wrap;
+gap:.45rem;
+margin-top:.6rem}
+.services span{
+font-size:.85rem;
+border:1px solid var(--panel-line);
+background:var(--panel);
+border-radius:999px;
+padding:.2rem .7rem;
+color:var(--muted)}
+.crumb{
+color:var(--faint);
+font-size:.9rem;
+text-decoration:none;
+margin-left:.3rem}
+.crumb:hover{
+color:var(--ink)}
+@media (max-width:640px){
+section{
+padding:3rem 0}
+.hero{
+padding:3.5rem 0 3rem}
+.closing{
+padding:3.5rem 0}
+}
+footer{
+border-top:1px solid var(--panel-line);
+padding:2rem 0 3rem;
+color:var(--faint);
+font-size:.92rem}
+footer .wrap{
+display:flex;
+justify-content:space-between;
+gap:1rem;
+flex-wrap:wrap}
+footer a{
+color:var(--muted);
+text-decoration:none;
+margin-right:1.2rem}
+footer a:hover{
+color:var(--ink)}
+.beta-card{
+background:linear-gradient(135deg,
+rgba(143,
+125,
+255,
+.10),
+rgba(63,
+208,
+196,
+.06));
+border:1px solid rgba(143,
+125,
+255,
+.28);
+border-radius:var(--radius);
+padding:1.8rem 1.6rem;
+max-width:44rem}
+.beta-card p{
+color:var(--muted)}
+.beta-form{
+display:grid;
+gap:1rem;
+margin-top:1.4rem}
+.beta-form label{
+display:grid;
+gap:.35rem;
+font-weight:600;
+font-size:.95rem}
+.beta-form .hint{
+font-weight:400;
+color:var(--faint);
+font-size:.85rem}
+.beta-form input[type=text],
+.beta-form input[type=email],
+.beta-form textarea{
+width:100%;
+font:inherit;
+color:var(--ink);
+background:var(--bg-2);
+border:1px solid var(--panel-line);
+border-radius:10px;
+padding:.7rem .85rem}
+.beta-form textarea{
+min-height:6.5rem;
+resize:vertical}
+.beta-form input:focus-visible,
+.beta-form textarea:focus-visible,
+.beta-form button:focus-visible{
+outline:3px solid var(--violet);
+outline-offset:2px}
+.beta-form fieldset{
+border:0;
+padding:0;
+margin:0;
+display:flex;
+gap:1.2rem;
+flex-wrap:wrap;
+align-items:center}
+.beta-form legend{
+font-weight:600;
+font-size:.95rem;
+margin-bottom:.35rem;
+padding:0}
+.beta-form .choice{
+display:flex;
+gap:.45rem;
+align-items:center;
+font-weight:400}
+.beta-form .consent{
+display:flex;
+gap:.6rem;
+align-items:flex-start;
+font-weight:400;
+color:var(--muted);
+font-size:.92rem}
+.beta-form .consent input{
+margin-top:.3rem}
+.beta-form .trap{
+position:absolute;
+left:-10000px;
+width:1px;
+height:1px;
+overflow:hidden}
+.beta-form button{
+justify-self:start;
+cursor:pointer}
+/* Tutorial page: the site's own palette,
+with system appearance support. */
+@media (prefers-color-scheme:light){
+:root{
+--bg:#f7f8fc;
+--bg-2:#fff;
+--panel:rgba(53,
+61,
+98,
+.035);
+--panel-line:rgba(53,
+61,
+98,
+.14);
+--ink:#191e35;
+--muted:#505b78;
+--faint:#5f6a85;
+--violet:#6550ce;
+--blue:#315ec5;
+--orange:#9d4c12}
+header.top{
+background:rgba(247,
+248,
+252,
+.9)}
+}
+html{
+scroll-behavior:auto}
+body{
+overflow-x:visible;
+overflow-anchor:none}
+header.top .wrap{
+gap:.8rem}
+nav.links{
+gap:.75rem;
+font-size:.84rem}
+header .crumb{
+font-size:.75rem}
+header .btn.small{
+font-size:.75rem;
+padding:.45rem .7rem}
+.tutorial-hero{
+padding:6rem 1.25rem 4rem;
+text-align:center}
+.tutorial-hero .kicker{
+margin-bottom:1rem}
+.tutorial-hero h1{
+font-size:clamp(3rem,
+7vw,
+5.8rem);
+font-weight:720;
+line-height:1.03;
+letter-spacing:-.055em;
+margin:0 auto 1.5rem;
+max-width:55rem}
+.tutorial-hero p:not(.kicker){
+max-width:38rem;
+margin:0 auto;
+color:var(--muted);
+font-size:1.2rem}
+.chapter-nav{
+position:sticky;
+top:4rem;
+z-index:4;
+background:var(--bg-2);
+border-block:1px solid var(--panel-line)}
+.chapter-nav .wrap{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:.3rem 1.7rem;
+padding-block:.8rem}
+.chapter-nav a{
+color:var(--ink);
+text-decoration:none;
+font-size:.9rem;
+padding:.3rem 0;
+font-weight:650}
+.chapter-nav a:hover,
+.jump a:hover{
+text-decoration:underline;
+text-underline-offset:5px}
+.chapter{
+padding:5rem 1.25rem 1rem;
+scroll-margin-top:9rem}
+.chapter-head{
+padding-bottom:2rem}
+.chapter h2{
+font-size:clamp(2.5rem,
+6vw,
+4rem);
+max-width:none;
+letter-spacing:-.045em;
+margin-bottom:.75rem}
+.chapter-head>p{
+color:var(--muted);
+max-width:40rem}
+.jump{
+display:flex;
+gap:.45rem .9rem;
+flex-wrap:wrap;
+padding:1.3rem 0 0;
+max-width:59rem}
+.jump span{
+width:100%;
+font-size:.85rem;
+font-weight:700;
+color:var(--faint)}
+.jump a{
+color:var(--muted);
+font-size:.88rem;
+text-decoration:none;
+border-bottom:1px solid var(--panel-line)}
+.tutorial{
+margin:0 0 2.5rem;
+border:1px solid var(--panel-line);
+border-radius:24px;
+background:var(--bg-2);
+overflow:hidden;
+scroll-margin-top:9rem}
+.tutorial-copy{
+padding:clamp(1.5rem,
+4vw,
+3.2rem);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2.5rem}
+.tutorial h3{
+font-size:clamp(1.7rem,
+3.3vw,
+2.7rem);
+line-height:1.12;
+letter-spacing:-.035em;
+margin:0 0 1rem}
+.tutorial p{
+color:var(--muted);
+margin:0;
+font-size:1rem}
+.tutorial ol{
+padding-left:1.35rem;
+margin:0;
+font-size:.96rem;
+color:var(--muted)}
+.tutorial li{
+padding-left:.35rem;
+margin-bottom:.85rem}
+.tutorial li:last-child{
+margin-bottom:0}
+.tutorial li::marker{
+color:var(--violet);
+font-weight:750}
+.tutorial .note{
+grid-column:1/-1;
+border-top:1px solid var(--panel-line);
+padding-top:1.2rem;
+font-size:.88rem}
+.tutorial figure{
+margin:0;
+padding:0 clamp(.6rem,
+2vw,
+1.5rem) 1.2rem}
+.tutorial img{
+width:100%;
+height:auto;
+display:block;
+border-radius:12px;
+border:1px solid var(--panel-line)}
+.tutorial figcaption{
+font-size:.78rem;
+text-align:center;
+color:var(--faint);
+margin-top:.65rem}
+.tutorial .early{
+display:inline-block;
+color:var(--orange);
+font-size:.75rem;
+font-weight:750;
+text-transform:uppercase;
+letter-spacing:.08em;
+margin-bottom:1rem}
+.end-note{
+padding:2rem 0 4rem;
+color:var(--muted);
+max-width:42rem}
+@media(max-width:1100px){
+header.top{
+position:relative}
+header.top .wrap{
+height:auto;
+min-height:4rem;
+flex-wrap:wrap;
+padding-block:.7rem}
+nav.links{
+display:flex;
+width:100%;
+order:3;
+flex-wrap:wrap;
+gap:.45rem 1rem}
+header .btn{
+margin-left:auto}
+.chapter-nav{
+top:0}
+.chapter,
+.tutorial{
+scroll-margin-top:7rem}
+}
+@media(max-width:700px){
+.tutorial-copy{
+grid-template-columns:1fr;
+gap:1.2rem}
+.tutorial-hero{
+padding:3.5rem 1.25rem 3rem}
+.chapter{
+padding:3.5rem 1.25rem 1rem}
+.chapter-nav .wrap{
+gap:.15rem 1rem}
+.chapter-nav a{
+font-size:.78rem}
+.tutorial{
+border-radius:18px}
+.chapter-nav a:last-child{
+font-size:.76rem}
+.chapter-head{
+padding-bottom:1.5rem}
+}
+@media(prefers-reduced-motion:no-preference){
+.js-reveal .tutorial{
+transition:opacity .45s ease,
+transform .45s ease}
+.js-reveal .tutorial.waiting{
+opacity:.94;
+transform:translateY(12px)}
+}
+@media(prefers-reduced-motion:reduce){
+html{
+scroll-behavior:auto}
+.tutorial{
+opacity:1!important;
+transform:none!important;
+transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">
+Skip to content
+</a>
+<header class="top">
+<div class="wrap">
+<div style="display:flex;align-items:center">
+<a class="brand" href="./" aria-label="Arla home">
+<img src="../assets/arla-192.png" alt="" width="34" height="34">
+<span>
+Arla
+</span>
+</a>
+<a class="crumb" href="../">
+by Irishwarhound
+</a>
+</div>
+<nav class="links" aria-label="Sections">
+<a href="./#how">
+How it works
+</a>
+<a href="./#features">
+Features
+</a>
+<a href="./#everything">
+Everything it does
+</a>
+<a href="./#privacy">
+Privacy
+</a>
+<a href="./#beta">
+Beta
+</a>
+<a href="./#faq">
+FAQ
+</a>
+<a href="./tutorials.html" aria-current="page">
+Tutorials
+</a>
+</nav>
+<span class="btn ghost small soon" aria-disabled="true" title="Buying opens after the beta">
+Buy · after beta
+</span>
+</div>
+</header>
+<main id="main">
+<div class="tutorial-hero wrap">
+<p class="kicker">
+Arla tutorials · Windows
+&
+Android
+</p>
+<h1>
+How to use Arla
+</h1>
+<p>
+A little guidance. A lot you can do.
+<br>
+Find your next step on your computer, your phone, or both.
+</p>
+</div>
+<nav class="chapter-nav" aria-label="Tutorial chapters">
+<div class="wrap">
+<a href="#desktop">
+Desktop
+</a>
+<a href="#phone">
+Phone
+</a>
+<a href="#together">
+Desktop + phone together
+</a>
+</div>
+</nav>
+<section class="chapter wrap" id="desktop" aria-labelledby="desktop-title">
+<div class="chapter-head">
+<p class="kicker">
+Windows desktop
+</p>
+<h2 id="desktop-title">
+Start here. Make it your own.
+</h2>
+<p>
+Your everyday tools, from the first conversation to a plan you can follow.
+</p>
+<nav class="jump" aria-label="Jump to Windows desktop">
+<span>
+Jump to
+</span>
+<a href="#first-start">
+Make yourself at home
+</a>
+<a href="#chat">
+Start with a conversation
+</a>
+<a href="#review">
+Review it. Then make it yours
+</a>
+<a href="#tasks">
+Give your next task a place
+</a>
+<a href="#goals">
+Turn a goal into a daily rhythm
+</a>
+<a href="#projects">
+Keep each project in context
+</a>
+<a href="#automations">
+Set up a regular job for Arla
+</a>
+<a href="#home-panels">
+Build a Home that fits your day
+</a>
+<a href="#sticky-notes">
+Keep a small thought in view
+</a>
+<a href="#capture">
+Catch the thought before it goes
+</a>
+<a href="#memory">
+Find what you have already shared
+</a>
+<a href="#library">
+Ask questions of your own documents
+</a>
+<a href="#research">
+Research a question. Keep the sources
+</a>
+<a href="#personas">
+Give a conversation the right voice
+</a>
+<a href="#cloud-ai">
+Start with a free cloud option
+</a>
+<a href="#brain">
+Know what is answering
+</a>
+<a href="#coding-assistants">
+Hand a coding task to your own assistant
+</a>
+<a href="#image-studio">
+Make room for an image
+</a>
+<a href="#computer-files">
+Choose what Arla can read and change
+</a>
+<a href="#work-log">
+See the work—and the known cost
+</a>
+<a href="#email-calendar">
+Connect only the accounts you choose
+</a>
+<a href="#relay">
+Let one answer feed the next
+</a>
+<a href="#desktop-privacy">
+Keep the controls close
+</a>
+</nav>
+</div>
+<article class="tutorial" id="first-start">
+<div class="tutorial-copy">
+<div>
+<h3>
+Make yourself at home.
+</h3>
+<p>
+Choose your name and your assistant’s name, then let the tour show you around. You can skip a stop and come back later.
+</p>
+</div>
+<ol>
+<li>
+On first start, read the Terms of Service. If you agree, check the agreement box and choose Accept and continue.
+</li>
+<li>
+In the tour, enter Your name and, if you like, Your assistant’s name (optional). Choose Next.
+</li>
+<li>
+Choose your offline downloads and cloud services, or continue through the tour. To repeat it later, open System → Help →
+Take the tour again.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-tour.webp"
+  alt="Arla on Windows: Make yourself at home tour screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="chat">
+<div class="tutorial-copy">
+<div>
+<h3>
+Start with a conversation.
+</h3>
+<p>
+Open your assistant from any page. Ask a question, describe what you need, or talk instead of typing.
+</p>
+</div>
+<ol>
+<li>
+Select the assistant’s name at the top of the window or the floating orb. Type in the message box and choose Send.
+</li>
+<li>
+For voice input, select the microphone, speak, then select Stop and transcribe. Review the text before sending. Speech
+models must be set up first.
+</li>
+<li>
+Select Read aloud on a finished reply to hear it. Open Details, when shown, to see what Arla did and which model
+answered.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-chat.webp"
+  alt="Arla on Windows: Start with a conversation chat screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="review">
+<div class="tutorial-copy">
+<div>
+<h3>
+Review it. Then make it yours.
+</h3>
+<p>
+When Arla proposes an action, the editable review form opens beside your desktop chat. Check the details before
+confirming.
+</p>
+</div>
+<ol>
+<li>
+Ask Arla for a plan, task, or another supported action. Review the form beside the conversation; on a narrow window, use
+Back to chat to return.
+</li>
+<li>
+Edit the proposed fields, then choose the form’s confirmation button. The same choices are also available in the chat.
+</li>
+<li>
+If the completed action offers Undo, select it to reverse that batch. Read any conflict message before replacing later
+edits.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-review-form.webp"
+  alt="Arla chat on the left with an editable plan review form beside it."
+  width="1440"
+  height="900"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Desktop review form with a disposable sample plan.
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="tasks">
+<div class="tutorial-copy">
+<div>
+<h3>
+Give your next task a place.
+</h3>
+<p>
+Plans
+&amp;
+Timeline brings your active project’s work together. Today helps you choose what to do next.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Plans
+&amp;
+Timeline. In Add an Action Item, choose Add an item.
+</li>
+<li>
+Choose Task under Type, enter a Title and the dates you need, then choose Add.
+</li>
+<li>
+Use the Timeline marks to open an item. Expand Today to review your next steps.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-plan.webp"
+  alt="Arla on Windows: Give your next task a place plan screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="goals">
+<div class="tutorial-copy">
+<div>
+<h3>
+Turn a goal into a daily rhythm.
+</h3>
+<p>
+Goals describe an outcome. Plans break work into dated steps; routines repeat; checks review progress. Choose whether
+you or Arla does the work.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Plans
+&amp;
+Timeline → Add an item. Choose Goal, Plan, Routine, or Check under Type.
+</li>
+<li>
+Fill in the fields for that type: plan steps, a goal’s purpose, a routine’s instructions, or What it checks and How to
+tell it passed.
+</li>
+<li>
+Review who does the work and the schedule, then choose Add. For a goal with a plan or routine, open its controls to
+review progress or pause it.
+</li>
+</ol>
+<p class="note">
+Automations are scheduled jobs for Arla. The separate Plan → Automations page manages those jobs; it is different from
+your own repeating routine.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-plan.webp"
+  alt="Arla on Windows: Turn a goal into a daily rhythm plan screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="projects">
+<div class="tutorial-copy">
+<div>
+<h3>
+Keep each project in context.
+</h3>
+<p>
+Projects keep instructions and work together. Switch projects before adding work so it goes to the right place.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Projects
+&amp;
+Goals and choose New project.
+</li>
+<li>
+Set its name, folder if needed, and project brief. Choose Save.
+</li>
+<li>
+Choose Load on a project, or use Switch project in the title bar.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-projects.webp"
+  alt="Arla on Windows: Keep each project in context projects screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="automations">
+<div class="tutorial-copy">
+<div>
+<h3>
+Set up a regular job for Arla.
+</h3>
+<p>
+Automations run on local models for the selected project. Keep the desktop app open when you want scheduled jobs to run.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Automations and choose New automation.
+</li>
+<li>
+Set the instructions, schedule, destination, and local model. Choose Save changes.
+</li>
+<li>
+Turn the automation on when you want it scheduled. Use Run now for an explicit run, then open its details to review
+results and failures.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-routines.webp"
+  alt="Arla on Windows: Set up a regular job for Arla routines screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="home-panels">
+<div class="tutorial-copy">
+<div>
+<h3>
+Build a Home that fits your day.
+</h3>
+<p>
+Choose the panels you want close at hand, then arrange and style them.
+</p>
+</div>
+<ol>
+<li>
+On Home, choose Add a panel to enter edit mode. Choose it again to open the panel gallery.
+</li>
+<li>
+Add a panel or a template. Use Panel settings to adjust its size and appearance.
+</li>
+<li>
+Choose Save layout when you are happy, or Cancel to leave the previous layout in place.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-home.webp"
+  alt="Arla on Windows: Build a Home that fits your day home screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="sticky-notes">
+<div class="tutorial-copy">
+<div>
+<h3>
+Keep a small thought in view.
+</h3>
+<p>
+Sticky notes belong to the current project. Place them on the board and pin the ones you want on Home.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Notes and choose New note.
+</li>
+<li>
+Type your note. Drag its card to move it, or double-click it to open its own window.
+</li>
+<li>
+Use the note’s Home control to show or hide it on Home. Add the Sticky notes panel on Home if you need it.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-notes.webp"
+  alt="Arla on Windows: Keep a small thought in view notes screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="capture">
+<div class="tutorial-copy">
+<div>
+<h3>
+Catch the thought before it goes.
+</h3>
+<p>
+Capture text, links, or files into the current project’s Inbox. Review the filing suggestions when you are ready.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Inbox, or press Ctrl+Alt+I for quick capture.
+</li>
+<li>
+Type a note, paste a link, drop a file, or choose the paperclip. Select Capture.
+</li>
+<li>
+Leave File automatically off if you want to review each filing suggestion first. Use Show filed items to see completed
+filing.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-inbox.webp"
+  alt="Arla on Windows: Catch the thought before it goes inbox screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="memory">
+<div class="tutorial-copy">
+<div>
+<h3>
+Find what you have already shared.
+</h3>
+<p>
+Memory keeps facts and notes available for later conversations. Review what is kept and remove what you no longer want.
+</p>
+</div>
+<ol>
+<li>
+Open Knowledge → Memory. Use Search memories to find a fact or note.
+</li>
+<li>
+Use Pin to keep a memory prominent, or Forget to remove it.
+</li>
+<li>
+Choose Organize memories when you want Arla to tidy its saved memories.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-memory.webp"
+  alt="Arla on Windows: Find what you have already shared memory screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="library">
+<div class="tutorial-copy">
+<div>
+<h3>
+Ask questions of your own documents.
+</h3>
+<p>
+Library makes the folders you choose searchable. Update the index after adding or changing files.
+</p>
+</div>
+<ol>
+<li>
+Open Knowledge → Library. Under Folders, choose Add folder and select documents you want included.
+</li>
+<li>
+Choose Update library to index them. The Files, Passages, Index size, and Status cards open more detail.
+</li>
+<li>
+Type in Search your library to find a passage, then select its file link to open the original.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-library.webp"
+  alt="Arla on Windows: Ask questions of your own documents library screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="research">
+<div class="tutorial-copy">
+<div>
+<h3>
+Research a question. Keep the sources.
+</h3>
+<p>
+Standard Research handles a focused question. Deep works through several steps and uses more searches and model
+requests.
+</p>
+</div>
+<ol>
+<li>
+Open Knowledge → Research. Under Research depth, choose Standard or Deep (several steps, more searches).
+</li>
+<li>
+Enter your question and choose Ask. Review the answer and its sources; a failed search or unavailable service is shown
+in the app.
+</li>
+<li>
+Choose Save as research, add tags if useful, then Save. To keep your own notes instead, choose New item in Your
+research.
+</li>
+</ol>
+<p class="note">
+Web research needs a working AI and search route. Optional search services use your own account or key; their limits and
+costs apply.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-research.webp"
+  alt="Arla on Windows: Research a question. Keep the sources research screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="personas">
+<div class="tutorial-copy">
+<div>
+<h3>
+Give a conversation the right voice.
+</h3>
+<p>
+Personas have their own instructions, personality, and preferred model. Your main assistant’s name remains yours to
+choose.
+</p>
+</div>
+<ol>
+<li>
+Open Minds → Personas. Choose New persona, or select an existing persona to edit it.
+</li>
+<li>
+Set its name, Instructions, personality traits, and Preferred model. Edits are saved as you make them.
+</li>
+<li>
+Choose Chat with the persona to start its chat. You can also open a persona from Home.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-personas.webp"
+  alt="Arla on Windows: Give a conversation the right voice personas screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="cloud-ai">
+<div class="tutorial-copy">
+<div>
+<h3>
+Start with a free cloud option.
+</h3>
+<p>
+A cloud AI can give Arla stronger answers online. Each service uses your own account and key; free plans still have
+limits.
+</p>
+</div>
+<ol>
+<li>
+Open System → Settings → AI services → Connect a cloud AI, step by step.
+</li>
+<li>
+Choose a service marked free. Follow its on-screen account instructions, paste your key, then choose Connect and test.
+</li>
+<li>
+Open Workshop → Models to review checked cloud models and manage local downloads. Read the free or paid choice before
+enabling paid use.
+</li>
+</ol>
+<p class="note">
+Arla checks models against your key. A model appearing in a service’s list does not guarantee that it can answer with
+your account.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-cloud-setup.webp"
+  alt="Arla on Windows: Start with a free cloud option cloud setup screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="brain">
+<div class="tutorial-copy">
+<div>
+<h3>
+Know what is answering.
+</h3>
+<p>
+Arla uses your working Brain and can switch to another healthy Brain when a request fails safely. The offline model is
+the local fallback.
+</p>
+</div>
+<ol>
+<li>
+Open Minds → Brain to choose a preferred Brain, or use Auto for the strongest connected one.
+</li>
+<li>
+Open Minds → Personas, expand your assistant’s section, then expand How Arla answers to review its connection.
+</li>
+<li>
+If you want the optional fallback, turn on Free public chat when no Brain answers (OVHcloud). It only talks and cannot
+perform actions.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-control.webp"
+  alt="Arla on Windows: Know what is answering control screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="coding-assistants">
+<div class="tutorial-copy">
+<div>
+<h3>
+Hand a coding task to your own assistant.
+</h3>
+<p>
+Claude Code, GitHub Copilot, and Muse Code run on your own signed-in accounts and use those plans’ usage.
+</p>
+</div>
+<ol>
+<li>
+Open Workshop → Tools → Assistants that code. Use the assistant’s Installation page if it is not installed, then reopen
+Tools.
+</li>
+<li>
+Choose Sign in for the assistant you want to use. Arla does not receive your login.
+</li>
+<li>
+Choose Hand it another task when available. Enter the Task, choose its Folder and assistant, review Let it run commands
+(tests, builds), then select Start.
+</li>
+</ol>
+<p class="note">
+Coding assistants edit the folder you choose. Arla’s Undo does not cover their changes; use Git or the assistant’s own
+undo. Muse Code’s Contributor mode has its own training setting.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-tools.webp"
+  alt="Arla on Windows: Hand a coding task to your own assistant tools screen."
+  width="1270"
+  height="505"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="image-studio">
+<div class="tutorial-copy">
+<div>
+<h3>
+Make room for an image.
+</h3>
+<p>
+Image Studio can generate images, search supported image services, and keep a local gallery. Connect and enable the
+service you want first.
+</p>
+</div>
+<ol>
+<li>
+On Home, use Add a panel to add Image Studio. Open the panel to work with it.
+</li>
+<li>
+Choose Generate or Search, select an available service, enter your description or search words, then choose Generate or
+Search.
+</li>
+<li>
+Choose Save to gallery on a result. Open Gallery to view saved images and use Export when you want a copy.
+</li>
+</ol>
+<p class="note">
+Cloud generation uses your own connected service and allowance. Check a searched image’s licence and credit before using
+it.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-imagestudio.webp"
+  alt="Arla on Windows: Make room for an image imagestudio screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="computer-files">
+<div class="tutorial-copy">
+<div>
+<h3>
+Choose what Arla can read and change.
+</h3>
+<p>
+Ask for a specific file action, then review the approval. Reading a file can send its contents to the Brain you
+selected.
+</p>
+</div>
+<ol>
+<li>
+Open Minds → Personas, expand your assistant’s section, then Permissions for brains. Review Writing files and File
+contents outside the workspace.
+</li>
+<li>
+Ask Arla to read or change the files you name. Approve only the resolved folder or file action shown in the chat.
+</li>
+<li>
+After a supported file change, use Undo on the reply or open System → Devices → Your computer · Recent changes by Arla.
+Read any refusal if the file has changed since.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-permissions.webp"
+  alt="Arla on Windows: Choose what Arla can read and change permissions screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="work-log">
+<div class="tutorial-copy">
+<div>
+<h3>
+See the work—and the known cost.
+</h3>
+<p>
+Work log shows project work and usage details. Unknown prices stay unpriced; the displayed total is not a complete bill.
+</p>
+</div>
+<ol>
+<li>
+Open Plan → Work log to review Up next, In progress, and Done.
+</li>
+<li>
+Select AI cost today to open Usage details. Check the service, model, and purpose breakdowns.
+</li>
+<li>
+Read the not priced count alongside the dollar amount. Unknown calls are excluded from that total.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-worklog.webp"
+  alt="Arla on Windows: See the work—and the known cost worklog screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="email-calendar">
+<div class="tutorial-copy">
+<div>
+<span class="early">
+Early access
+</span>
+<h3>
+Connect only the accounts you choose.
+</h3>
+<p>
+Email and calendar are Early access. Use your own Google or Microsoft account and review the access requested during
+sign-in.
+</p>
+</div>
+<ol>
+<li>
+Open Workshop → Tools → Email and calendar. Choose Connect Google or Connect Microsoft when available in your build.
+</li>
+<li>
+Choose the calendars you want in Today. Use Sync now to refresh them.
+</li>
+<li>
+Ask Arla for an email or calendar action, review the form, and confirm its details. Sending an email requires the
+separate Send now confirmation.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-email-calendar.webp"
+  alt="Arla on Windows: Connect only the accounts you choose email calendar screen."
+  width="1270"
+  height="335"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="relay">
+<div class="tutorial-copy">
+<div>
+<span class="early">
+Early access
+</span>
+<h3>
+Let one answer feed the next.
+</h3>
+<p>
+Relay is Early access. Build a short chain of models or Deck slots, with each step able to use the previous answer.
+</p>
+</div>
+<ol>
+<li>
+Open Minds → Relay and enter the request in Input.
+</li>
+<li>
+Choose a Deck slot or model for each step and edit its instruction. Add a step if needed.
+</li>
+<li>
+Choose Run relay. Use Stop to cancel a running chain.
+</li>
+</ol>
+<p class="note">
+Connected cloud services use your own account or key. Each step can use that service’s allowance.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-relay.webp"
+  alt="Arla on Windows: Let one answer feed the next relay screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="desktop-privacy">
+<div class="tutorial-copy">
+<div>
+<h3>
+Keep the controls close.
+</h3>
+<p>
+Settings lets you manage appearance, voice, services, and backups. Review permissions before connecting services or
+sharing files.
+</p>
+</div>
+<ol>
+<li>
+Open System → Settings to review your preferences and connected AI services.
+</li>
+<li>
+Open System → Backups to review your backup options.
+</li>
+<li>
+Read the Privacy policy linked below for what stays on your devices and what connected services receive.
+</li>
+</ol>
+<p class="note">
+<a href="./privacy.html">
+Read the privacy policy
+</a>
+·
+<a href="./help.html">
+Installation and licence help
+</a>
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-settings.webp"
+  alt="Arla on Windows: Keep the controls close settings screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+</section>
+<section class="chapter wrap" id="phone" aria-labelledby="phone-title">
+<div class="chapter-head">
+<p class="kicker">
+Android phone
+</p>
+<h2 id="phone-title">
+Take it with you.
+</h2>
+<p>
+Use the phone on its own, or link it to your computer when you want to share work.
+</p>
+<nav class="jump" aria-label="Jump to Android phone">
+<span>
+Jump to
+</span>
+<a href="#phone-home">
+Your day, within reach
+</a>
+<a href="#phone-chat">
+Keep the conversation with you
+</a>
+<a href="#offline-model">
+Bring an offline model along
+</a>
+<a href="#standalone">
+Use the phone on its own
+</a>
+<a href="#phone-scheduled">
+Check what is waiting to happen
+</a>
+<a href="#phone-controls">
+Make the phone feel like yours
+</a>
+</nav>
+</div>
+<article class="tutorial" id="phone-home">
+<div class="tutorial-copy">
+<div>
+<h3>
+Your day, within reach.
+</h3>
+<p>
+Home brings together panels for your day, projects, and quick capture. The Android app also works on its own.
+</p>
+</div>
+<ol>
+<li>
+Open Home from the navigation bar. Tap a panel to open its details.
+</li>
+<li>
+Tap Customize Home to arrange the panels you want. Tap a project in the project bar before adding project work.
+</li>
+<li>
+Open Plan for Today, tasks, goals, plans, routines, Timeline, and notes.
+</li>
+</ol>
+</div>
+</article>
+<article class="tutorial" id="phone-chat">
+<div class="tutorial-copy">
+<div>
+<h3>
+Keep the conversation with you.
+</h3>
+<p>
+Talk to your assistant from the phone. A linked computer can answer when available; the phone can use its own connected
+AI or downloaded offline model.
+</p>
+</div>
+<ol>
+<li>
+Tap your assistant to open its chat. Type your message, or use the microphone, and send it.
+</li>
+<li>
+Review any action form and its confirmation choices before saving. Use Undo when the completed action offers it.
+</li>
+<li>
+Open System for voice preferences. Keep the screen awake while a reply is being written if Android sleep interrupts it.
+</li>
+</ol>
+</div>
+</article>
+<article class="tutorial" id="offline-model">
+<div class="tutorial-copy">
+<div>
+<h3>
+Bring an offline model along.
+</h3>
+<p>
+Downloaded offline chat models run on this phone without a cloud key. Larger packs need more space and memory.
+</p>
+</div>
+<ol>
+<li>
+Open Workshop and expand On this phone. Choose the offline chat pack that fits your phone.
+</li>
+<li>
+Choose Get pack for an extra pack, or Get for Lite when it is not installed. Use Wi-Fi for the download.
+</li>
+<li>
+Wait for the download to finish before relying on offline chat. In Workshop, review the offline models available on this
+phone.
+</li>
+</ol>
+</div>
+</article>
+<article class="tutorial" id="standalone">
+<div class="tutorial-copy">
+<div>
+<h3>
+Use the phone on its own.
+</h3>
+<p>
+You can keep using Arla without a linked computer. Phone-only work stays on the phone until you choose to link and move
+or sync supported items.
+</p>
+</div>
+<ol>
+<li>
+Open Plan and create or choose a project for your phone work.
+</li>
+<li>
+Chat with a downloaded offline model or connect your own cloud service in Workshop.
+</li>
+<li>
+For a request that offers Add as a task, tap it, review the editable task text, then choose Save.
+</li>
+</ol>
+<p class="note">
+Free public chat can answer questions, but it has no tools. Some actions need a working Brain or your computer.
+</p>
+</div>
+</article>
+<article class="tutorial" id="phone-scheduled">
+<div class="tutorial-copy">
+<div>
+<h3>
+Check what is waiting to happen.
+</h3>
+<p>
+Plan → Scheduled brings approved sends and other scheduled items together. Check which device will carry out an action.
+</p>
+</div>
+<ol>
+<li>
+Open Plan and expand Scheduled.
+</li>
+<li>
+Review each item’s device and status. Open the available controls before changing or cancelling it.
+</li>
+<li>
+If a phone email shows Turn on for exact alarms, review that Android setting before relying on its timing.
+</li>
+</ol>
+<p class="note">
+Email and calendar are Early access. Phone-scheduled email may need Android alarm access; calendar changes still use
+your computer.
+</p>
+</div>
+</article>
+<article class="tutorial" id="phone-controls">
+<div class="tutorial-copy">
+<div>
+<h3>
+Make the phone feel like yours.
+</h3>
+<p>
+System holds appearance, assistant, voice, data, and computer settings. Cloud keys and models live in Workshop.
+</p>
+</div>
+<ol>
+<li>
+Open System. Expand Assistants to review your assistant, personas, and voice settings.
+</li>
+<li>
+Open Workshop for Models, speed and cloud keys. Use your own service accounts and read each connection’s terms.
+</li>
+<li>
+In System → Your data, use Save a backup or Export everything when you want a copy. Read the privacy policy before
+enabling optional services.
+</li>
+</ol>
+<p class="note">
+<a href="./privacy.html">
+Read the privacy policy
+</a>
+</p>
+</div>
+</article>
+</section>
+<section class="chapter wrap" id="together" aria-labelledby="together-title">
+<div class="chapter-head">
+<p class="kicker">
+Desktop + phone together
+</p>
+<h2 id="together-title">
+Keep your place across devices.
+</h2>
+<p>
+Link once, choose the right project, and review what is waiting for your computer.
+</p>
+<nav class="jump" aria-label="Jump to Desktop + phone together">
+<span>
+Jump to
+</span>
+<a href="#link-devices">
+One assistant. Two places to use it
+</a>
+<a href="#computer-away">
+Let the request wait for your computer
+</a>
+<a href="#shared-projects">
+Pick the same project on each device
+</a>
+</nav>
+</div>
+<article class="tutorial" id="link-devices">
+<div class="tutorial-copy">
+<div>
+<h3>
+One assistant. Two places to use it.
+</h3>
+<p>
+Link your Android phone to your Windows computer to share supported project work and continue your assistant’s
+conversation.
+</p>
+</div>
+<ol>
+<li>
+On the computer, open System → Devices and turn on Phone access. Choose Pair a phone.
+</li>
+<li>
+On the phone, open System → Your computer. Enter the address shown on the computer and its 6-digit code, then tap Link
+this phone.
+</li>
+<li>
+Check that the computer key shown on the phone matches the one on the computer’s Devices page.
+</li>
+</ol>
+<p class="note">
+Start on the same private network. Keep pairing codes private. Sync away from home is an optional encrypted relay and is
+Early access; the computer still needs to be awake.
+</p>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-devices.webp"
+  alt="Devices page showing Phone access and Pair a phone controls."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+<article class="tutorial" id="computer-away">
+<div class="tutorial-copy">
+<div>
+<h3>
+Let the request wait for your computer.
+</h3>
+<p>
+When a supported request needs the computer, you can explicitly keep it waiting instead of sending it again yourself.
+</p>
+</div>
+<ol>
+<li>
+If the reply offers Send to my computer when it’s back, tap that button to keep the request waiting.
+</li>
+<li>
+Read the waiting status. Use Cancel if you no longer want the request sent.
+</li>
+<li>
+If the request returns for review, choose Send now only when you still want it. Check Plan for any task you already
+saved on the phone.
+</li>
+</ol>
+</div>
+</article>
+<article class="tutorial" id="shared-projects">
+<div class="tutorial-copy">
+<div>
+<h3>
+Pick the same project on each device.
+</h3>
+<p>
+Project identity keeps work in its proper place. Check the active project and connection status before editing shared
+records.
+</p>
+</div>
+<ol>
+<li>
+On the computer, choose the project from Switch project or load it in Projects
+&amp;
+Goals.
+</li>
+<li>
+On the phone, use the project bar to choose the shared project. Read its sync status if the computer is offline.
+</li>
+<li>
+If a persona edit is refused because it changed on another device, refresh and review the current persona before saving
+again.
+</li>
+</ol>
+</div>
+<figure>
+<img
+  src="../screenshots/tutorials/desktop-projects.webp"
+  alt="Arla on Windows: Pick the same project on each device projects screen."
+  width="1380"
+  height="880"
+  loading="lazy"
+  decoding="async">
+<figcaption>
+Windows desktop · sample data
+</figcaption>
+</figure>
+</article>
+</section>
+<div class="wrap">
+<p class="end-note">
+These guides use Arla’s default labels. If you have renamed a page or your assistant, look for the name you chose. Need
+help installing? Read
+<a href="./help.html">
+Getting started
+</a>
+. See
+<a href="./whats-new.html">
+what’s new
+</a>
+or read the
+<a href="./privacy.html">
+privacy policy
+</a>
+.
+</p>
+</div>
+</main>
+<footer>
+<div class="wrap">
+<div>
+<a href="./privacy.html">
+Privacy
+</a>
+<a href="./terms.html">
+Terms
+</a>
+<a href="mailto:support@irishwarhound.com">
+Contact
+</a>
+</div>
+<div>
+© 2026
+<a href="../" style="margin:0">
+Irishwarhound
+</a>
+</div>
+</div>
+</footer>
+<script>
+(() => {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let observer;
+  const revealAll = () => {
+    observer?.disconnect();
+    document.documentElement.classList.remove('js-reveal');
+    document.querySelectorAll('.waiting').forEach(el => el.classList.remove('waiting'));
+  };
+  const start = () => {
+    revealAll();
+    if (motion.matches || !('IntersectionObserver' in window)) return;
+    const pending = [...document.querySelectorAll('.tutorial')]
+      .filter(el => el.getBoundingClientRect().top > innerHeight);
+    observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('waiting');
+        observer.unobserve(entry.target);
+      }
+    }), {rootMargin:'0px 0px 60px 0px'});
+    document.documentElement.classList.add('js-reveal');
+    pending.forEach(el => {el.classList.add('waiting');observer.observe(el);});
+  };
+  motion.addEventListener('change', start);
+  document.addEventListener('focusin', event => {
+    event.target.closest('.tutorial')?.classList.remove('waiting');
+  });
+  addEventListener('beforeprint', revealAll);
+  start();
+})();
+</script>
+</body>
+</html>
