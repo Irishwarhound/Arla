@@ -932,6 +932,50 @@ transform:none!important;
 transition:none!important}
 }
 .tutorial figure.phone-shot{max-width:52rem;margin-inline:auto}
+
+@media(max-width:500px){
+.js .walk-controls {
+display:grid;
+grid-template-columns:1fr 1fr}
+.walk-controls .next {
+justify-self:end}
+.walk-controls [data-full-screen] {
+grid-row:2;
+grid-column:1 / -1;
+justify-self:center}
+}
+/* Zoom changes only the active screenshot; no-script images retain their full view. */
+.focus-plane {
+position:relative;
+width:100%;
+line-height:0}
+.screen.is-zoomed .focus-plane {
+position:absolute;
+width:var(--image-width);
+height:var(--image-height);
+left:var(--image-left);
+top:var(--image-top)}
+.screen.is-zoomed .ring {
+border-width:1px;
+min-width:0;
+min-height:0}
+.walk-controls {
+flex-wrap:wrap;
+gap:.55rem}
+.walk-controls [data-full-screen] {
+font-size:.78rem;
+padding:.55rem .65rem}
+@media print {
+.screen.is-zoomed {
+height:auto!important}
+.screen.is-zoomed .focus-plane {
+position:relative;
+width:100%;
+height:auto;
+left:0;
+top:0}
+}
+
 </style>
 <style>
 
@@ -1464,17 +1508,17 @@ aria-pressed="false">Phone</button></div>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Type what you need in the message box." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Type what you need in the message box." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">2</span></span>
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Type what you need in the message box." width="1380" height="600" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Type what you need in the message box." width="1380" height="600" loading="lazy"></noscript>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Type what you need in the <b>message box</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-08a66af3dc.webp" alt="Desktop: Click Send." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-08a66af3dc.webp" alt="Desktop: Click Send." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:93.075%;top:90.682%;width:4.534%;height:4.205%" aria-hidden="true"><span class="marker">3</span></span>
+<img data-src="../screenshots/tutorials/d-08a66af3dc.webp" alt="Desktop: Click Send." width="1380" height="600" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-08a66af3dc.webp" alt="Desktop: Click Send." width="1380" height="600" loading="lazy"></noscript>
+<span class="ring" style="left:93.07518%;top:85.33333%;width:4.53351%;height:6.16667%" aria-hidden="true"><span class="marker">3</span></span>
 </div></div><figcaption>Click <b>Send</b>.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -1521,19 +1565,19 @@ say your message. After Stop and transcribe, review the text before sending." op
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-9dbf4b054f.webp" alt="Desktop: Click Speak and say your message." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-9dbf4b054f.webp" alt="Desktop: Click Speak and say your message." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:90.322%;top:91.705%;width:2.029%;height:3.182%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-9dbf4b054f.webp" alt="Desktop: Click Speak and say your message." width="1380" height="600" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-9dbf4b054f.webp" alt="Desktop: Click Speak and say your message." width="1380" height="600" loading="lazy"></noscript>
+<span class="ring" style="left:90.32156%;top:86.83333%;width:2.02899%;height:4.66667%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Click <b>Speak</b> and say your message.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: After Stop and transcribe, review the text before sending." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: After Stop and transcribe, review the text before sending." width="1380" height="600" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: After Stop and transcribe, review the text before sending." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: After Stop and transcribe, review the text before sending." width="1380" height="600"
 loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">2</span></span>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>After <b>Stop and transcribe</b>, review the text before sending.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -1551,17 +1595,17 @@ aria-pressed="false">Phone</button></div>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-d5116fac13.webp" alt="Desktop: Click Read aloud." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-d5116fac13.webp" alt="Desktop: Click Read aloud." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.696%;top:41.014%;width:2.029%;height:3.182%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-d5116fac13.webp" alt="Desktop: Click Read aloud." width="1380" height="315" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-d5116fac13.webp" alt="Desktop: Click Read aloud." width="1380" height="315" loading="lazy"></noscript>
+<span class="ring" style="left:3.69565%;top:79.87103%;width:2.02899%;height:8.88889%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Click <b>Read aloud</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a59a21254f.webp" alt="Desktop: Open Details when a reply provides them." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a59a21254f.webp" alt="Desktop: Open Details when a reply provides them." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.261%;top:38.514%;width:4.390%;height:2.500%" aria-hidden="true"><span class="marker">2</span></span>
+<img data-src="../screenshots/tutorials/d-a59a21254f.webp" alt="Desktop: Open Details when a reply provides them." width="1380" height="315" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-a59a21254f.webp" alt="Desktop: Open Details when a reply provides them." width="1380" height="315" loading="lazy"></noscript>
+<span class="ring" style="left:73.13179%;top:72.88690%;width:4.38972%;height:6.98413%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Open <b>Details</b> when a reply provides them.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -1601,9 +1645,9 @@ computer · Recent changes by Arla." open>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-530878f21d.webp" alt="Desktop: Click Undo on the completed action." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-530878f21d.webp" alt="Desktop: Click Undo on the completed action." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.261%;top:32.150%;width:3.819%;height:3.182%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-530878f21d.webp" alt="Desktop: Click Undo on the completed action." width="1380" height="315" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-530878f21d.webp" alt="Desktop: Click Undo on the completed action." width="1380" height="315" loading="lazy"></noscript>
+<span class="ring" style="left:3.26087%;top:62.09325%;width:3.81907%;height:8.88889%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Click <b>Undo</b> on the completed action.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -1745,21 +1789,21 @@ ChatGPT, Claude, Gemini or Copilot export into the assistant." open>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-58ddc4b264.webp" alt="Desktop: Find the chat history export tip in an empty chat." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-58ddc4b264.webp" alt="Desktop: Find the chat history export tip in an empty chat." width="1380" height="147" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-58ddc4b264.webp" alt="Desktop: Find the chat history export tip in an empty chat." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-58ddc4b264.webp" alt="Desktop: Find the chat history export tip in an empty chat." width="1380" height="147"
 loading="lazy"></noscript>
-<span class="ring" style="left:2.754%;top:82.750%;width:94.493%;height:1.909%" aria-hidden="true"><span class="marker">1</span></span>
+<span class="ring" style="left:2.75362%;top:44.35587%;width:94.49275%;height:11.42645%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Find the <b>chat history export</b> tip in an empty chat.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-3b6b371950.webp" alt="Desktop: Drop a ChatGPT, Claude, Gemini or Copilot export into the assistant." width="1380" height="880"
+<img data-src="../screenshots/tutorials/d-3b6b371950.webp" alt="Desktop: Drop a ChatGPT, Claude, Gemini or Copilot export into the assistant." width="1380" height="600"
 loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-3b6b371950.webp" alt="Desktop: Drop a ChatGPT, Claude, Gemini or Copilot export into the assistant." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-3b6b371950.webp" alt="Desktop: Drop a ChatGPT, Claude, Gemini or Copilot export into the assistant." width="1380" height="600"
 loading="lazy"></noscript>
-<span class="ring" style="left:1.739%;top:6.818%;width:96.522%;height:75.932%" aria-hidden="true"><span class="marker">2</span></span>
+<span class="ring" style="left:1.73913%;top:9.00000%;width:96.52174%;height:74.83333%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Drop a <b>ChatGPT, Claude, Gemini or Copilot export</b> into the assistant.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -2094,11 +2138,11 @@ Routines." open>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask for a routine for your goal, with its schedule." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask for a routine for your goal, with its schedule." width="1380" height="600" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask for a routine for your goal, with its schedule." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask for a routine for your goal, with its schedule." width="1380" height="600"
 loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">1</span></span>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Ask for a <b>routine for your goal</b>, with its schedule.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -2146,9 +2190,9 @@ model while the desktop app is open.</p>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-2a2b82ee59.webp" alt="Desktop: Click New automation." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-2a2b82ee59.webp" alt="Desktop: Click New automation." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:86.342%;top:25.767%;width:11.629%;height:4.205%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-2a2b82ee59.webp" alt="Desktop: Click New automation." width="1380" height="560" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-2a2b82ee59.webp" alt="Desktop: Click New automation." width="1380" height="560" loading="lazy"></noscript>
+<span class="ring" style="left:86.34171%;top:40.49107%;width:11.62930%;height:6.60714%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Click <b>New automation</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -2338,9 +2382,9 @@ Review it and use the available Start or time controls to act on it. Desktop Rea
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-992c33ced8.webp" alt="Desktop: Read Focus for today." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-992c33ced8.webp" alt="Desktop: Read Focus for today." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:9.348%;top:49.318%;width:70.145%;height:4.886%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-992c33ced8.webp" alt="Desktop: Read Focus for today." width="1380" height="560" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-992c33ced8.webp" alt="Desktop: Read Focus for today." width="1380" height="560" loading="lazy"></noscript>
+<span class="ring" style="left:9.34783%;top:77.50000%;width:70.14493%;height:7.67857%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Read <b>Focus for today</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -2461,9 +2505,9 @@ about.</p>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask Arla to remind you at the time you choose." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask Arla to remind you at the time you choose." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask Arla to remind you at the time you choose." width="1380" height="600" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask Arla to remind you at the time you choose." width="1380" height="600" loading="lazy"></noscript>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Ask Arla to <b>remind you</b> at the time you choose.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -3119,7 +3163,7 @@ away.</p>
 <a class="task-link" href="#use-phone-on-its-own">Link to this tutorial</a></div></details>
 <details class="task" id="send-when-computer-returns" data-search="How to send a request when your computer is back send when computer returns When a reply offers a computer
 handoff, review the request before queuing it. When offered, choose “Send to my computer when it’s back”. It sends once when the computer returns; Cancel removes a waiting request.
-The example shows the connection controls, not an active queued offer. Phone Enter the request in your assistant’s chat. Check the connection in System → Your computer." open>
+The screenshot shows the offline offer before it is selected. Phone Enter the request in your assistant’s chat. Review the offer, then choose Send to my computer when it’s back if you want to queue it." open>
 <summary><h3>How to send a request when your computer is back</h3></summary><div class="task-body"><span id="computer-away" class="legacy-anchor"></span><p>When a reply offers a
 computer handoff, review the request before queuing it.</p>
 
@@ -3137,19 +3181,17 @@ computer handoff, review the request before queuing it.</p>
 <div class="device phone">
 
 <div class="screen">
-<img data-src="../screenshots/tutorials/p-computer.webp" alt="Phone: Check the connection in System → Your computer." width="1440" height="1676" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/p-computer.webp" alt="Phone: Check the connection in System → Your computer." width="1440" height="1676" loading="lazy"></noscript>
-<span class="ring" style="left:4.580%;top:83.565%;width:14.547%;height:4.398%" aria-hidden="true"><span class="marker">2</span></span>
-</div></div><figcaption>Check the connection in <b>System → Your computer</b>.</figcaption></figure></li></ol>
+<img data-src="../screenshots/tutorials/p-computer-offer.webp" alt="Phone: Review the offer, then choose Send to my computer when it’s back if you want to queue it." width="1440" height="551" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/p-computer-offer.webp" alt="Phone: Review the offer, then choose Send to my computer when it’s back if you want to queue it." width="1440" height="551" loading="lazy"></noscript>
+<span class="ring" style="left:3.34052%;top:56.76056%;width:81.89655%;height:12.81690%" aria-hidden="true"><span class="marker">2</span></span>
+</div></div><figcaption>Review the offer, then choose <b>Send to my computer when it’s back</b> if you want to queue it.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
 →</button></div>
-</section><p class="note">When offered, choose “Send to my computer when it’s back”. It sends once when the computer returns; Cancel removes a waiting request. The example shows
-the connection controls, not an active queued offer.</p>
+</section><p class="note">When offered, choose “Send to my computer when it’s back”. It sends once when the computer returns; Cancel removes a waiting request. The screenshot shows the offline offer before it is selected.</p>
 <a class="task-link" href="#send-when-computer-returns">Link to this tutorial</a></div></details>
 <details class="task" id="add-request-as-task" data-search="How to add a request as a task add request as task Use the Add as a task offer on a request that cannot currently be
-completed. When shown, choose “Add as a task”, edit the proposed title and details, then Save. New linked-phone tasks wait for the computer when needed. This guide does not stage a
-live task offer. Phone Ask for the work in the assistant message box. After reviewing and saving the task, find it in Plan → Tasks." open>
+completed. When shown, choose “Add as a task”, edit the proposed title and details, then Save. New linked-phone tasks wait for the computer when needed. The screenshot shows the offer before it is selected. Phone Choose Add as a task when you want to review the proposed task. After reviewing and saving the task, find it in Plan → Tasks." open>
 <summary><h3>How to add a request as a task</h3></summary><div class="task-body"><p>Use the Add as a task offer on a request that cannot currently be completed.</p>
 
 <section class="walkthrough" data-walkthrough data-app="Phone" aria-label="Phone walkthrough">
@@ -3158,10 +3200,10 @@ live task offer. Phone Ask for the work in the assistant message box. After revi
 <div class="device phone">
 
 <div class="screen">
-<img data-src="../screenshots/tutorials/p-chat.webp" alt="Phone: Ask for the work in the assistant message box." width="1100" height="261" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/p-chat.webp" alt="Phone: Ask for the work in the assistant message box." width="1100" height="261" loading="lazy"></noscript>
-<span class="ring" style="left:0.000%;top:67.050%;width:90.000%;height:28.736%" aria-hidden="true"><span class="marker">1</span></span>
-</div></div><figcaption>Ask for the work in the <b>assistant message box</b>.</figcaption></figure></li>
+<img data-src="../screenshots/tutorials/p-task-offer.webp" alt="Phone: Choose Add as a task when you want to review the proposed task." width="1440" height="551" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/p-task-offer.webp" alt="Phone: Choose Add as a task when you want to review the proposed task." width="1440" height="551" loading="lazy"></noscript>
+<span class="ring" style="left:3.34052%;top:73.09859%;width:81.89655%;height:12.81690%" aria-hidden="true"><span class="marker">1</span></span>
+</div></div><figcaption>Choose <b>Add as a task</b> when you want to review the proposed task.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device phone">
 
@@ -3175,8 +3217,7 @@ loading="lazy"></noscript>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
 →</button></div>
-</section><p class="note">When shown, choose “Add as a task”, edit the proposed title and details, then Save. New linked-phone tasks wait for the computer when needed. This guide
-does not stage a live task offer.</p>
+</section><p class="note">When shown, choose “Add as a task”, edit the proposed title and details, then Save. New linked-phone tasks wait for the computer when needed. The screenshot shows the offer before it is selected.</p>
 <a class="task-link" href="#add-request-as-task">Link to this tutorial</a></div></details>
 <details class="task" id="review-scheduled-items" data-search="How to review scheduled sends and reminders review scheduled items Open Plan → Scheduled. Your computer must be
 reachable to view or cancel its scheduled items. Phone-scheduled email may need exact-alarm access; choose Turn on only if you want to grant it. Phone Open Scheduled. Choose
@@ -3332,19 +3373,19 @@ loading="lazy"></noscript>
 <div class="device phone">
 
 <div class="screen">
-<img data-src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Open Knowledge and use Search notes, goals, inbox and chats." width="1440" height="1676" loading="lazy"
+<img data-src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Open Knowledge and use Search notes, goals, inbox and chats." width="1440" height="800" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Open Knowledge and use Search notes, goals, inbox and chats." width="1440" height="1676"
+<noscript><img src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Open Knowledge and use Search notes, goals, inbox and chats." width="1440" height="800"
 loading="lazy"></noscript>
-<span class="ring" style="left:4.580%;top:22.222%;width:91.056%;height:5.787%" aria-hidden="true"><span class="marker">1</span></span>
+<span class="ring" style="left:4.58000%;top:46.55509%;width:91.05600%;height:12.12377%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Open Knowledge and use <b>Search notes, goals, inbox and chats</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device phone">
 
 <div class="screen">
-<img data-src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Choose Save something to remember to add a note." width="1440" height="1676" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Choose Save something to remember to add a note." width="1440" height="1676" loading="lazy"></noscript>
-<span class="ring" style="left:2.425%;top:35.417%;width:94.828%;height:7.639%" aria-hidden="true"><span class="marker">2</span></span>
+<img data-src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Choose Save something to remember to add a note." width="1440" height="800" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/p-knowledge.webp" alt="Phone: Choose Save something to remember to add a note." width="1440" height="800" loading="lazy"></noscript>
+<span class="ring" style="left:2.42500%;top:74.19862%;width:94.82800%;height:16.00371%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Choose <b>Save something to remember</b> to add a note.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -3476,11 +3517,11 @@ card and choose Chat with that persona." open>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to ask your named persona for help." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to ask your named persona for help." width="1380" height="600" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to ask your named persona for help." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to ask your named persona for help." width="1380" height="600"
 loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">1</span></span>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Ask your assistant to <b>ask your named persona</b> for help.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -3813,27 +3854,27 @@ Connect a service in Settings first.</p>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-d4a824a1ed.webp" alt="Desktop: Choose Generate for a new image." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-d4a824a1ed.webp" alt="Desktop: Choose Generate for a new image." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:82.861%;top:17.841%;width:5.776%;height:3.523%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-d4a824a1ed.webp" alt="Desktop: Choose Generate for a new image." width="1380" height="450" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-d4a824a1ed.webp" alt="Desktop: Choose Generate for a new image." width="1380" height="450" loading="lazy"></noscript>
+<span class="ring" style="left:82.86119%;top:34.88889%;width:5.77559%;height:6.88889%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Choose <b>Generate</b> for a new image.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-b6930dd653.webp" alt="Desktop: Enter what you want in Describe an image and choose an available service." width="1380" height="880"
+<img data-src="../screenshots/tutorials/d-b6930dd653.webp" alt="Desktop: Enter what you want in Describe an image and choose an available service." width="1380" height="450"
 loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-b6930dd653.webp" alt="Desktop: Enter what you want in Describe an image and choose an available service." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-b6930dd653.webp" alt="Desktop: Enter what you want in Describe an image and choose an available service." width="1380" height="450"
 loading="lazy"></noscript>
-<span class="ring" style="left:7.319%;top:28.750%;width:85.567%;height:4.659%" aria-hidden="true"><span class="marker">2</span></span>
+<span class="ring" style="left:7.31884%;top:56.22222%;width:85.56726%;height:9.11111%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Enter what you want in <b>Describe an image</b> and choose an available service.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-e5ff4cea10.webp" alt="Desktop: Open Gallery for saved results." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-e5ff4cea10.webp" alt="Desktop: Open Gallery for saved results." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:93.687%;top:17.841%;width:4.792%;height:3.523%" aria-hidden="true"><span class="marker">3</span></span>
+<img data-src="../screenshots/tutorials/d-e5ff4cea10.webp" alt="Desktop: Open Gallery for saved results." width="1380" height="450" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-e5ff4cea10.webp" alt="Desktop: Open Gallery for saved results." width="1380" height="450" loading="lazy"></noscript>
+<span class="ring" style="left:93.68659%;top:34.88889%;width:4.79167%;height:6.88889%" aria-hidden="true"><span class="marker">3</span></span>
 </div></div><figcaption>Open <b>Gallery</b> for saved results.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -3850,27 +3891,27 @@ Enter Hours, Minutes and Seconds. Click Start. Use Pause, Resume or Reset as nee
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-40ac3e5ceb.webp" alt="Desktop: Click Set custom time." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-40ac3e5ceb.webp" alt="Desktop: Click Set custom time." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:50.198%;top:21.818%;width:5.691%;height:5.646%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-40ac3e5ceb.webp" alt="Desktop: Click Set custom time." width="1380" height="350" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-40ac3e5ceb.webp" alt="Desktop: Click Set custom time." width="1380" height="350" loading="lazy"></noscript>
+<span class="ring" style="left:50.19814%;top:54.85714%;width:5.69067%;height:14.19643%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Click <b>Set custom time</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-2444d6ad30.webp" alt="Desktop: Enter Hours, Minutes and Seconds." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-2444d6ad30.webp" alt="Desktop: Enter Hours, Minutes and Seconds." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:50.435%;top:21.818%;width:5.217%;height:7.500%" aria-hidden="true"><span class="marker">2</span></span>
+<img data-src="../screenshots/tutorials/d-2444d6ad30.webp" alt="Desktop: Enter Hours, Minutes and Seconds." width="1380" height="350" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-2444d6ad30.webp" alt="Desktop: Enter Hours, Minutes and Seconds." width="1380" height="350" loading="lazy"></noscript>
+<span class="ring" style="left:50.43478%;top:54.85714%;width:5.21739%;height:18.85714%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Enter <b>Hours, Minutes and Seconds</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-7e7913a78d.webp" alt="Desktop: Click Start. Use Pause, Resume or Reset as needed." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-7e7913a78d.webp" alt="Desktop: Click Start. Use Pause, Resume or Reset as needed." width="1380" height="350" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-7e7913a78d.webp" alt="Desktop: Click Start. Use Pause, Resume or Reset as needed." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-7e7913a78d.webp" alt="Desktop: Click Start. Use Pause, Resume or Reset as needed." width="1380" height="350"
 loading="lazy"></noscript>
-<span class="ring" style="left:50.819%;top:30.682%;width:4.450%;height:4.205%" aria-hidden="true"><span class="marker">3</span></span>
+<span class="ring" style="left:50.81861%;top:77.14286%;width:4.44973%;height:10.57143%" aria-hidden="true"><span class="marker">3</span></span>
 </div></div><figcaption>Click <b>Start</b>. Use Pause, Resume or Reset as needed.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -3887,17 +3928,17 @@ or Reset as needed." open>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-cfc3e29d76.webp" alt="Desktop: Choose Stopwatch." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-cfc3e29d76.webp" alt="Desktop: Choose Stopwatch." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:52.363%;top:16.705%;width:5.904%;height:3.182%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-cfc3e29d76.webp" alt="Desktop: Choose Stopwatch." width="1380" height="350" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-cfc3e29d76.webp" alt="Desktop: Choose Stopwatch." width="1380" height="350" loading="lazy"></noscript>
+<span class="ring" style="left:52.36300%;top:42.00000%;width:5.90353%;height:8.00000%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Choose <b>Stopwatch</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-9cd9e925ea.webp" alt="Desktop: Click Start; use Pause or Reset as needed." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-9cd9e925ea.webp" alt="Desktop: Click Start; use Pause or Reset as needed." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:51.270%;top:29.055%;width:3.545%;height:3.182%" aria-hidden="true"><span class="marker">2</span></span>
+<img data-src="../screenshots/tutorials/d-9cd9e925ea.webp" alt="Desktop: Click Start; use Pause or Reset as needed." width="1380" height="350" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-9cd9e925ea.webp" alt="Desktop: Click Start; use Pause or Reset as needed." width="1380" height="350" loading="lazy"></noscript>
+<span class="ring" style="left:51.27038%;top:73.05357%;width:3.54506%;height:8.00000%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Click <b>Start</b>; use Pause or Reset as needed.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -4082,9 +4123,9 @@ review form.</p>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to prepare an email." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to prepare an email." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:3.116%;top:91.136%;width:86.481%;height:3.750%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to prepare an email." width="1380" height="600" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-a7feb33c4e.webp" alt="Desktop: Ask your assistant to prepare an email." width="1380" height="600" loading="lazy"></noscript>
+<span class="ring" style="left:3.11594%;top:86.00000%;width:86.48098%;height:5.50000%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Ask your assistant to <b>prepare an email</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -4388,11 +4429,11 @@ Arla running in the tray when I close the window if background work should conti
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/r-startup.webp" alt="Desktop: Choose whether to Start Arla when I sign in to Windows." width="1364" height="835" loading="lazy"
+<img data-src="../screenshots/tutorials/r-startup.webp" alt="Desktop: Choose whether to Start Arla when I sign in to Windows." width="1364" height="205" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/r-startup.webp" alt="Desktop: Choose whether to Start Arla when I sign in to Windows." width="1364" height="835"
+<noscript><img src="../screenshots/tutorials/r-startup.webp" alt="Desktop: Choose whether to Start Arla when I sign in to Windows." width="1364" height="205"
 loading="lazy"></noscript>
-<span class="ring" style="left:2.346%;top:3.832%;width:95.308%;height:2.515%" aria-hidden="true"><span class="marker">1</span></span>
+<span class="ring" style="left:2.34604%;top:15.60976%;width:95.30792%;height:10.24390%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Choose whether to <b>Start Arla when I sign in to Windows</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
@@ -4626,19 +4667,19 @@ permission to record.</p>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-a46031871d.webp" alt="Desktop: Open Meetings." width="1380" height="880" loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/d-a46031871d.webp" alt="Desktop: Open Meetings." width="1380" height="880" loading="lazy"></noscript>
-<span class="ring" style="left:9.348%;top:37.045%;width:87.391%;height:2.386%" aria-hidden="true"><span class="marker">1</span></span>
+<img data-src="../screenshots/tutorials/d-a46031871d.webp" alt="Desktop: Open Meetings." width="1380" height="181" loading="lazy" decoding="async">
+<noscript><img src="../screenshots/tutorials/d-a46031871d.webp" alt="Desktop: Open Meetings." width="1380" height="181" loading="lazy"></noscript>
+<span class="ring" style="left:9.34783%;top:44.19890%;width:87.39130%;height:11.60221%" aria-hidden="true"><span class="marker">1</span></span>
 </div></div><figcaption>Open <b>Meetings</b>.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/d-c9bf6e165c.webp" alt="Desktop: Click Record; choose Stop recording when finished." width="1380" height="880" loading="lazy"
+<img data-src="../screenshots/tutorials/d-c9bf6e165c.webp" alt="Desktop: Click Record; choose Stop recording when finished." width="880" height="230" loading="lazy"
 decoding="async">
-<noscript><img src="../screenshots/tutorials/d-c9bf6e165c.webp" alt="Desktop: Click Record; choose Stop recording when finished." width="1380" height="880"
+<noscript><img src="../screenshots/tutorials/d-c9bf6e165c.webp" alt="Desktop: Click Record; choose Stop recording when finished." width="880" height="230"
 loading="lazy"></noscript>
-<span class="ring" style="left:20.652%;top:53.722%;width:58.696%;height:4.205%" aria-hidden="true"><span class="marker">2</span></span>
+<span class="ring" style="left:3.97727%;top:53.36957%;width:92.04545%;height:16.08696%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Click <b>Record</b>; choose Stop recording when finished.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -4667,21 +4708,21 @@ loading="lazy"></noscript>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/r-meeting-analyse.webp" alt="Desktop: Click Analyse when you want the transcript sent to the answering model." width="1364" height="835"
+<img data-src="../screenshots/tutorials/r-meeting-analyse.webp" alt="Desktop: Click Analyse when you want the transcript sent to the answering model." width="920" height="835"
 loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/r-meeting-analyse.webp" alt="Desktop: Click Analyse when you want the transcript sent to the answering model." width="1364"
+<noscript><img src="../screenshots/tutorials/r-meeting-analyse.webp" alt="Desktop: Click Analyse when you want the transcript sent to the answering model." width="920"
 height="835" loading="lazy"></noscript>
-<span class="ring" style="left:20.308%;top:54.551%;width:58.651%;height:4.431%" aria-hidden="true"><span class="marker">2</span></span>
+<span class="ring" style="left:6.19577%;top:54.55100%;width:86.95648%;height:4.43100%" aria-hidden="true"><span class="marker">2</span></span>
 </div></div><figcaption>Click <b>Analyse</b> when you want the transcript sent to the answering model.</figcaption></figure></li>
 <li data-step><figure>
 <div class="device desktop">
 <div class="window-bar"><span>Arla</span><span class="window-dots" aria-hidden="true">− □ ×</span></div>
 <div class="screen">
-<img data-src="../screenshots/tutorials/r-meeting-store.webp" alt="Desktop: Choose Store for a new meeting, or Save edits for an edited meeting." width="1364" height="835"
+<img data-src="../screenshots/tutorials/r-meeting-store.webp" alt="Desktop: Choose Store for a new meeting, or Save edits for an edited meeting." width="920" height="835"
 loading="lazy" decoding="async">
-<noscript><img src="../screenshots/tutorials/r-meeting-store.webp" alt="Desktop: Choose Store for a new meeting, or Save edits for an edited meeting." width="1364" height="835"
+<noscript><img src="../screenshots/tutorials/r-meeting-store.webp" alt="Desktop: Choose Store for a new meeting, or Save edits for an edited meeting." width="920" height="835"
 loading="lazy"></noscript>
-<span class="ring" style="left:20.308%;top:86.677%;width:7.055%;height:4.431%" aria-hidden="true"><span class="marker">3</span></span>
+<span class="ring" style="left:6.19577%;top:86.67700%;width:10.45980%;height:4.43100%" aria-hidden="true"><span class="marker">3</span></span>
 </div></div><figcaption>Choose <b>Store</b> for a new meeting, or Save edits for an edited meeting.</figcaption></figure></li></ol>
 <div class="walk-state" aria-live="polite" aria-atomic="true"></div>
 <div class="walk-controls"><button type="button" data-back aria-label="Previous step">← Back</button><button type="button" class="next" data-next aria-label="Next step">Next
@@ -4723,12 +4764,48 @@ Irishwarhound
     const image = step?.querySelector('img[data-src]');
     if (image && !image.hasAttribute('src')) image.src = image.dataset.src;
   };
+  function zoom(walk) {
+    const step = walk.querySelector('li:not([hidden])');
+    if (!step) return;
+    const screen = step.querySelector('.screen');
+    const image = step.querySelector('img[data-src]');
+    const ring = step.querySelector('.ring');
+    const width = screen.getBoundingClientRect().width;
+    if (!width) return;
+    screen.classList.remove('is-zoomed');
+    screen.style.height = '';
+    if (walk.dataset.fullScreen === 'true') return;
+    const iw = Number(image.getAttribute('width'));
+    const ih = Number(image.getAttribute('height'));
+    const x = parseFloat(ring.style.left) * iw / 100;
+    const y = parseFloat(ring.style.top) * ih / 100;
+    const cw = parseFloat(ring.style.width) * iw / 100;
+    const ch = parseFloat(ring.style.height) * ih / 100;
+    const fullScale = width / iw;
+    // Phone screenshots already above the readability bar keep their whole frame.
+    if (step.querySelector('.device.phone') && ch * fullScale >= 28) return;
+    // Preserve three control widths (or the whole source image at its edges).
+    // Very wide, shallow controls cannot also reach 28 px on narrow displays.
+    const contextScale = width / Math.min(iw, 3 * cw);
+    const scale = Math.min(contextScale, Math.max(fullScale, 32 / ch, width / 640));
+    const cropWidth = width / scale;
+    const cropHeight = Math.min(ih, Math.max(ch * 1.7, Math.min(360, Math.max(190, width * .6)) / scale));
+    const left = Math.max(0, Math.min(iw - cropWidth, x + cw / 2 - cropWidth / 2));
+    const top = Math.max(0, Math.min(ih - cropHeight, y + ch / 2 - cropHeight / 2));
+    screen.style.setProperty('--image-width', iw * scale + 'px');
+    screen.style.setProperty('--image-height', ih * scale + 'px');
+    screen.style.setProperty('--image-left', -left * scale + 'px');
+    screen.style.setProperty('--image-top', -top * scale + 'px');
+    screen.style.height = cropHeight * scale + 'px';
+    screen.classList.add('is-zoomed');
+  }
   function draw(walk, position) {
     const steps = [...walk.querySelectorAll('ol>li')];
     const current = Math.max(0, Math.min(position, steps.length - 1));
     walk.dataset.step = current;
     steps.forEach((step, index) => { step.hidden = index !== current; });
     load(steps[current]);
+    zoom(walk);
     // Only the displayed image and its immediate successor are loaded.
     if (steps[current + 1]) {
       const next = new Image();
@@ -4760,6 +4837,35 @@ Irishwarhound
   for (const task of tasks) {
     task.open = false;
     task.querySelectorAll('.walkthrough').forEach(walk => {
+      walk.querySelectorAll('.screen').forEach(screen => {
+        const plane = document.createElement('div');
+        plane.className = 'focus-plane';
+        plane.append(...screen.childNodes);
+        screen.append(plane);
+      });
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.dataset.fullScreen = '';
+      toggle.textContent = 'See full screen';
+      toggle.setAttribute('aria-pressed', 'false');
+      toggle.addEventListener('click', () => {
+        const full = walk.dataset.fullScreen !== 'true';
+        walk.dataset.fullScreen = String(full);
+        toggle.setAttribute('aria-pressed', String(full));
+        toggle.textContent = full ? 'Zoom in on step' : 'See full screen';
+        zoom(walk);
+      });
+      walk.querySelector('.walk-controls').insertBefore(toggle, walk.querySelector('[data-next]'));
+      const resize = new ResizeObserver(entries => {
+        for (const entry of entries) {
+          const width = entry.contentRect.width;
+          if (width > 0 && width !== entry.target.zoomWidth) {
+            entry.target.zoomWidth = width;
+            zoom(walk);
+          }
+        }
+      });
+      walk.querySelectorAll('.device').forEach(device => resize.observe(device));
       walk.querySelector('[data-back]').addEventListener('click', () => draw(walk, Number(walk.dataset.step) - 1));
       walk.querySelector('[data-next]').addEventListener('click', () => draw(walk, Number(walk.dataset.step) + 1));
     });
