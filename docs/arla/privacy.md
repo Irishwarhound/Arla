@@ -1,8 +1,8 @@
 # Arla Privacy Policy
 
-**Version 2.2 · Effective October 19, 2026**
+**Version 2.3 · Effective October 28, 2026**
 
-Cody Dean, publishing as Irishwarhound ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase", which also runs the optional relay described under "Your paired devices". Neither ever receives your conversations, files or records in a form we can read. We do not receive automatic usage or crash reports. If you contact us, send a problem report or report an AI reply, we receive what you choose to send.
+Irishwarhound LLC ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase", which also runs the optional relay described under "Your paired devices". Neither ever receives your conversations, files or records in a form we can read. We do not receive automatic usage or crash reports. If you contact us, send a problem report or report an AI reply, we receive what you choose to send.
 
 ## What stays on your devices
 
@@ -101,4 +101,4 @@ Arla asks for device permissions when a feature needs them: camera for an Inbox 
 
 Arla is not directed at children under 13. Device security protects local records, and operating-system protected storage protects keys. No system is perfectly secure. We will date material policy changes and describe changes to data sharing in release notes.
 
-**Contact:** Irishwarhound (Cody Dean) · Idaho, USA · support@irishwarhound.com
+**Contact:** Irishwarhound LLC · Idaho, USA · support@irishwarhound.com
