@@ -1,6 +1,6 @@
 # Arla Privacy Policy
 
-**Version 2.3 · Effective October 28, 2026**
+**Version 2.4 · Effective November 13, 2026**
 
 Irishwarhound LLC ("we", "us") makes Arla for Windows and Android. The Arla apps have no account with us, advertising or analytics. Our only server is the licence and update service described under "Your licence and purchase", which also runs the optional relay described under "Your paired devices". Neither ever receives your conversations, files or records in a form we can read. We do not receive automatic usage or crash reports. If you contact us, send a problem report or report an AI reply, we receive what you choose to send.
 
@@ -99,6 +99,17 @@ You can edit or delete app records, remove a paired phone, turn off memory recal
 
 Arla asks for device permissions when a feature needs them: camera for an Inbox photo or a photo you take in the side-button assistant, the photo library only when you pick a picture there, microphone for voice and meetings, files for chosen documents and backups, network for selected services and paired devices, notifications for reminders and scheduled emails, and, on Android, alarms so a scheduled email can be sent on time (without it, it may be sent a few minutes late). Refusing a permission disables the related feature.
 
-Arla is not directed at children under 13. Device security protects local records, and operating-system protected storage protects keys. No system is perfectly secure. We will date material policy changes and describe changes to data sharing in release notes.
+## Your rights over what our service keeps
+
+Records on your devices stay under your control in the app, as described above. For what our service keeps (licence and activation records, beta applications, reviews, the waitlist, trial reports and problem reports):
+
+- **See, correct or delete it:** email support@irishwarhound.com. We answer within 30 days. A licence needs its record to activate and check, so deleting a licence record also ends that licence.
+- **Why we use it** (for people in the EU, the UK and places with similar laws): licence and activation records to deliver and check the licence you bought; the one-way connection codes to stop floods and misuse; the waitlist, beta applications, reviews and problem reports because you chose to send them. You can withdraw that choice at any time by asking us to delete them.
+- **How long:** licence and activation records while the licence exists; trial and problem reports for up to 13 months; connection codes for two days; a waitlist address until its one email has gone; beta applications and reviews until you ask us to delete them.
+- **Where:** our service runs on Cloudflare, so this information may be processed in the United States and other countries where Cloudflare operates. Stripe and Link handle purchases under their own policies.
+- **We never sell it** or share it for advertising.
+- **Complaints:** if you are in the EU, the UK or Switzerland, you can complain to your local data-protection authority. Please write to us first so we can put it right.
+
+Arla is not directed at children under 13. Device security protects local records, and operating-system protected storage protects keys. No system is perfectly secure. If a security incident affects information our service keeps, we will tell the people affected, and the authorities where the law requires it. We will date material policy changes and describe changes to data sharing in release notes.
 
 **Contact:** Irishwarhound LLC · Idaho, USA · support@irishwarhound.com
