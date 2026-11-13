@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arla · one assistant for your computer and phone</title>
-<meta name="description" content="Arla is a personal AI assistant for Windows and Android. One conversation across your devices that remembers you, plans with you and does the work, with your data on your own devices.">
-<meta property="og:title" content="Arla · one assistant for your computer and phone">
-<meta property="og:description" content="One conversation across your devices that remembers you, plans with you and does the work.">
+<title>Arla · one assistant, one conversation, on your computer and phone</title>
+<meta name="description" content="Arla is your own AI team for Windows and Android. She tests and ranks the AI services you connect, uses the best model that's working, and does the work in your projects, writing, meetings and email, with your data on your own devices.">
+<meta property="og:title" content="Arla · your own AI team, on your computer and phone">
+<meta property="og:description" content="Your own AI team. It picks the best model for each job, then does the work.">
 <meta property="og:image" content="https://irishwarhound.com/assets/arla-512.png">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0b0e1a">
@@ -35,9 +35,10 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 .brand img{width:34px;height:34px}
 .brand span{font-family:'Sacramento',cursive;font-size:2rem;line-height:1;padding-top:.2rem}
 nav.links{display:flex;gap:1.4rem;font-size:.95rem}
-nav.links a{color:var(--muted);text-decoration:none}
+nav.links a{color:var(--muted);text-decoration:none;white-space:nowrap}
 nav.links a:hover{color:var(--ink)}
-@media (max-width:720px){nav.links{display:none}}
+@media (max-width:1180px){header.top .crumb{display:none}nav.links{gap:1rem;font-size:.9rem}}
+@media (max-width:920px){nav.links{display:none}}
 
 /* Hero */
 .hero{position:relative;padding:5.5rem 0 4.5rem;text-align:center;overflow:hidden;isolation:isolate}
@@ -93,6 +94,7 @@ h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;letter-spacing:-.02em;marg
 .card li{position:relative;padding-left:1.1rem;margin:.5rem 0;color:var(--muted);font-size:.96rem;line-height:1.5}
 .card li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:.4rem;border-radius:50%;background:var(--c,var(--violet));opacity:.8}
 .card li b{color:var(--ink);font-weight:600}
+.card .tag{margin:-.35rem 0 .7rem;color:var(--faint);font-size:.88rem}
 
 /* Different */
 .diff{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.2rem}
@@ -180,6 +182,7 @@ footer a:hover{color:var(--ink)}
     <div style="display:flex;align-items:center"><a class="brand" href="./" aria-label="Arla home"><img src="../assets/arla-192.png" alt="" width="34" height="34"><span>Arla</span></a><a class="crumb" href="../">by Irishwarhound</a></div>
     <nav class="links" aria-label="Sections">
       <a href="#how">How it works</a>
+      <a href="#different">Why Arla</a>
       <a href="#features">Features</a>
       <a href="#everything">Everything it does</a>
       <a href="#privacy">Privacy</a>
@@ -197,8 +200,8 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <img class="logo" src="../assets/arla-512.png" alt="The Arla logo: four faces in blue, orange, purple and teal around a glowing brain" width="512" height="512">
       <h1>Arla</h1>
-      <p class="pitch">One assistant, one conversation, on your computer and your phone.</p>
-      <p class="sub">Arla remembers you, plans with you, and actually does the work, using the AI models you already have. Your data stays on your own devices.</p>
+      <p class="pitch">Your own AI team. It picks the best model for each job, then does the work.</p>
+      <p class="sub">Connect the AI services you already have, free or paid. Arla tests and ranks every model, uses the best one that's working, and puts it to work on your projects, writing, meetings and email, on your computer and your phone.</p>
       <div class="cta">
         <a class="btn primary" href="#beta">Apply for the beta</a>
         <a class="btn ghost" href="#waitlist">Join the waitlist</a>
@@ -206,7 +209,7 @@ footer a:hover{color:var(--ink)}
       </div>
       <p class="status">Arla is in beta. Apply to test it free for 90 days, or join the waitlist to hear when you can buy it ($35 once for 1 computer, nothing charged automatically).</p>
       <div class="pills" aria-label="At a glance">
-        <span class="pill">Windows desktop</span><span class="pill">Android phone app</span><span class="pill">Bring your own AI</span><span class="pill">No account with us</span>
+        <span class="pill">Windows desktop</span><span class="pill">Android phone app</span><span class="pill">30+ AI services</span><span class="pill">Bring your own AI</span><span class="pill">No account with us</span><span class="pill">Your data on your devices</span>
       </div>
     </div>
   </div>
@@ -257,6 +260,83 @@ footer a:hover{color:var(--ink)}
         <span>"What should I focus on today?"</span>
         <span>"Switch to light mode."</span>
         <span>"Remind me to call the bank at 3."</span>
+        <span>"Ask Muse for three title ideas."</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="different">
+    <div class="wrap">
+      <p class="kicker">What sets Arla apart</p>
+      <h2>Built to do what a chat window can't.</h2>
+      <p class="lede">Arla manages your AI models for you, puts a team on the job, and works inside your projects, books and meetings.</p>
+      <div class="grid">
+
+        <article class="card" style="--c:var(--blue)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg></div>
+          <h3>She manages your AI models for you</h3>
+          <ul>
+            <li><b>Connect more than 30 AI services</b>, free or paid, plus models on your own computer.</li>
+            <li><b>Every model, rated and checked:</b> Arla reads each model a service offers, rates it, and checks it within a strict daily limit, so checking never eats your allowance.</li>
+            <li><b>The best one that's working answers</b>, judged by how its recent replies actually went. If it fails, the next one takes over, and the reply says which model answered and why.</li>
+            <li><b>Paid models only after you say yes</b>, and the Work log shows what each reply cost, from the service's own prices.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--violet)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 19"/></svg></div>
+          <h3>A team you design</h3>
+          <ul>
+            <li><b>Up to 10 personas</b>, each with its own model, voice and instructions.</li>
+            <li><b>Ask one, or put them to work together:</b> a Team answers one request (your assistant gives the final answer), and a RoundTable discusses a topic.</li>
+            <li><b>Specialists:</b> give a small model one exact job and an optional check on its answer.</li>
+            <li><b>Skills:</b> checklists and tested calculations, which Arla also writes as she learns. Each must pass its tests before it's saved.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--orange)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6h10M10 12h10M10 18h10"/><path d="m3.5 6 1.5 1.5L8 4.5M3.5 12l1.5 1.5L8 10.5M3.5 18l1.5 1.5L8 16.5"/></svg></div>
+          <h3>She runs your projects, not just a chat</h3>
+          <ul>
+            <li><b>Every project holds its own</b> goals, plans, tasks, automations, checks, notes and timeline, and Arla's work stays inside that project.</li>
+            <li><b>Say what you want:</b> she builds the goal, the dated plan and the daily tasks.</li>
+            <li><b>A plan keeper</b> re-paces plans from real progress, and My day keeps work in work hours.</li>
+            <li><b>Automations</b> run on local models, so they cost nothing.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--teal)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
+          <h3>Writer Studio</h3>
+          <p class="tag">A $4.99 add-on · free for beta testers</p>
+          <ul>
+            <li><b>A full studio:</b> binder, scene cards, outline, plotlines, a story bible, and a timeline with your own calendar.</li>
+            <li><b>Arla helps as much or as little as you want:</b> she can fill the story bible, build the book from your outline, or draft one scene at a time.</li>
+            <li>Offline grammar and spelling, comments, snapshots, and import of an existing draft.</li>
+            <li><b>Export</b> to Word, EPUB, HTML, Markdown or plain text. Your books are files on your own computer.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--blue)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5"/></svg></div>
+          <h3>Meetings that turn into work</h3>
+          <ul>
+            <li><b>Record a meeting</b> and watch the transcript appear as people talk. Speech is turned into text on the device by default.</li>
+            <li><b>Analyse</b> gives you a summary and the action items, and <b>Add to project</b> turns them into tasks, checks or automations.</li>
+            <li><b>Email and calendar</b> (early access): Arla drafts, sends and books things only after you confirm in a form.</li>
+          </ul>
+        </article>
+
+        <article class="card" style="--c:var(--violet)">
+          <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.5v5M15 2.5v5"/><path d="M6 7.5h12v4a6 6 0 0 1-12 0Z"/><path d="M12 17.5v4"/></svg></div>
+          <h3>Plugs into the tools you already use</h3>
+          <ul>
+            <li><b>Arla is an MCP server:</b> Claude Code can use her tools to read your plans, update tasks, search memory or ask a persona.</li>
+            <li><b>She connects to other MCP tool servers</b>, and you approve what each may touch.</li>
+            <li><b>Coding help:</b> she hands work to Claude Code, GitHub Copilot, Qwen Code or Muse Code, each on your own sign-in.</li>
+          </ul>
+        </article>
+
       </div>
     </div>
   </section>
@@ -274,9 +354,9 @@ footer a:hover{color:var(--ink)}
           <ul>
             <li><b>One conversation</b> on computer and phone, including what you say while the computer is off.</li>
             <li><b>The best available model answers.</b> If one fails, another takes over, and each reply shows which model answered.</li>
-            <li>Works with Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, Groq, OpenRouter and any OpenAI-compatible service.</li>
+            <li>Works with Ollama, LM Studio, OpenAI, Anthropic, Google Gemini, Groq, OpenRouter, Mistral, DeepSeek and more than 20 others, plus any OpenAI-compatible service.</li>
             <li><b>Voice:</b> speak and hear replies. On the desktop, speech runs on your own computer.</li>
-            <li>Brain, Direct chat and Relay for power users: chain models to draft, critique and polish.</li>
+            <li><b>Learns from you:</b> a correction or "Think harder" makes her take more care with similar requests next time.</li>
           </ul>
         </article>
 
@@ -288,7 +368,7 @@ footer a:hover{color:var(--ink)}
             <li><b>Start does the right thing.</b> Arla runs her own items; for yours, she shows just what you need to do.</li>
             <li><b>Repeating items</b> (daily, weekly, monthly) keep their history, and a missed turn says Missed.</li>
             <li><b>A Timeline</b> with Now, a clear Overdue mark, and bars that show how long each item runs.</li>
-            <li>Checks and routines: one-click project tests, and scheduled jobs on local models that cost nothing.</li>
+            <li>Checks and automations: one-click project tests, and scheduled jobs on local models that cost nothing.</li>
           </ul>
         </article>
 
@@ -312,29 +392,31 @@ footer a:hover{color:var(--ink)}
             <li><b>Library:</b> your notes, PDFs and code, searchable by every model. Secret and backup files are left out on purpose.</li>
             <li><b>Bring your history:</b> import chats from ChatGPT, Claude and Gemini.</li>
             <li><b>Research</b> answers with numbered sources, labelled by publisher, saved for later.</li>
+            <li><b>Deep research</b> works in several steps, then checks each main finding against quotes from the pages.</li>
             <li><b>Inbox:</b> drop in an idea, link or file, and Arla files it.</li>
           </ul>
         </article>
 
         <article class="card" style="--c:var(--violet)">
           <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2A5 5 0 0 1 21.5 19"/></svg></div>
-          <h3>Personas, Deck and more</h3>
+          <h3>Minds, notes and images</h3>
           <ul>
-            <li><b>Personas</b> with their own model, voice and instructions: Code Buddy, Muse, Critic, Scout, or your own.</li>
-            <li><b>Deck:</b> five chats side by side. Ask several models the same thing and compare.</li>
+            <li><b>Minds:</b> your assistant in the centre with your personas around it. Talk to one, or start a Team or a RoundTable.</li>
+            <li><b>Personas</b> with their own model, voice and instructions: Code Buddy, Muse, Critic, Scout, or your own (up to 10).</li>
             <li><b>Sticky notes</b> on a board, on Home, or always on top. Also on the phone.</li>
             <li><b>Image Studio:</b> generate and save pictures with a connected service.</li>
-            <li>Nine themes, including a light one, and a Home built from the panels you choose.</li>
+            <li>Thirteen themes, including a light one, and a Home built from the panels you choose.</li>
           </ul>
         </article>
 
         <article class="card" style="--c:var(--teal)">
           <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
-          <h3>The phone app</h3>
+          <h3>The phone app: one conversation, two devices</h3>
           <ul>
             <li><b>The same conversation</b>, paired to your computer over your own network, on an encrypted link.</li>
-            <li><b>Works without the computer:</b> an on-device AI model, fully offline once downloaded, or a cloud service you connect.</li>
-            <li>Messages sent offline sync when you're back.</li>
+            <li><b>Works without the computer:</b> an on-device AI model, fully offline once downloaded, or a cloud service you connect. Messages sent offline sync when you're back.</li>
+            <li><b>Side-button assistant:</b> hold the side key for Arla over any app.</li>
+            <li><b>Reminders</b> set on the phone itself, even when your computer is off.</li>
             <li>Your own Home with Today, Timeline, goals, notes and personas, plus a quick orb.</li>
             <li>Voice that can stay on the phone, and backups saved to your computer.</li>
           </ul>
@@ -361,6 +443,7 @@ footer a:hover{color:var(--ink)}
             <li><b>Voice:</b> speak and hear replies. On the computer, speech recognition and the voice run locally.</li>
             <li><b>The orb:</b> a movable orb opens Arla anywhere in the app; drag it out of the window for a floating orb with its own chat pop-up.</li>
             <li><b>Bigger jobs:</b> for a project-sized request, Arla drafts a plan with her team for you to review before anything runs.</li>
+            <li><b>Learns from you:</b> when you correct her or press "Think harder", she takes more care with similar requests, and tasks she finishes well become shortcuts you can reuse.</li>
           </ul>
         </div>
 
@@ -371,26 +454,27 @@ footer a:hover{color:var(--ink)}
             <li><b>Power:</b> sleep, lock, restart or shut down, always with a countdown you can cancel; wake the PC at a set time.</li>
             <li><b>Reminders</b> and requests scheduled for later ("at 9, summarise my inbox"), each one cancellable.</li>
             <li><b>Hands for the AI:</b> work with files in your workspace, run Python, read public web pages, and look at the screen when you ask.</li>
-            <li><b>Coding help:</b> hand work to Claude Code on your own Claude Code sign-in, and open a PowerShell, Command Prompt or Git Bash terminal inside Arla.</li>
+            <li><b>Ask about your computer:</b> its hardware, disks, programs, a folder's size or a file's text, looked up with read-only tools. Reading outside Arla's workspace asks you first.</li>
+            <li><b>Changes files for you:</b> new files and edits happen straight away with Undo for 30 days; she asks once before she overwrites, renames, moves or deletes anything, and deleted files go to the Recycle Bin. Only models that pass Arla's file-writing test do this.</li>
+            <li><b>Coding help:</b> hand work to Claude Code, GitHub Copilot, Qwen Code or Muse Code, each on your own sign-in, and see which files changed. Open a PowerShell, Command Prompt or Git Bash terminal inside Arla.</li>
             <li><b>Approvals:</b> when an action needs your OK, approve it from any paired device; file edits and commands are approved on the computer only.</li>
           </ul>
         </div>
 
         <div class="grp" style="--c:var(--blue)">
-          <h3>Many minds</h3>
+          <h3>Minds: your assistant and your personas</h3>
           <ul>
-            <li><b>Brain:</b> a direct chat with your strongest connected model.</li>
-            <li><b>Deck:</b> five chats side by side, to compare models or personas on the same question.</li>
-            <li><b>Direct chat:</b> one conversation pinned to one model of your choice.</li>
-            <li><b>Relay:</b> chain models step by step: draft with one, critique with a second, polish with a third.</li>
-            <li><b>Personas:</b> Assistant, Code Buddy, Muse, Critic, Scout and Caretaker to start, each with its own model, temperature and instructions. Make your own with a full character sheet and icon.</li>
+            <li><b>One page:</b> your assistant sits in the centre of a starry sky with your personas around it; each star is something it remembers or has done.</li>
+            <li><b>Talk</b> to your assistant, to the Brain (your strongest connected model), or to any persona.</li>
+            <li><b>Team:</b> several personas work on one request, and your assistant gives the final answer. <b>RoundTable:</b> they discuss a topic together.</li>
+            <li><b>Personas:</b> up to 10. Assistant, Code Buddy, Muse, Critic, Scout and Caretaker to start, each with its own model, temperature and instructions. Make your own with a full character sheet and icon; your phone shows the same ones.</li>
           </ul>
         </div>
 
         <div class="grp" style="--c:var(--teal)">
           <h3>Projects and action items</h3>
           <ul>
-            <li><b>Projects</b> each hold goals, tasks, plans, checks, routines, an Inbox, a Timeline and a Work log, and can point at a folder on your computer.</li>
+            <li><b>Projects</b> each hold goals, tasks, plans, checks, automations, an Inbox, a Timeline and a Work log, and can point at a folder on your computer.</li>
             <li><b>Clear stages:</b> Not started, Needs your input, Running, In progress, Done. <b>Start</b> runs Arla's items and shows you just what to do on yours.</li>
             <li><b>Details that matter:</b> who it's for, priority, start and due dates, a time and length, and repeats (daily, weekly on chosen days, monthly or every few days, with an optional end).</li>
             <li><b>Arla asks</b> one short question when a new item is missing something it needs.</li>
@@ -415,7 +499,7 @@ footer a:hover{color:var(--ink)}
           <ul>
             <li><b>Inbox:</b> drop in text, links and files (or a photo on the phone) and Arla files each one; a quick-capture window is always a click away.</li>
             <li><b>Sticky notes:</b> a Notes board, notes pinned to Home, and an always-on-top note; also on the phone, with offline edits that sync later.</li>
-            <li><b>Routines:</b> small scheduled jobs on local models only, so they cost nothing: Morning focus, End of day summary and Weekly goal check to start.</li>
+            <li><b>Automations:</b> small scheduled jobs on local models only, so they cost nothing: Morning focus, End of day summary and Weekly goal check to start.</li>
             <li><b>Checks:</b> one-click tests that confirm a project still works; a command is always shown to you first.</li>
             <li><b>Work log:</b> a live board of project work and of replies by service and model.</li>
           </ul>
@@ -428,18 +512,44 @@ footer a:hover{color:var(--ink)}
             <li><b>Library:</b> notes, PDFs, Word documents and code from folders you choose (and each project's folder), searchable by every model. Backup, signing and secret files are always skipped.</li>
             <li><b>Bring your history:</b> import chats from ChatGPT, Claude and Gemini; they become searchable notes, and the lasting facts go to memory.</li>
             <li><b>Research:</b> answers with numbered sources, labelled by publisher; check a source, save research with tags, and search it later. It uses your connected models' web search, with Tavily as a backup.</li>
+            <li><b>Deep research:</b> for a question that needs more than one search, Arla plans it and works in up to four steps (search, read, note what's missing and where sources disagree), then writes a cited report. Each main finding is checked against quotes from the pages, and every source is rated.</li>
           </ul>
         </div>
 
         <div class="grp" style="--c:var(--teal)">
           <h3>Workshop</h3>
           <ul>
-            <li><b>Models:</b> download and manage local models (kept on your graphics card so replies stay fast), connect cloud services, and set usage budgets.</li>
+            <li><b>Models:</b> download and manage local models (kept on your graphics card so replies stay fast), connect cloud services, and set usage budgets. Arla rates and checks every cloud model, and says plainly when one hasn't been checked yet, is out of credits or at its limit, or is resting.</li>
+            <li><b>What your AI costs:</b> the Work log shows today's AI cost from the token counts each service reports and its published prices. A call without a published price says "not priced", never a guess.</li>
             <li><b>Skills:</b> small, pre-checked recipes for common jobs. Arla writes new ones as she learns, and each must pass its own tests before it's saved. Switch any off, export or import them.</li>
-            <li><b>Specialists:</b> tiny local models that each do one job fast, taking routine work off the bigger ones.</li>
-            <li><b>Tools:</b> connect other tools (MCP servers), start and stop them, and approve what each may touch.</li>
-            <li><b>Image Studio:</b> generate pictures (Pollinations, Google Gemini, Hugging Face), search free images (Openverse, Pexels), and save them with their licence labels.</li>
+            <li><b>Specialists:</b> small models that each do one job fast, taking routine work off the bigger ones. Make your own: give it an exact job, a model rule and an optional check on its answer.</li>
+            <li><b>Tools:</b> connect other tools (MCP servers), start and stop them, and approve what each may touch. Wolfram Alpha and DeepL are ready to add.</li>
+            <li><b>Arla's own MCP server:</b> Claude Code (and other MCP clients that work over HTTP) can use Arla's tools, such as your projects, plans, tasks, memory, research and personas. It only accepts connections from your own computer.</li>
+            <li><b>Image Studio:</b> generate pictures (Pollinations, Google Gemini, Hugging Face, fal, Replicate and more), search free images (Openverse, Pexels, Pixabay, Wikimedia Commons), and save them with their licence labels.</li>
             <li><b>Test Arla:</b> one button runs a short self-check with your own models and reports what worked.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--orange)">
+          <h3>Writer Studio (add-on)</h3>
+          <ul>
+            <li><b>Its own window:</b> a Home panel opens a full writing studio, and you choose the modules and workspaces that suit how you write.</li>
+            <li><b>Plan the book:</b> binder, scene cards that stay linked to your scenes, outline, plotlines, a scene table, a story bible for characters and places, and a timeline with a standard or custom calendar.</li>
+            <li><b>Arla helps as much or as little as you want:</b> she can shape and fill the studio for you, build the book from your outline, or draft one scene at a time.</li>
+            <li><b>Finish it:</b> offline grammar and spelling, a proofreading panel and book dictionary, comments and a revision list, snapshots, search and Replace all, writing sprints and dictation.</li>
+            <li><b>In and out:</b> import an existing draft; export to Word, EPUB, HTML, Markdown or plain text. Your books are files on your own computer.</li>
+            <li><b>Price:</b> $4.99 once per Arla licence; beta keys include it.</li>
+          </ul>
+        </div>
+
+        <div class="grp" style="--c:var(--teal)">
+          <h3>Meetings, email and calendar</h3>
+          <ul>
+            <li><b>Record meetings</b> on your computer or phone and watch the transcript build as people talk. Speech is turned into text on the device, unless you connect a cloud transcription service (Deepgram, AssemblyAI and more).</li>
+            <li><b>Analyse</b> writes the summary and the action items, using the same automatic model choice as the chat, and says which model did it.</li>
+            <li><b>Add to project:</b> turn action items into tasks, checks or automations; automations wait, switched off, until you turn them on.</li>
+            <li><b>Email and calendar (early access):</b> connect Google or Microsoft accounts. New mail comes into your Inbox, and Arla reads your calendar for the next 30 days. She drafts, sends, schedules and adds events only after you confirm in a form.</li>
+            <li><b>Scheduled emails with a backup:</b> if your computer is off at send time, a linked phone sends the email instead, once and never twice.</li>
           </ul>
         </div>
 
@@ -451,6 +561,9 @@ footer a:hover{color:var(--ink)}
             <li><b>Your Home:</b> a Daily Brief, quick capture, chat, the Today calendar with My day, goals, Timeline, personas, notes, Inbox and health panels; it can mirror your computer's Home and accent colour.</li>
             <li><b>Arla runs the app from chat:</b> "open my notes", "switch to my work project", "add a goal".</li>
             <li><b>A team on the phone:</b> watch specialists work on a bigger request, step by step.</li>
+            <li><b>Side-button assistant:</b> hold the side key for a small assistant over any app; Share screen sends a picture of what you were looking at with your message.</li>
+            <li><b>Reminders on the phone:</b> "remind me at 9 tomorrow to call the dentist" sets the reminder on the phone itself, even when your computer is off.</li>
+            <li><b>Text from photos and offline translation:</b> photos in your Inbox get their text read on the phone, and you can translate any text without internet.</li>
             <li><b>Camera to Inbox, voice</b> that can stay on the phone, a quick orb, and backups saved to your computer.</li>
             <li><b>What it's worth:</b> an estimate of the time and money Arla saved you, with its assumptions shown.</li>
           </ul>
@@ -459,7 +572,7 @@ footer a:hover{color:var(--ink)}
         <div class="grp" style="--c:var(--orange)">
           <h3>Make it yours, and stay in control</h3>
           <ul>
-            <li><b>Nine themes</b> including a light one, accent colours, rename the app's labels, and a Home built from the panels you choose.</li>
+            <li><b>Thirteen themes</b> including a light one, accent colours, rename the app's labels, and a Home built from the panels you choose.</li>
             <li><b>Control page:</b> what Arla may do, what she did, which model answered, what she's learned, and what that learning costs in memory and disk.</li>
             <li><b>Devices:</b> pair phones, see what's connected, and refuse older, less secure links.</li>
             <li><b>Backups:</b> manual, nightly and before every update, with restore; phone backups kept separately.</li>
@@ -471,7 +584,7 @@ footer a:hover{color:var(--ink)}
       </div>
       <h3 style="margin:1rem 0 .2rem">Works with</h3>
       <div class="services" aria-label="Supported AI services">
-        <span>Ollama (local)</span><span>LM Studio (local)</span><span>On-device models (phone)</span><span>OpenAI</span><span>Anthropic</span><span>Google Gemini</span><span>Groq</span><span>OpenRouter</span><span>Any OpenAI-compatible service</span><span>Tavily (research)</span><span>Claude Code</span><span>MCP tools</span>
+        <span>Ollama (local)</span><span>LM Studio (local)</span><span>On-device models (phone)</span><span>OpenAI</span><span>Anthropic</span><span>Google Gemini</span><span>Groq</span><span>OpenRouter</span><span>Mistral</span><span>DeepSeek</span><span>xAI</span><span>NVIDIA NIM</span><span>Cloudflare</span><span>Hugging Face</span><span>AWS Bedrock</span><span>Cohere</span><span>Any OpenAI-compatible service</span><span>Tavily (research)</span><span>ElevenLabs</span><span>Deepgram</span><span>Wolfram Alpha</span><span>DeepL</span><span>Claude Code</span><span>GitHub Copilot</span><span>Qwen Code</span><span>MCP tools</span><span>Google and Microsoft email (early access)</span>
       </div>
     </div>
   </section>
@@ -496,20 +609,6 @@ footer a:hover{color:var(--ink)}
     </div>
   </section>
 
-  <section id="different">
-    <div class="wrap">
-      <p class="kicker">What makes Arla different</p>
-      <h2>Not another chat window.</h2>
-      <div class="diff">
-        <div style="--c:var(--violet)"><h3>One thread</h3><p>One conversation follows you between computer and phone.</p></div>
-        <div style="--c:var(--orange)"><h3>It acts</h3><p>Arla changes things for you, and you can take it back.</p></div>
-        <div style="--c:var(--blue)"><h3>Your models</h3><p>Local, free and paid services side by side, with limits.</p></div>
-        <div style="--c:var(--teal)"><h3>Your time</h3><p>A day that keeps work in work hours, and learning that asks first.</p></div>
-        <div style="--c:var(--violet)"><h3>Your data</h3><p>It lives on your devices, not on our servers.</p></div>
-      </div>
-    </div>
-  </section>
-
   <section id="platforms">
     <div class="wrap">
       <p class="kicker">Platforms</p>
@@ -522,13 +621,15 @@ footer a:hover{color:var(--ink)}
         <h3>Where things stand</h3>
         <ul>
           <li><b>Price:</b> $35 once (tax included) for a licence on 1 computer, with all 1.x updates. No subscription. The phone app is included when it's linked to your licensed computer; on its own it's free for 7 days, then $5.99 once through Google Play.</li>
+          <li><b>Writer Studio:</b> an optional $4.99 add-on, paid once per Arla licence. Beta keys include it.</li>
           <li><b>Beta first:</b> buying and the public free trial open after the beta; until then, <a href="#beta">apply to test Arla</a> free for 90 days. <b>Free trial</b> (when buying opens): 3 days with everything on, no card needed. After that Arla turns read-only until you buy: your data stays viewable, searchable and exportable, and is never locked or deleted.</li>
           <li><b>Refunds:</b> email us within 7 days of buying for a full refund.</li>
           <li><b>Your PC:</b> Windows 10 or 11 (64-bit), 8 GB of memory (16 GB recommended for offline models) and about 10 GB free for the starter pack. <a href="./help.html#requirements">Full requirements</a>.</li>
-          <li><b>The Android app</b> isn't available to download yet; it's coming to the Play Store.</li>
+          <li><b>The Android app</b> is in closed testing on Google Play: beta testers with an Android phone get an invite.</li>
+          <li><b>Email and calendar</b> are early access while Google and Microsoft finish reviewing Arla.</li>
           <li>Windows and Android only for now: no Mac, Linux or iPhone.</li>
           <li>The Windows installer is signed by Cody Dean. Because Arla is new, Windows may still show a SmartScreen warning (choose More info, then Run anyway).</li>
-          <li>Arla's actions use a connected cloud model. Without one she still answers with a local model, and changes wait until a cloud model is back.</li>
+          <li>Arla's actions use a connected cloud model that passes her checks. Without one she still answers, with free public models or a local model, and changes wait until a qualified model is back.</li>
         </ul>
       </div>
     </div>
@@ -594,6 +695,9 @@ footer a:hover{color:var(--ink)}
       <p class="kicker">Questions</p>
       <h2>Good to know</h2>
       <details><summary>Do I need to pay for AI services?</summary><p>No. Arla can use free cloud services and models running on your own computer. If you already pay for an AI service, you can connect it too, and set usage limits so nothing runs away.</p></details>
+      <details><summary>Which AI model answers me?</summary><p>Arla checks every model your connected services offer and ranks them by what they can do and how their recent replies actually went. Each request goes to the best one that's working; if it fails, the next one takes over, and the reply names the model that answered. You can pin a favourite instead, and a paid model is only used after you agree.</p></details>
+      <details><summary>What is the Writer Studio, and what does it cost?</summary><p>A writing studio inside Arla for novelists and other writers: plan, write, revise and export a book, with Arla helping as much or as little as you want. It's an optional $4.99 add-on, paid once per Arla licence, and beta keys include it.</p></details>
+      <details><summary>Can I use Arla from Claude Code?</summary><p>Yes. Arla runs an MCP server on your computer. In Arla, open Workshop → Models → Connect Claude Code or another app to Arla, and copy the ready-made command into your terminal once. Claude Code can then use Arla's tools: your projects, plans, tasks, memory, research and personas. Other MCP clients that work over HTTP can use the same address and access token. The server only accepts connections from your own computer.</p></details>
       <details><summary>Does Arla send my data to you?</summary><p>No. There's no account with us. Our only server checks licence keys, delivers updates and receives problem reports you choose to send; it never receives your conversations, files or records. Your records stay on your computer and phone. A cloud AI service only receives a request when you've connected it. See the <a href="./privacy.html">privacy policy</a> for the details.</p></details>
       <details><summary>Can Arla change things without asking?</summary><p>She asks first before an action your words didn't request, and before running a command on your computer. Changes she makes in one go are saved as one step you can undo, and a large batch waits for your OK.</p></details>
       <details><summary>Does it work offline?</summary><p>The phone app can answer with an on-device model when it's offline, and your messages sync when you're back. On the computer, Arla can answer with a local model; actions wait until a connected cloud model is available.</p></details>
